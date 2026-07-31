@@ -255,6 +255,9 @@
   #atlas-map{position:absolute;inset:0}
   #atlas-map canvas{outline:none}
   .atlas .maplibregl-ctrl-attrib{font-size:9px}
+  .atlas-cta-row{display:flex;justify-content:center;padding:clamp(26px,5vw,50px) 0 0}
+  .atlas-cta{background:var(--rust);color:#fff;border:none;cursor:pointer;font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:1rem 2.1rem;transition:background .25s}
+  .atlas-cta:hover{background:var(--rust-deep)}
   .atlas .maplibregl-popup{z-index:5}
   .atlas .maplibregl-popup-content{background:var(--bg-2)!important;color:var(--ink)!important;border:1px solid rgba(233,223,208,.30)!important;font-family:var(--sans)!important;font-size:12.5px!important;line-height:1.4!important;border-radius:6px!important;padding:9px 12px!important;box-shadow:0 14px 36px rgba(0,0,0,.6)!important}
   .atlas .maplibregl-popup-content b{color:#fff}
@@ -517,12 +520,12 @@
           <li><span class="ln" style="background:#2a9d8f"></span> Kayak</li>
           <li><span class="ln" style="background:#118ab2"></span> Boat / ferry</li>
           <li><span class="ln" style="background:#e9c46a"></span> Hitchhiking</li>
-          <li><span class="ln" style="background:#8ecae6"></span> Train</li>
-          <li><span class="dt" style="background:#e0873b"></span> Planning</li>
-          <li><span class="dt" style="background:#d9c25a"></span> Dreaming</li>
+          <li><span class="ln" style="background:#fff"></span> Planning (Sept.)</li>
+          <li><span class="ln" style="background:#ff3b30"></span> Dreaming</li>
         </ul>
       </div>
     </div>
+    <div class="atlas-cta-row"><button class="atlas-cta" id="see-expedition" type="button">See the current expedition</button></div>
   </section>
 
   <script>
@@ -534,7 +537,7 @@
     function initAtlas(){
       if(!window.maplibregl) return;
       var ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
-      var map=new maplibregl.Map({container:'atlas-map', attributionControl:true, cooperativeGestures:true, center:[10,44], zoom:2.1, minZoom:1.2, maxZoom:16,
+      var map=new maplibregl.Map({container:'atlas-map', attributionControl:true, center:[10,44], zoom:2.1, minZoom:1.2, maxZoom:16, fadeDuration:0,
         style:{version:8, projection:{type:'globe'},
           sources:{sat:{type:'raster',tiles:[ESRI],tileSize:256,maxzoom:19,attribution:'Esri, Maxar, Earthstar Geographics'}},
           layers:[{id:'bg',type:'background',paint:{'background-color':'#05070d'}},{id:'sat',type:'raster',source:'sat'}]}});
@@ -544,9 +547,11 @@
         map.addSource('routes',{type:'geojson',data:'atlas/routes.geojson'});
         map.addLayer({id:'routes-solid',type:'line',source:'routes',filter:['!=',['get','dashed'],1],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],1,1.4,4,2.8,8,4.5],'line-opacity':0.95}});
         map.addLayer({id:'routes-dash',type:'line',source:'routes',filter:['all',['==',['get','dashed'],1],['==',['get','cat'],'done']],layout:{'line-cap':'butt','line-join':'round'},paint:{'line-color':['get','color'],'line-width':2,'line-dasharray':[2,2],'line-opacity':0.9}});
-        map.addLayer({id:'routes-dot',type:'line',source:'routes',filter:['==',['get','cat'],'dream'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],1,2,6,3.2],'line-dasharray':[0,2.3],'line-opacity':0.95}});
+        map.addLayer({id:'routes-plan-casing',type:'line',source:'routes',filter:['==',['get','cat'],'plan'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#05070d','line-width':['interpolate',['linear'],['zoom'],3,3.2,9,9],'line-opacity':0.85}});
+        map.addLayer({id:'routes-plan',type:'line',source:'routes',filter:['==',['get','cat'],'plan'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],3,1.8,9,5],'line-opacity':1}});
+        map.addLayer({id:'routes-dot',type:'line',source:'routes',filter:['==',['get','cat'],'dream'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],1,2.6,6,4.6],'line-dasharray':[0,2],'line-opacity':1}});
         map.addSource('places',{type:'geojson',data:'atlas/places.geojson'});
-        map.addLayer({id:'places',type:'circle',source:'places',paint:{'circle-radius':6,'circle-color':['get','color'],'circle-stroke-width':1.6,'circle-stroke-color':'#05070d'}});
+        map.addLayer({id:'places',type:'circle',source:'places',paint:{'circle-radius':['case',['==',['get','kind'],'stage'],3.4,6],'circle-color':['get','color'],'circle-stroke-width':1.4,'circle-stroke-color':'#05070d'}});
         var popup=new maplibregl.Popup({closeButton:false,closeOnClick:false});
         function on(layer,html){
           map.on('mouseenter',layer,function(e){ map.getCanvas().style.cursor='pointer'; var f=e.features[0]; popup.setLngLat(f.geometry.type==='Point'?f.geometry.coordinates:e.lngLat).setHTML(html(f.properties)).addTo(map); });
@@ -556,6 +561,8 @@
         on('routes-solid',function(p){ return p.label||''; });
         on('routes-dash',function(p){ return p.label||''; });
         on('routes-dot',function(p){ return p.label||''; });
+        on('routes-plan',function(p){ return p.label||''; });
+        var _b=document.getElementById('see-expedition'); if(_b) _b.addEventListener('click',function(){ map.flyTo({center:[2.99,39.62],zoom:8.4,pitch:35,duration:2600}); });
         on('places',function(p){ return p.label||''; });
       });
     }
