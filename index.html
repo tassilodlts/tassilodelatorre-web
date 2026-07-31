@@ -545,9 +545,9 @@
           map.on('mousemove',layer,function(e){ if(e.features[0].geometry.type!=='Point') popup.setLngLat(e.lngLat); });
           map.on('mouseleave',layer,function(){ map.getCanvas().style.cursor=''; popup.remove(); });
         }
-        on('routes-solid',function(p){ return (p.from?('<b>'+p.from+'</b>'):'')+(p.to?(' to <b>'+p.to+'</b>'):'')+'<br>'+p.mode+' · '+p.km+' km'; });
-        on('routes-dash',function(p){ return (p.from?('<b>'+p.from+'</b>'):'')+(p.to?(' to <b>'+p.to+'</b>'):'')+'<br>'+p.mode+' · '+p.km+' km'; });
-        on('places',function(p){ return '<b>'+p.name+'</b><br>'+p.catlabel; });
+        on('routes-solid',function(p){ return p.label||''; });
+        on('routes-dash',function(p){ return p.label||''; });
+        on('places',function(p){ return p.label||''; });
       });
     }
     if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){start(); io.disconnect();}});},{rootMargin:'350px'}); io.observe(sec); }
