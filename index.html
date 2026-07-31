@@ -248,20 +248,22 @@
     .marquee:active .marquee-track{animation-play-state:paused}
   }
 
-  /* ---------- atlas globe ---------- */
-  .atlas{background:var(--bg-2);border-top:1px solid var(--line)}
-  .globe-block{position:relative;margin-top:clamp(28px,5vw,56px);display:flex;flex-direction:column;align-items:center;gap:20px}
-  .globe-mount{position:relative;width:100%;max-width:560px;aspect-ratio:1/1;cursor:grab;touch-action:pan-y}
-  .globe-mount:active{cursor:grabbing}
-  .globe-mount canvas{display:block;width:100%!important;height:100%!important}
-  .globe-tip{position:absolute;pointer-events:none;transform:translate(-50%,-150%);background:var(--bg);color:var(--ink);border:1px solid var(--line);font-family:var(--sans);font-size:12px;letter-spacing:.02em;padding:5px 10px;border-radius:4px;white-space:nowrap;z-index:3;box-shadow:0 8px 24px rgba(0,0,0,.45)}
-  .globe-legend{list-style:none;display:flex;gap:22px;flex-wrap:wrap;justify-content:center;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-  .globe-legend li{display:flex;align-items:center;gap:8px}
-  .globe-legend .gd{width:10px;height:10px;border-radius:50%;display:inline-block}
-  .globe-legend .done{background:#5fbf8a}
-  .globe-legend .plan{background:#e0873b}
-  .globe-legend .dream{background:#d9c25a}
-  .globe-hint{font-size:.82rem;color:var(--muted);letter-spacing:.02em;text-align:center;margin-top:-4px}
+
+  /* ---------- atlas globe (maplibre) ---------- */
+  .atlas{background:#05070d;border-top:1px solid var(--line);padding-bottom:0}
+  .globe-map{position:relative;width:100%;height:min(76vh,700px);margin-top:clamp(22px,4vw,44px);background:#05070d;border-top:1px solid var(--line)}
+  #atlas-map{position:absolute;inset:0}
+  #atlas-map canvas{outline:none}
+  .maplibregl-ctrl-attrib{font-size:9px}
+  .map-legend{position:absolute;left:14px;bottom:14px;z-index:2;background:rgba(5,7,13,.76);border:1px solid var(--line);border-radius:8px;padding:11px 13px;color:var(--ink);max-width:min(86vw,210px)}
+  .map-legend h4{font-family:var(--sans);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 7px;font-weight:600}
+  .map-legend ul{list-style:none;margin:0;padding:0}
+  .map-legend li{display:flex;align-items:center;gap:9px;margin:5px 0;font-size:11.5px;letter-spacing:.02em}
+  .map-legend .ln{width:20px;height:3px;border-radius:2px;flex:none}
+  .map-legend .dt{width:9px;height:9px;border-radius:50%;flex:none}
+  .maplibregl-popup-content{background:var(--bg);color:var(--ink);border:1px solid var(--line);font-family:var(--sans);font-size:12px;border-radius:5px;padding:8px 11px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+  .maplibregl-popup-content b{color:#fff}
+  .maplibregl-popup-tip{display:none}
 </style>
 </head>
 <body>
@@ -495,92 +497,60 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <p class="eyebrow">The Atlas</p>
-        <h2 id="atlas-h">Where the journeys have been, and where they are going.</h2>
-        <p class="lede">A living globe of the expeditions: the ones already done, the ones being planned, and the ones still just a dream.</p>
+        <h2 id="atlas-h">Every journey, on one globe.</h2>
+        <p class="lede">The real routes, by bike, kayak, boat and thumb, from the Camino to Kyrgyzstan. Spin the globe, zoom in, follow the lines across the world.</p>
       </div>
-      <div class="globe-block reveal">
-        <div class="globe-mount" id="globe-mount" role="img" aria-label="Interactive 3D globe marking past, planned and dreamed journeys"></div>
-        <div class="globe-tip" id="globe-tip" hidden></div>
-        <ul class="globe-legend">
-          <li><span class="gd done"></span> Done</li>
-          <li><span class="gd plan"></span> Planning</li>
-          <li><span class="gd dream"></span> Dreaming</li>
+    </div>
+    <div class="globe-map reveal">
+      <div id="atlas-map" role="application" aria-label="Interactive satellite globe of Tassilo's journeys"></div>
+      <div class="map-legend">
+        <h4>By transport</h4>
+        <ul>
+          <li><span class="ln" style="background:#f4a261"></span> Bike</li>
+          <li><span class="ln" style="background:#2a9d8f"></span> Kayak</li>
+          <li><span class="ln" style="background:#118ab2"></span> Boat / ferry</li>
+          <li><span class="ln" style="background:#e9c46a"></span> Hitchhiking</li>
+          <li><span class="ln" style="background:#8ecae6"></span> Train</li>
+          <li><span class="dt" style="background:#e0873b"></span> Planning</li>
+          <li><span class="dt" style="background:#d9c25a"></span> Dreaming</li>
         </ul>
-        <p class="globe-hint">Drag to spin the globe. Hover a point to see the place.</p>
       </div>
     </div>
   </section>
 
   <script>
   (function(){
-    var sec=document.getElementById('atlas'); if(!sec) return;
-    var started=false;
+    var sec=document.getElementById('atlas'); if(!sec) return; var started=false;
     function start(){ if(started) return; started=true;
-      var s=document.createElement('script'); s.src='atlas/three.min.js'; s.onload=initGlobe; document.body.appendChild(s); }
-    function initGlobe(){
-      var mount=document.getElementById('globe-mount'), tip=document.getElementById('globe-tip');
-      if(!mount||!window.THREE) return; var THREE=window.THREE;
-      var TRIPS=[
-        {n:'Danube by kayak',lat:49.02,lng:12.10,c:'done'},
-        {n:'Corsica',lat:42.15,lng:9.10,c:'done'},
-        {n:'Naples, Monte Molare',lat:40.85,lng:14.27,c:'done'},
-        {n:'Artvin, Turkey',lat:41.18,lng:41.82,c:'done'},
-        {n:'Rome',lat:41.90,lng:12.49,c:'done'},
-        {n:'Garmisch-Partenkirchen',lat:47.49,lng:11.10,c:'done'},
-        {n:'Schoenried, Switzerland',lat:46.49,lng:7.27,c:'done'},
-        {n:'Madrid',lat:40.42,lng:-3.70,c:'done'},
-        {n:'Mallorca',lat:39.60,lng:2.95,c:'plan'},
-        {n:'Menorca',lat:39.95,lng:4.12,c:'plan'},
-        {n:'Crete',lat:35.24,lng:24.81,c:'plan'},
-        {n:'Patagonia',lat:-50.5,lng:-73.0,c:'dream'},
-        {n:'Lofoten, Norway',lat:68.2,lng:14.0,c:'dream'},
-        {n:'Greenland',lat:64.2,lng:-51.7,c:'dream'}
-      ];
-      var COL={done:0x5fbf8a,plan:0xe0873b,dream:0xd9c25a};
-      var W=mount.clientWidth||480;
-      var renderer=new THREE.WebGLRenderer({alpha:true,antialias:true});
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2)); renderer.setSize(W,W);
-      if('outputEncoding' in renderer) renderer.outputEncoding=THREE.sRGBEncoding;
-      mount.appendChild(renderer.domElement);
-      var scene=new THREE.Scene();
-      var cam=new THREE.PerspectiveCamera(34,1,0.1,100); cam.position.set(0,0,3.4);
-      var loader=new THREE.TextureLoader();
-      var day=loader.load('atlas/earth_day.jpg'); if('encoding' in day) day.encoding=THREE.sRGBEncoding;
-      var earth=new THREE.Mesh(new THREE.SphereGeometry(1,64,64), new THREE.MeshPhongMaterial({map:day,specularMap:loader.load('atlas/earth_spec.jpg'),specular:new THREE.Color(0x2b3c58),shininess:14}));
-      scene.add(earth);
-      var clouds=new THREE.Mesh(new THREE.SphereGeometry(1.012,48,48), new THREE.MeshPhongMaterial({map:loader.load('atlas/earth_clouds.png'),transparent:true,opacity:0.55,depthWrite:false}));
-      earth.add(clouds);
-      var atmo=new THREE.Mesh(new THREE.SphereGeometry(1.14,48,48), new THREE.ShaderMaterial({transparent:true,side:THREE.BackSide,blending:THREE.AdditiveBlending,depthWrite:false,uniforms:{glow:{value:new THREE.Color(0x4d8ae0)}},vertexShader:'varying vec3 vN; void main(){ vN=normalize(normalMatrix*normal); gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',fragmentShader:'varying vec3 vN; uniform vec3 glow; void main(){ float i=pow(0.66-dot(vN,vec3(0.0,0.0,1.0)),4.0); gl_FragColor=vec4(glow,1.0)*clamp(i,0.0,1.0)*0.5;}'}));
-      scene.add(atmo);
-      var sun=new THREE.DirectionalLight(0xfff3e4,1.3); sun.position.set(-1.5,0.55,1.1); scene.add(sun);
-      scene.add(new THREE.AmbientLight(0x8092b0,0.6));
-      function toVec(lat,lng,r){var phi=(90-lat)*Math.PI/180,th=(lng+180)*Math.PI/180;return new THREE.Vector3(-r*Math.sin(phi)*Math.cos(th),r*Math.cos(phi),r*Math.sin(phi)*Math.sin(th));}
-      var markers=[], mGeo=new THREE.SphereGeometry(0.02,14,14);
-      TRIPS.forEach(function(t){
-        var m=new THREE.Mesh(mGeo,new THREE.MeshBasicMaterial({color:COL[t.c]})); m.position.copy(toVec(t.lat,t.lng,1.012)); m.userData=t; earth.add(m); markers.push(m);
-        var halo=new THREE.Mesh(new THREE.SphereGeometry(0.038,14,14),new THREE.MeshBasicMaterial({color:COL[t.c],transparent:true,opacity:0.22,depthWrite:false})); halo.position.copy(m.position); earth.add(halo);
+      var l=document.createElement('link'); l.rel='stylesheet'; l.href='atlas/maplibre-gl.css'; document.head.appendChild(l);
+      var s=document.createElement('script'); s.src='atlas/maplibre-gl.js'; s.onload=initAtlas; document.body.appendChild(s); }
+    function initAtlas(){
+      if(!window.maplibregl) return;
+      var ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+      var map=new maplibregl.Map({container:'atlas-map', attributionControl:true, cooperativeGestures:true, center:[10,44], zoom:2.1, minZoom:1.2, maxZoom:16,
+        style:{version:8, projection:{type:'globe'},
+          sources:{sat:{type:'raster',tiles:[ESRI],tileSize:256,maxzoom:19,attribution:'Esri, Maxar, Earthstar Geographics'}},
+          layers:[{id:'bg',type:'background',paint:{'background-color':'#05070d'}},{id:'sat',type:'raster',source:'sat'}]}});
+      map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
+      map.on('style.load',function(){ if(map.setFog) map.setFog({'color':'rgba(24,34,54,0.5)','high-color':'#1b3a63','space-color':'#05070d','horizon-blend':0.05,'star-intensity':0.12}); });
+      map.on('load',function(){
+        map.addSource('routes',{type:'geojson',data:'atlas/routes.geojson'});
+        map.addLayer({id:'routes-solid',type:'line',source:'routes',filter:['!=',['get','dashed'],1],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],1,1.4,4,2.8,8,4.5],'line-opacity':0.95}});
+        map.addLayer({id:'routes-dash',type:'line',source:'routes',filter:['==',['get','dashed'],1],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':2,'line-dasharray':[2,2],'line-opacity':0.9}});
+        map.addSource('places',{type:'geojson',data:'atlas/places.geojson'});
+        map.addLayer({id:'places',type:'circle',source:'places',paint:{'circle-radius':6,'circle-color':['get','color'],'circle-stroke-width':1.6,'circle-stroke-color':'#05070d'}});
+        var popup=new maplibregl.Popup({closeButton:false,closeOnClick:false});
+        function on(layer,html){
+          map.on('mouseenter',layer,function(e){ map.getCanvas().style.cursor='pointer'; var f=e.features[0]; popup.setLngLat(f.geometry.type==='Point'?f.geometry.coordinates:e.lngLat).setHTML(html(f.properties)).addTo(map); });
+          map.on('mousemove',layer,function(e){ if(e.features[0].geometry.type!=='Point') popup.setLngLat(e.lngLat); });
+          map.on('mouseleave',layer,function(){ map.getCanvas().style.cursor=''; popup.remove(); });
+        }
+        on('routes-solid',function(p){ return (p.from?('<b>'+p.from+'</b>'):'')+(p.to?(' to <b>'+p.to+'</b>'):'')+'<br>'+p.mode+' · '+p.km+' km'; });
+        on('routes-dash',function(p){ return (p.from?('<b>'+p.from+'</b>'):'')+(p.to?(' to <b>'+p.to+'</b>'):'')+'<br>'+p.mode+' · '+p.km+' km'; });
+        on('places',function(p){ return '<b>'+p.name+'</b><br>'+p.catlabel; });
       });
-      earth.rotation.x=0.18; earth.rotation.y=-0.6;
-      var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var dragging=false,lx=0,ly=0,vel=0.0016,dom=renderer.domElement;
-      var ray=new THREE.Raycaster(), ndc=new THREE.Vector2();
-      function hover(cx,cy){
-        var r=dom.getBoundingClientRect();
-        ndc.x=((cx-r.left)/r.width)*2-1; ndc.y=-((cy-r.top)/r.height)*2+1; ray.setFromCamera(ndc,cam);
-        var hits=ray.intersectObjects(markers.concat([earth])); var obj=hits.length?hits[0].object:null;
-        if(obj&&obj.userData&&obj.userData.n){ var b=mount.getBoundingClientRect(); tip.textContent=obj.userData.n; tip.style.left=(cx-b.left)+'px'; tip.style.top=(cy-b.top)+'px'; tip.hidden=false; dom.style.cursor='pointer'; }
-        else { tip.hidden=true; dom.style.cursor='grab'; }
-      }
-      dom.addEventListener('pointerdown',function(e){dragging=true;lx=e.clientX;ly=e.clientY;tip.hidden=true;});
-      window.addEventListener('pointermove',function(e){
-        if(dragging){var dx=e.clientX-lx,dy=e.clientY-ly;lx=e.clientX;ly=e.clientY;earth.rotation.y+=dx*0.005;earth.rotation.x=Math.max(-1.1,Math.min(1.1,earth.rotation.x+dy*0.005));}
-        else if(e.target===dom){hover(e.clientX,e.clientY);}
-      });
-      window.addEventListener('pointerup',function(){dragging=false;});
-      window.addEventListener('resize',function(){var w=mount.clientWidth;renderer.setSize(w,w);});
-      (function tick(){requestAnimationFrame(tick); if(!dragging&&!reduce) earth.rotation.y+=vel; if(!reduce) clouds.rotation.y+=0.0004; renderer.render(scene,cam);})();
     }
-    if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){start(); io.disconnect();}});},{rootMargin:'250px'}); io.observe(sec); }
+    if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){start(); io.disconnect();}});},{rootMargin:'350px'}); io.observe(sec); }
     else start();
   })();
   </script>
