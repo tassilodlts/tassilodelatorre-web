@@ -254,16 +254,23 @@
   .globe-map{position:relative;width:100%;height:min(76vh,700px);margin-top:clamp(22px,4vw,44px);background:#05070d;border-top:1px solid var(--line)}
   #atlas-map{position:absolute;inset:0}
   #atlas-map canvas{outline:none}
-  .maplibregl-ctrl-attrib{font-size:9px}
+  .atlas .maplibregl-ctrl-attrib{font-size:9px}
+  .atlas .maplibregl-popup{z-index:5}
+  .atlas .maplibregl-popup-content{background:var(--bg-2)!important;color:var(--ink)!important;border:1px solid rgba(233,223,208,.30)!important;font-family:var(--sans)!important;font-size:12.5px!important;line-height:1.4!important;border-radius:6px!important;padding:9px 12px!important;box-shadow:0 14px 36px rgba(0,0,0,.6)!important}
+  .atlas .maplibregl-popup-content b{color:#fff}
+  .atlas .maplibregl-popup-anchor-top .maplibregl-popup-tip{border-bottom-color:var(--bg-2)!important}
+  .atlas .maplibregl-popup-anchor-bottom .maplibregl-popup-tip{border-top-color:var(--bg-2)!important}
+  .atlas .maplibregl-popup-anchor-left .maplibregl-popup-tip{border-right-color:var(--bg-2)!important}
+  .atlas .maplibregl-popup-anchor-right .maplibregl-popup-tip{border-left-color:var(--bg-2)!important}
+  .atlas .maplibregl-ctrl-group{background:var(--bg-2)!important;border:1px solid var(--line)!important;box-shadow:none!important}
+  .atlas .maplibregl-ctrl-group button+button{border-top:1px solid var(--line)!important}
+  .atlas .maplibregl-ctrl button .maplibregl-ctrl-icon{filter:invert(1) brightness(1.5)}
   .map-legend{position:absolute;left:14px;bottom:14px;z-index:2;background:rgba(5,7,13,.76);border:1px solid var(--line);border-radius:8px;padding:11px 13px;color:var(--ink);max-width:min(86vw,210px)}
   .map-legend h4{font-family:var(--sans);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 7px;font-weight:600}
   .map-legend ul{list-style:none;margin:0;padding:0}
   .map-legend li{display:flex;align-items:center;gap:9px;margin:5px 0;font-size:11.5px;letter-spacing:.02em}
   .map-legend .ln{width:20px;height:3px;border-radius:2px;flex:none}
   .map-legend .dt{width:9px;height:9px;border-radius:50%;flex:none}
-  .maplibregl-popup-content{background:var(--bg);color:var(--ink);border:1px solid var(--line);font-family:var(--sans);font-size:12px;border-radius:5px;padding:8px 11px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
-  .maplibregl-popup-content b{color:#fff}
-  .maplibregl-popup-tip{display:none}
 </style>
 </head>
 <body>
@@ -536,7 +543,8 @@
       map.on('load',function(){
         map.addSource('routes',{type:'geojson',data:'atlas/routes.geojson'});
         map.addLayer({id:'routes-solid',type:'line',source:'routes',filter:['!=',['get','dashed'],1],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],1,1.4,4,2.8,8,4.5],'line-opacity':0.95}});
-        map.addLayer({id:'routes-dash',type:'line',source:'routes',filter:['==',['get','dashed'],1],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':2,'line-dasharray':[2,2],'line-opacity':0.9}});
+        map.addLayer({id:'routes-dash',type:'line',source:'routes',filter:['all',['==',['get','dashed'],1],['==',['get','cat'],'done']],layout:{'line-cap':'butt','line-join':'round'},paint:{'line-color':['get','color'],'line-width':2,'line-dasharray':[2,2],'line-opacity':0.9}});
+        map.addLayer({id:'routes-dot',type:'line',source:'routes',filter:['==',['get','cat'],'dream'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],1,2,6,3.2],'line-dasharray':[0,2.3],'line-opacity':0.95}});
         map.addSource('places',{type:'geojson',data:'atlas/places.geojson'});
         map.addLayer({id:'places',type:'circle',source:'places',paint:{'circle-radius':6,'circle-color':['get','color'],'circle-stroke-width':1.6,'circle-stroke-color':'#05070d'}});
         var popup=new maplibregl.Popup({closeButton:false,closeOnClick:false});
@@ -547,6 +555,7 @@
         }
         on('routes-solid',function(p){ return p.label||''; });
         on('routes-dash',function(p){ return p.label||''; });
+        on('routes-dot',function(p){ return p.label||''; });
         on('places',function(p){ return p.label||''; });
       });
     }
