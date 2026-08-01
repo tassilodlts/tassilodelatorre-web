@@ -324,6 +324,15 @@
   .field-grid figcaption{margin-top:.5rem;font-size:.8rem;color:var(--muted);letter-spacing:.02em}
   @media(max-width:900px){.field-grid{columns:2}}
   @media(max-width:560px){.field-grid{columns:1}}
+  /* ---------- marco blanco consistente + galeria uniforme ---------- */
+  .strip img,.field-grid img,.prints-grid img,.nuka-media img{border:clamp(6px,0.7vw,9px) solid #fff;border-radius:2px;box-shadow:0 7px 22px rgba(0,0,0,.13)}
+  .prints-grid img{width:100%;height:auto;display:block}
+  .portrait-stack .study{border-color:#fff;box-shadow:0 20px 50px rgba(0,0,0,.30)}
+  .field-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,30px)}
+  .field-grid figure{margin:0;break-inside:auto}
+  .field-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+  @media(max-width:900px){.field-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.field-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -419,7 +428,6 @@
       <div class="field-grid reveal">
         <figure><img src="photos/p19.jpg" loading="lazy" alt="A rock-cut classical tomb facade with a figure in a sleeping bag between the pillars"><figcaption>A bed among the columns</figcaption></figure>
         <figure><img src="photos/p23.jpg" loading="lazy" alt="Tassilo with Fluffo, his black dog, among Roman colonnade ruins at sunset"><figcaption>Golden hour with Fluffo</figcaption></figure>
-        <figure><img src="photos/p25.jpg" loading="lazy" alt="A stone ruin perched on a sheer cliff above a dark valley, a tiny figure in the doorway"><figcaption>The house on the cliff</figcaption></figure>
         <figure><img src="photos/p24.jpg" loading="lazy" alt="An intact Roman tomb-temple with columns and a small figure inside in golden light"><figcaption>The temple still stands</figcaption></figure>
         <figure><img src="photos/p26.jpg" loading="lazy" alt="A man reading in a hammock strung over trees, a loaded kayak on the bank"><figcaption>Slung above the river</figcaption></figure>
         <figure><img src="photos/p22.jpg" loading="lazy" alt="A man walking the surf beside a beached, rusting fishing trawler at golden hour"><figcaption>The stranded giant</figcaption></figure>
