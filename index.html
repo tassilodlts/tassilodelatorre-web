@@ -623,10 +623,10 @@
       map.dragRotate.enable(); map.touchZoomRotate.enableRotation();
       try{ map.touchPitch.enable(); }catch(e){}
       map.boxZoom.disable();
-      (function(){ var sDrag=false,sx=0,sy=0;
-        map.getCanvasContainer().addEventListener('mousedown',function(e){ if(e.shiftKey){sDrag=true;sx=e.clientX;sy=e.clientY;e.preventDefault();} });
-        window.addEventListener('mousemove',function(e){ if(!sDrag)return; var dx=e.clientX-sx,dy=e.clientY-sy; sx=e.clientX; sy=e.clientY; map.setPitch(Math.max(0,Math.min(85,map.getPitch()-dy*0.35))); map.setBearing(map.getBearing()+dx*0.4); });
-        window.addEventListener('mouseup',function(){ sDrag=false; }); })();
+      (function(){ var sDrag=false,sx=0,sy=0; var cc=map.getCanvasContainer();
+        cc.addEventListener('mousedown',function(e){ if(!e.shiftKey)return; sDrag=true; sx=e.clientX; sy=e.clientY; map.dragPan.disable(); e.preventDefault(); e.stopPropagation(); }, true);
+        window.addEventListener('mousemove',function(e){ if(!sDrag)return; var dx=e.clientX-sx,dy=e.clientY-sy; sx=e.clientX; sy=e.clientY; map.setPitch(Math.max(0,Math.min(85,map.getPitch()-dy*0.5))); map.setBearing(map.getBearing()+dx*0.6); },true);
+        window.addEventListener('mouseup',function(){ if(sDrag){ sDrag=false; map.dragPan.enable(); } },true); })();
       map.on('style.load',function(){ if(map.setSky) map.setSky({'sky-color':'#05070d','horizon-color':'#1b3a63','fog-color':'#182236','sky-horizon-blend':0.8,'horizon-fog-blend':0.6,'fog-ground-blend':0.5,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,10,1,12,0]}); });
       map.on('load',function(){
         map.addSource('dem',{type:'raster-dem',tiles:['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'],encoding:'terrarium',tileSize:256,maxzoom:13});
