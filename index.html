@@ -275,23 +275,27 @@
   .map-legend .ln{width:20px;height:3px;border-radius:2px;flex:none}
   .map-legend .dt{width:9px;height:9px;border-radius:50%;flex:none}
 
+
   /* ---------- nuka project ---------- */
   .nuka{background:var(--bg-2);border-top:1px solid var(--line)}
-  .nuka-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
-  .nuka-media img{width:100%;height:auto;border-radius:2px}
-  .nuka-media figcaption{margin-top:.7rem;font-size:.8rem;color:var(--muted);letter-spacing:.02em}
-  .nuka h2{max-width:12em}
+  .nuka-grid{display:grid;grid-template-columns:0.92fr 1.08fr;gap:clamp(30px,5vw,72px);align-items:center}
+  .nuka-media{margin:0}
+  .nuka-media img{width:100%;height:auto;border-radius:3px;box-shadow:0 30px 70px rgba(0,0,0,.42)}
+  .nuka-media figcaption{margin-top:.8rem;font-size:.8rem;color:var(--muted);letter-spacing:.02em}
+  .nuka h2{max-width:11em;margin-top:1rem}
   .nuka .lede{max-width:40em}
-  .nuka-sub{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:1.8rem 0 .9rem}
-  .nuka-ways{list-style:none;padding:0;margin:0 0 1.8rem;display:flex;flex-direction:column;gap:.65rem}
-  .nuka-ways li{padding-left:1rem;border-left:2px solid var(--rust);color:var(--ink);font-size:.98rem;line-height:1.5}
-  .nuka-ways b{color:#fff;letter-spacing:.02em}
+  .nuka .lede em{color:#e3cdb4;font-style:italic}
+  .nuka-sub{font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:2rem 0 1rem}
+  .nuka-ways{list-style:none;padding:0;margin:0 0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .nuka-ways li{background:rgba(233,223,208,.045);border:1px solid var(--line);border-radius:6px;padding:15px 17px}
+  .nuka-ways .w{font-family:var(--serif);font-size:1.08rem;color:#fff;display:block;margin-bottom:.3rem}
+  .nuka-ways .d{font-size:.85rem;color:var(--muted);line-height:1.46;display:block}
   .nuka-cta{display:flex;gap:1rem 1.7rem;flex-wrap:wrap;align-items:center}
   .nuka .cta{background:var(--rust);color:#fff;text-decoration:none;font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:1rem 2.1rem;transition:background .25s}
   .nuka .cta:hover{background:var(--rust-deep)}
   .nuka .cta-ghost{color:var(--muted);text-decoration:none;font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid transparent;padding-bottom:2px}
   .nuka .cta-ghost:hover{border-bottom-color:var(--rust);color:var(--ink)}
-  @media(max-width:820px){.nuka-grid{grid-template-columns:1fr}}
+  @media(max-width:820px){.nuka-grid{grid-template-columns:1fr}.nuka-ways{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -314,7 +318,6 @@
         <a href="#expeditions">Expeditions</a>
         <a href="#about">About</a>
         <a href="#partners">Partners</a>
-        <a href="#atlas">Atlas</a>
         <a href="#nuka">Nuka</a>
         <a href="#prints">Prints</a>
         <a class="nav-keep" href="#contact">Contact</a>
@@ -598,14 +601,14 @@
       </figure>
       <div class="nuka-body reveal">
         <p class="eyebrow">A project to support</p>
-        <h2 id="nuka-h">Nuka Sakdari, a monastery worth saving.</h2>
-        <p class="lede">High above a roadless valley in Artvin, Türkiye, stands a ninth-century Georgian basilica of the Tao-Klarjeti school: its stone roof open to the sky, its walls deteriorating, never restored and scarcely documented. With a small team of architects I am building the first complete architectural record in its eleven-hundred-year history, and using film to fund its emergency stabilisation. We fund, document, advocate and film, always under the authority of the Ministry of Culture. We do not touch the stones.</p>
-        <p class="nuka-sub">How you can help</p>
+        <h2 id="nuka-h">Eleven hundred years old, and running out of time.</h2>
+        <p class="lede">High above a roadless valley in Artvin stands <em>Nuka Sakdari</em>, a ninth-century Georgian basilica of the Tao-Klarjeti school: its stone roof open to the sky, its walls deteriorating, never restored and scarcely documented. With a small team of architects I am making the first complete architectural record in its history, and using film to fund its emergency stabilisation. We fund, document, advocate and film, always under the authority of the Ministry of Culture. We do not touch the stones.</p>
+        <p class="nuka-sub">Ways to help</p>
         <ul class="nuka-ways">
-          <li><b>Gear</b>: cameras, a drone, and access and documentation kit for the survey.</li>
-          <li><b>Funding</b>: to pay for the architectural survey and the emergency stabilisation.</li>
-          <li><b>Contacts</b>: introductions to heritage bodies, foundations, film funds and Turkish authorities.</li>
-          <li><b>Experience</b>: conservation architects, structural engineers, photogrammetry, Georgian-heritage experts, film.</li>
+          <li><span class="w">Gear</span><span class="d">Cameras, a drone, and access and documentation kit for the survey.</span></li>
+          <li><span class="w">Funding</span><span class="d">To pay for the architectural survey and the emergency stabilisation.</span></li>
+          <li><span class="w">Contacts</span><span class="d">Heritage bodies, foundations, film funds, Turkish authorities.</span></li>
+          <li><span class="w">Experience</span><span class="d">Conservation architects, engineers, photogrammetry, Georgian-heritage experts, film.</span></li>
         </ul>
         <div class="nuka-cta">
           <a class="cta" href="mailto:tassilo@tassilodelatorre.com?subject=Nuka%20Sakdari%20support">Support the project</a>
