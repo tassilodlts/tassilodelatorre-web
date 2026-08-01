@@ -311,6 +311,7 @@
   .atlas{background:var(--bg-2)}
   .map-legend{color:#f4efe3}
   .map-legend h4{color:#c7c8ae}
+  .map-hint{margin-top:10px;font-size:10.5px;letter-spacing:.04em;color:#9a9c86;line-height:1.5}
   .atlas .maplibregl-ctrl-group{background:#20241a!important;border:1px solid rgba(255,255,255,.18)!important}
   .atlas .maplibregl-popup-content{background:#20241a!important;color:#f4efe3!important;border:1px solid rgba(255,255,255,.20)!important}
   .atlas .maplibregl-popup-content b{color:#fff}
@@ -599,6 +600,7 @@
           <li><span class="ln" style="background:#fff"></span> Planning (Sept.)</li>
           <li><span class="ln" style="background:#ff3b30"></span> Dreaming</li>
         </ul>
+        <p class="map-hint">Drag to spin · scroll to zoom · Shift + drag to tilt</p>
       </div>
     </div>
     <div class="atlas-cta-row"><button class="atlas-cta" id="see-expedition" type="button">See the current expedition</button></div>
@@ -613,13 +615,22 @@
     function initAtlas(){
       if(!window.maplibregl) return;
       var ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
-      var map=new maplibregl.Map({container:'atlas-map', attributionControl:true, center:[10,44], zoom:2.1, minZoom:1.2, maxZoom:16, fadeDuration:0,
+      var map=new maplibregl.Map({container:'atlas-map', attributionControl:true, center:[10,44], zoom:2.1, minZoom:1.2, maxZoom:17, fadeDuration:0, maxPitch:85, pitchWithRotate:true, dragRotate:true,
         style:{version:8, projection:{type:'globe'},
           sources:{sat:{type:'raster',tiles:[ESRI],tileSize:256,maxzoom:19,attribution:'Esri, Maxar, Earthstar Geographics'}},
           layers:[{id:'bg',type:'background',paint:{'background-color':'#05070d'}},{id:'sat',type:'raster',source:'sat'}]}});
-      map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
+      map.addControl(new maplibregl.NavigationControl({showCompass:true, visualizePitch:true}),'top-right');
+      map.dragRotate.enable(); map.touchZoomRotate.enableRotation();
+      try{ map.touchPitch.enable(); }catch(e){}
+      map.boxZoom.disable();
+      (function(){ var sDrag=false,sx=0,sy=0;
+        map.getCanvasContainer().addEventListener('mousedown',function(e){ if(e.shiftKey){sDrag=true;sx=e.clientX;sy=e.clientY;e.preventDefault();} });
+        window.addEventListener('mousemove',function(e){ if(!sDrag)return; var dx=e.clientX-sx,dy=e.clientY-sy; sx=e.clientX; sy=e.clientY; map.setPitch(Math.max(0,Math.min(85,map.getPitch()-dy*0.35))); map.setBearing(map.getBearing()+dx*0.4); });
+        window.addEventListener('mouseup',function(){ sDrag=false; }); })();
       map.on('style.load',function(){ if(map.setSky) map.setSky({'sky-color':'#05070d','horizon-color':'#1b3a63','fog-color':'#182236','sky-horizon-blend':0.8,'horizon-fog-blend':0.6,'fog-ground-blend':0.5,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,10,1,12,0]}); });
       map.on('load',function(){
+        map.addSource('dem',{type:'raster-dem',tiles:['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'],encoding:'terrarium',tileSize:256,maxzoom:13});
+        if(map.setTerrain) map.setTerrain({source:'dem',exaggeration:1.3});
         map.addSource('routes',{type:'geojson',data:'atlas/routes.geojson'});
         map.addLayer({id:'routes-solid',type:'line',source:'routes',filter:['all',['!=',['get','dashed'],1],['==',['get','cat'],'done']],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],1,1.4,4,2.8,8,4.5],'line-opacity':0.95}});
         map.addLayer({id:'routes-plan-casing',type:'line',source:'routes',filter:['==',['get','cat'],'plan'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#05070d','line-width':['interpolate',['linear'],['zoom'],3,3.2,9,9],'line-opacity':0.85}});
