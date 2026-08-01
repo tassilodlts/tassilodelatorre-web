@@ -331,7 +331,7 @@
 <a class="skip" href="#work">Skip to content</a>
 
 <div class="livebar">
-  <a href="#partners">Partner slots open<span id="live-day"></span> →</a>
+  <a href="#partners">Partner slots open →</a>
 </div>
 
 <div class="hero" id="top">
@@ -690,14 +690,6 @@
 
 <script>
 (function(){
-  /* live day counter, self-updating from the start date */
-  try{
-    var start=new Date('2026-07-30T00:00:00');
-    var now=new Date();
-    var days=Math.floor((now-start)/86400000)+1;
-    var el=document.getElementById('live-day');
-    if(el && days>=1 && days<=90){el.textContent=' · Day '+days;}
-  }catch(e){}
   /* close mobile nav after a link tap */
   try{
     var t=document.getElementById('navtoggle');
