@@ -314,6 +314,15 @@
   .nuka .lede em{color:var(--rust)}
   .nuka-ways li{background:rgba(75,74,61,.06)}
   .nuka-ways .w{color:var(--ink)}
+
+  /* ---------- field gallery ---------- */
+  .field{background:var(--bg)}
+  .field-grid{columns:3;column-gap:clamp(12px,1.6vw,20px);margin-top:clamp(30px,5vw,60px)}
+  .field-grid figure{break-inside:avoid;margin:0 0 clamp(12px,1.6vw,20px)}
+  .field-grid img{width:100%;height:auto;border-radius:2px;display:block}
+  .field-grid figcaption{margin-top:.5rem;font-size:.8rem;color:var(--muted);letter-spacing:.02em}
+  @media(max-width:900px){.field-grid{columns:2}}
+  @media(max-width:560px){.field-grid{columns:1}}
 </style>
 </head>
 <body>
@@ -395,6 +404,32 @@
           <img src="photos/p08.jpg" loading="lazy" alt="A teal hammock strung across a doorway in a derelict plastered room; Tassilo in a red wool hat rests inside it with Fluffo the black dog on his chest">
           <figcaption><span class="no">06</span> Bivouac: a doorway, a hammock, a dog.</figcaption>
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="field" id="field" aria-labelledby="field-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">More from the road</p>
+        <h2 id="field-h">Frames from the expeditions.</h2>
+        <p class="lede">Rivers and ruins, camps and coastlines, and a dog who never misses a launch.</p>
+      </div>
+      <div class="field-grid reveal">
+        <figure><img src="photos/p18.jpg" loading="lazy" alt="Aerial of a whitewashed Andalusian finca in the dehesa with mountains behind at dawn"><figcaption>Cortijo at first light</figcaption></figure>
+        <figure><img src="photos/p21.jpg" loading="lazy" alt="A young man running up a river beach with his black dog, a kayak beside the water"><figcaption>Landfall on the Danube</figcaption></figure>
+        <figure><img src="photos/p19.jpg" loading="lazy" alt="A rock-cut classical tomb facade with a figure in a sleeping bag between the pillars"><figcaption>A bed among the columns</figcaption></figure>
+        <figure><img src="photos/p23.jpg" loading="lazy" alt="A traveller with his black dog among Roman colonnade ruins at sunset"><figcaption>Golden hour with the dog</figcaption></figure>
+        <figure><img src="photos/p25.jpg" loading="lazy" alt="A stone ruin perched on a sheer cliff above a dark valley, a tiny figure in the doorway"><figcaption>The house on the cliff</figcaption></figure>
+        <figure><img src="photos/p24.jpg" loading="lazy" alt="An intact Roman tomb-temple with columns and a small figure inside in golden light"><figcaption>The temple still stands</figcaption></figure>
+        <figure><img src="photos/p26.jpg" loading="lazy" alt="A man reading in a hammock strung over trees, a loaded kayak on the bank"><figcaption>Slung above the river</figcaption></figure>
+        <figure><img src="photos/p22.jpg" loading="lazy" alt="A man walking the surf beside a beached, rusting fishing trawler at golden hour"><figcaption>The stranded giant</figcaption></figure>
+        <figure><img src="photos/p20.jpg" loading="lazy" alt="A man and his dog in a sleeping bag inside a blue-frescoed stone ruin at dawn"><figcaption>Dawn in the ruined chapel</figcaption></figure>
+        <figure><img src="photos/p27.jpg" loading="lazy" alt="An ornate Baroque church interior with a frescoed dome and gilded columns"><figcaption>Under the painted vault</figcaption></figure>
+        <figure><img src="photos/p31.jpg" loading="lazy" alt="A young man caught mid-air leaping by a big riverside tree, kayak and dog on the beach"><figcaption>Leap into the shallows</figcaption></figure>
+        <figure><img src="photos/p28.jpg" loading="lazy" alt="Stepped hillside vineyards with a small stone chapel-gate"><figcaption>Terraces of the Wachau</figcaption></figure>
+        <figure><img src="photos/p29.jpg" loading="lazy" alt="Top-down drone view of a man asleep beside his loaded kayak on the sand"><figcaption>Beached at dusk</figcaption></figure>
+        <figure><img src="photos/p30.jpg" loading="lazy" alt="Aerial of a hammock and a blue kayak on a riverbank in warm evening light"><figcaption>Camp on the gravel bar</figcaption></figure>
       </div>
     </div>
   </section>
