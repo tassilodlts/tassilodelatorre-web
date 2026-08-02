@@ -26,7 +26,7 @@
     --bg:#e8e1cf;
     --bg-2:#e8e1cf;
     --ink:#4b4a3d;
-    --muted:#8b897a;
+    --muted:#676552;
     --rust:#74855a;
     --rust-deep:#5f7047;
     --green:#74855a;
@@ -327,6 +327,20 @@
   .field-grid figcaption{margin-top:.5rem;font-size:.8rem;color:var(--muted);letter-spacing:.02em}
   @media(max-width:900px){.field-grid{columns:2}}
   @media(max-width:560px){.field-grid{columns:1}}
+  /* ===== fixes de contraste, pulido y a11y ===== */
+  .partners .cta.secondary{color:var(--ink);border-color:var(--brown)}
+  .partners .cta.secondary:hover{background:rgba(75,74,61,.06);border-color:var(--ink)}
+  .offer p{color:var(--muted)}
+  .offer li{border-top-color:var(--line)}
+  @media(max-width:720px){nav{box-shadow:0 18px 44px rgba(75,74,61,.30)}}
+  .portrait-stack .study{box-shadow:0 18px 44px rgba(75,74,61,.28)}
+  .nuka-media img{box-shadow:0 20px 48px rgba(75,74,61,.26)}
+  @media(hover:hover){
+    .strip img,.field-grid img,.prints-grid img{transition:filter .35s ease}
+    .strip figure:hover img,.field-grid figure:hover img,.prints-grid figure:hover img{filter:brightness(1.04) saturate(1.04)}
+  }
+  .strip:focus-visible{outline:2px solid var(--rust);outline-offset:3px;border-radius:2px}
+  .navtoggle:focus-visible + .burger{outline:2px solid var(--rust);outline-offset:3px;border-radius:2px}
 </style>
 </head>
 <body>
@@ -334,7 +348,7 @@
 <a class="skip" href="#work">Skip to content</a>
 
 <div class="livebar">
-  <a href="#partners">Partner slots open →</a>
+  <span class="dot" aria-hidden="true"></span><a href="#partners">Partner slots open →</a>
 </div>
 
 <div class="hero" id="top">
@@ -342,7 +356,7 @@
     <div class="wrap bar">
       <a class="brand" href="#top">Tassilo de la Torre</a>
       <input type="checkbox" id="navtoggle" class="navtoggle" aria-label="Toggle menu">
-      <label for="navtoggle" class="burger" tabindex="0" aria-hidden="true">&#9776;</label>
+      <label for="navtoggle" class="burger" aria-hidden="true">&#9776;</label>
       <nav aria-label="Main">
         <a href="#work">Work</a>
         <a href="#architecture">Architecture</a>
@@ -385,27 +399,27 @@
 
       <div class="gallery">
         <figure class="g1 reveal">
-          <img src="photos/p02.jpg" loading="lazy" alt="Tassilo standing upright on his loaded folding kayak, paddle raised, gliding a mirror-calm Danube at golden hour with Fluffo at the bow and the neoclassical Walhalla temple on the wooded hill behind">
+          <img width="1800" height="1359" decoding="async" src="photos/p02.jpg" loading="lazy" alt="Tassilo standing upright on his loaded folding kayak, paddle raised, gliding a mirror-calm Danube at golden hour with Fluffo at the bow and the neoclassical Walhalla temple on the wooded hill behind">
           <figcaption><span class="no">01</span> The Danube beneath the Walhalla. EUROPA, fully loaded, Fluffo at the bow.</figcaption>
         </figure>
         <figure class="g2 reveal">
-          <img src="photos/p06.jpg" loading="lazy" alt="Drone view straight down onto a weathered wooden boat moored at a green riverbank, Tassilo's folding kayak tied alongside">
+          <img width="1440" height="1079" decoding="async" src="photos/p06.jpg" loading="lazy" alt="Drone view straight down onto a weathered wooden boat moored at a green riverbank, Tassilo's folding kayak tied alongside">
           <figcaption><span class="no">02</span> The river, straight down, by drone.</figcaption>
         </figure>
         <figure class="g3 reveal">
-          <img src="photos/p09.jpg" loading="lazy" alt="A small tent pitched on the rocky summit of Monte Molare at dawn, Tassilo on the crag above a sea of pink mist, the Bay of Naples and Vesuvius on the horizon">
+          <img width="1440" height="1080" decoding="async" src="photos/p09.jpg" loading="lazy" alt="A small tent pitched on the rocky summit of Monte Molare at dawn, Tassilo on the crag above a sea of pink mist, the Bay of Naples and Vesuvius on the horizon">
           <figcaption><span class="no">03</span> Dawn on Monte Molare, the Bay of Naples and Vesuvius behind.</figcaption>
         </figure>
         <figure class="g4 reveal">
-          <img src="photos/p20.jpg" loading="lazy" alt="Tassilo and Fluffo, his black dog, asleep in a sleeping bag inside Nuka Sakdari, the frescoed ninth-century Georgian basilica, at dawn">
+          <img width="1281" height="1600" decoding="async" src="photos/p20.jpg" loading="lazy" alt="Tassilo and Fluffo, his black dog, asleep in a sleeping bag inside Nuka Sakdari, the frescoed ninth-century Georgian basilica, at dawn">
           <figcaption><span class="no">04</span> Dawn inside Nuka Sakdari, Fluffo still asleep.</figcaption>
         </figure>
         <figure class="g5 reveal">
-          <img src="photos/p15.jpg" loading="lazy" alt="Tassilo kneeling on the grass, hand-painting the name EUROPA on the bow of his folding kayak, a marked-up map of Europe spread on the hull beside him">
+          <img width="1800" height="1359" decoding="async" src="photos/p15.jpg" loading="lazy" alt="Tassilo kneeling on the grass, hand-painting the name EUROPA on the bow of his folding kayak, a marked-up map of Europe spread on the hull beside him">
           <figcaption><span class="no">05</span> The boat gets her name.</figcaption>
         </figure>
         <figure class="g6 reveal">
-          <img src="photos/p08.jpg" loading="lazy" alt="A teal hammock strung across a doorway in a derelict plastered room; Tassilo in a red wool hat rests inside it with Fluffo the black dog on his chest">
+          <img width="1800" height="1800" decoding="async" src="photos/p08.jpg" loading="lazy" alt="A teal hammock strung across a doorway in a derelict plastered room; Tassilo in a red wool hat rests inside it with Fluffo the black dog on his chest">
           <figcaption><span class="no">06</span> Bivouac: a doorway, a hammock, and Fluffo.</figcaption>
         </figure>
       </div>
@@ -420,16 +434,16 @@
         <p class="lede">Rivers and ruins, camps and coastlines, and Fluffo, who never misses a launch.</p>
       </div>
       <div class="field-grid reveal">
-        <figure><img src="photos/p19.jpg" loading="lazy" alt="A rock-cut classical tomb facade with a figure in a sleeping bag between the pillars"><figcaption>A bed among the columns</figcaption></figure>
-        <figure><img src="photos/p23.jpg" loading="lazy" alt="Tassilo with Fluffo, his black dog, among Roman colonnade ruins at sunset"><figcaption>Golden hour with Fluffo</figcaption></figure>
-        <figure><img src="photos/p24.jpg" loading="lazy" alt="An intact Roman tomb-temple with columns and a small figure inside in golden light"><figcaption>The temple still stands</figcaption></figure>
-        <figure><img src="photos/p26.jpg" loading="lazy" alt="A man reading in a hammock strung over trees, a loaded kayak on the bank"><figcaption>Slung above the river</figcaption></figure>
-        <figure><img src="photos/p22.jpg" loading="lazy" alt="A man walking the surf beside a beached, rusting fishing trawler at golden hour"><figcaption>The stranded giant</figcaption></figure>
-        <figure><img src="photos/p27.jpg" loading="lazy" alt="An ornate Baroque church interior with a frescoed dome and gilded columns"><figcaption>Under the painted vault</figcaption></figure>
-        <figure><img src="photos/p31.jpg" loading="lazy" alt="A young man caught mid-air leaping by a big riverside tree, kayak and dog on the beach"><figcaption>Leap into the shallows</figcaption></figure>
-        <figure><img src="photos/p28.jpg" loading="lazy" alt="Stepped hillside vineyards with a small stone chapel-gate"><figcaption>Terraces of the Wachau</figcaption></figure>
-        <figure><img src="photos/p29.jpg" loading="lazy" alt="Top-down drone view of a man asleep beside his loaded kayak on the sand"><figcaption>Beached at dusk</figcaption></figure>
-        <figure><img src="photos/p30.jpg" loading="lazy" alt="Aerial of a hammock and a blue kayak on a riverbank in warm evening light"><figcaption>Camp on the gravel bar</figcaption></figure>
+        <figure><img width="1050" height="1400" decoding="async" src="photos/p19.jpg" loading="lazy" alt="A rock-cut classical tomb facade with a figure in a sleeping bag between the pillars"><figcaption>A bed among the columns</figcaption></figure>
+        <figure><img width="1400" height="1050" decoding="async" src="photos/p23.jpg" loading="lazy" alt="Tassilo with Fluffo, his black dog, among Roman colonnade ruins at sunset"><figcaption>Golden hour with Fluffo</figcaption></figure>
+        <figure><img width="1400" height="1050" decoding="async" src="photos/p24.jpg" loading="lazy" alt="An intact Roman tomb-temple with columns and a small figure inside in golden light"><figcaption>The temple still stands</figcaption></figure>
+        <figure><img width="1400" height="1057" decoding="async" src="photos/p26.jpg" loading="lazy" alt="A man reading in a hammock strung over trees, a loaded kayak on the bank"><figcaption>Slung above the river</figcaption></figure>
+        <figure><img width="1400" height="1096" decoding="async" src="photos/p22.jpg" loading="lazy" alt="A man walking the surf beside a beached, rusting fishing trawler at golden hour"><figcaption>The stranded giant</figcaption></figure>
+        <figure><img width="1400" height="943" decoding="async" src="photos/p27.jpg" loading="lazy" alt="An ornate Baroque church interior with a frescoed dome and gilded columns"><figcaption>Under the painted vault</figcaption></figure>
+        <figure><img width="1400" height="942" decoding="async" src="photos/p31.jpg" loading="lazy" alt="A young man caught mid-air leaping by a big riverside tree, kayak and dog on the beach"><figcaption>Leap into the shallows</figcaption></figure>
+        <figure><img width="1400" height="943" decoding="async" src="photos/p28.jpg" loading="lazy" alt="Stepped hillside vineyards with a small stone chapel-gate"><figcaption>Terraces of the Wachau</figcaption></figure>
+        <figure><img width="1400" height="943" decoding="async" src="photos/p29.jpg" loading="lazy" alt="Top-down drone view of a man asleep beside his loaded kayak on the sand"><figcaption>Beached at dusk</figcaption></figure>
+        <figure><img width="1400" height="942" decoding="async" src="photos/p30.jpg" loading="lazy" alt="Aerial of a hammock and a blue kayak on a riverbank in warm evening light"><figcaption>Camp on the gravel bar</figcaption></figure>
       </div>
     </div>
   </section>
@@ -446,19 +460,19 @@
       <div class="strip-shell reveal">
         <div class="strip" tabindex="0" role="region" aria-label="Architecture photographs, scroll horizontally">
           <figure>
-            <img src="photos/p03.jpg" loading="lazy" alt="Aerial drone photograph at dusk of La Vela di Calatrava, Santiago Calatrava's vast white steel structure over the unfinished Città dello Sport in Rome, city lights on the horizon">
+            <img width="1440" height="1080" decoding="async" src="photos/p03.jpg" loading="lazy" alt="Aerial drone photograph at dusk of La Vela di Calatrava, Santiago Calatrava's vast white steel structure over the unfinished Città dello Sport in Rome, city lights on the horizon">
             <figcaption><span class="no">i.</span> La Vela di Calatrava, Rome, by drone at dusk.</figcaption>
           </figure>
           <figure>
-            <img src="photos/p04.jpg" loading="lazy" alt="Looking down a colonnade of sculptural white concrete ribs in raking evening light, their zigzag shadows mirrored in a dark pool of rainwater">
+            <img width="1440" height="1080" decoding="async" src="photos/p04.jpg" loading="lazy" alt="Looking down a colonnade of sculptural white concrete ribs in raking evening light, their zigzag shadows mirrored in a dark pool of rainwater">
             <figcaption><span class="no">ii.</span> Ribs, light, and a puddle for a mirror.</figcaption>
           </figure>
           <figure>
-            <img src="photos/p05.jpg" loading="lazy" alt="A symmetrical honey-stone neoclassical palace at golden hour, perfectly mirrored in a long, still reflecting pool">
+            <img width="1800" height="1350" decoding="async" src="photos/p05.jpg" loading="lazy" alt="A symmetrical honey-stone neoclassical palace at golden hour, perfectly mirrored in a long, still reflecting pool">
             <figcaption><span class="no">iii.</span> Stone, symmetry, still water.</figcaption>
           </figure>
           <figure>
-            <img src="photos/p07.jpg" loading="lazy" alt="A ruined stone tower clinging to a sheer dark cliff face, a tiny figure in a red hat waving from its doorway">
+            <img width="1440" height="1800" decoding="async" src="photos/p07.jpg" loading="lazy" alt="A ruined stone tower clinging to a sheer dark cliff face, a tiny figure in a red hat waving from its doorway">
             <figcaption><span class="no">iv.</span> A tower holding on to the cliff. Find the red hat.</figcaption>
           </figure>
         </div>
@@ -492,7 +506,7 @@
     </div>
   </section>
 
-  <section id="about" aria-labelledby="about-h" style="padding-top:0">
+  <section id="about" aria-labelledby="about-h" style="padding-top:clamp(24px,4vw,56px)">
     <div class="wrap">
       <div class="sec-head reveal">
         <p class="eyebrow">About</p>
@@ -501,10 +515,10 @@
       <div class="about-grid">
         <div class="portrait-stack reveal">
           <figure class="main">
-            <img src="photos/p11.jpg" loading="lazy" alt="Portrait of Tassilo in a red wool hat lying in a teal hammock, cradling Fluffo the black dog asleep on his chest">
+            <img width="1800" height="1800" decoding="async" src="photos/p11.jpg" loading="lazy" alt="Portrait of Tassilo in a red wool hat lying in a teal hammock, cradling Fluffo the black dog asleep on his chest">
           </figure>
           <figure class="study">
-            <img src="photos/p14.jpg" loading="lazy" alt="Editorial modelling photograph of Tassilo in a white tee and open dark shirt, leaning against a wood-panelled doorway">
+            <img width="1170" height="877" decoding="async" src="photos/p14.jpg" loading="lazy" alt="Editorial modelling photograph of Tassilo in a white tee and open dark shirt, leaning against a wood-panelled doorway">
             <figcaption>The other kind of shoot.</figcaption>
           </figure>
         </div>
@@ -522,16 +536,16 @@
 
       <div class="trio">
         <figure class="reveal">
-          <img src="photos/p12.jpg" loading="lazy" alt="Fluffo the black dog in a red life vest sitting on a sandy beach, a long driftwood stick in his mouth">
-          <figcaption>Fluffo, first mate, life vest regulation. Corsica.</figcaption>
+          <img width="1013" height="1800" decoding="async" src="photos/p12.jpg" loading="lazy" alt="Fluffo the black dog in a red life vest sitting on a sandy beach, a long driftwood stick in his mouth">
+          <figcaption>Fluffo, first mate, regulation life vest. Corsica.</figcaption>
         </figure>
         <div class="trio-col">
           <figure class="reveal">
-            <img src="photos/p13.jpg" loading="lazy" alt="Tassilo skiing at speed, carving a deep turn with snow spray flying against dark pines">
+            <img width="1170" height="635" decoding="async" src="photos/p13.jpg" loading="lazy" alt="Tassilo skiing at speed, carving a deep turn with snow spray flying against dark pines">
             <figcaption><span class="no">Winter</span> The season the kayak stays folded. Ski teacher in Garmisch-Partenkirchen, Germany.</figcaption>
           </figure>
           <figure class="reveal">
-            <img src="photos/p16.jpg" loading="lazy" alt="Tassilo laughing at the centre of a group of ski instructors in red uniforms, lifted off his feet at a sunny mountain bar">
+            <img width="1800" height="1350" decoding="async" src="photos/p16.jpg" loading="lazy" alt="Tassilo laughing at the centre of a group of ski instructors in red uniforms, lifted off his feet at a sunny mountain bar">
             <figcaption>End of the season, carried off the hill. Ski teacher in Schönried, Switzerland.</figcaption>
           </figure>
         </div>
@@ -566,10 +580,10 @@
         <p class="lede">Fine-art prints of the expeditions, from the water and from the air. Archival paper, signed and numbered, shipped worldwide.</p>
       </div>
       <div class="prints-grid">
-        <figure class="reveal"><img src="photos/p02.jpg" loading="lazy" alt="The Danube beneath the Walhalla, Tassilo standing on his loaded folding kayak at golden hour"><figcaption>The Danube beneath the Walhalla</figcaption></figure>
-        <figure class="reveal"><img src="photos/p03.jpg" loading="lazy" alt="Aerial of La Vela di Calatrava, Rome, at dusk"><figcaption>La Vela di Calatrava, Rome</figcaption></figure>
-        <figure class="reveal"><img src="photos/p17.jpg" loading="lazy" alt="A stone church ruin clinging to a sheer cliff in Artvin, a lone figure lit in the doorway"><figcaption>The cliff church of Artvin</figcaption></figure>
-        <figure class="reveal"><img src="photos/p09.jpg" loading="lazy" alt="Dawn camp on Monte Molare above the Bay of Naples, Vesuvius on the horizon"><figcaption>Dawn on Monte Molare, Naples</figcaption></figure>
+        <figure class="reveal"><img width="1800" height="1359" decoding="async" src="photos/p02.jpg" loading="lazy" alt="The Danube beneath the Walhalla, Tassilo standing on his loaded folding kayak at golden hour"><figcaption>The Danube beneath the Walhalla</figcaption></figure>
+        <figure class="reveal"><img width="1440" height="1080" decoding="async" src="photos/p03.jpg" loading="lazy" alt="Aerial of La Vela di Calatrava, Rome, at dusk"><figcaption>La Vela di Calatrava, Rome</figcaption></figure>
+        <figure class="reveal"><img width="1280" height="1600" decoding="async" src="photos/p17.jpg" loading="lazy" alt="A stone church ruin clinging to a sheer cliff in Artvin, a lone figure lit in the doorway"><figcaption>The cliff church of Artvin</figcaption></figure>
+        <figure class="reveal"><img width="1440" height="1080" decoding="async" src="photos/p09.jpg" loading="lazy" alt="Dawn camp on Monte Molare above the Bay of Naples, Vesuvius on the horizon"><figcaption>Dawn on Monte Molare, Naples</figcaption></figure>
       </div>
       <div class="cta-row reveal">
         <a class="cta" href="mailto:tassilo@tassilodelatorre.com?subject=Print%20order">Order a print</a>
@@ -597,13 +611,13 @@
           <li><span class="ln" style="background:#e9c46a"></span> Hitchhiking</li>
           <li><span class="ln" style="background:#06d6a0"></span> On foot</li>
           <li><span class="ln" style="background:#8ecae6"></span> Train</li>
-          <li><span class="ln" style="background:#fff"></span> Planning (Sept.)</li>
+          <li><span class="ln" style="background:#fff"></span> Planned · Sept. 2026</li>
           <li><span class="ln" style="background:#ff3b30"></span> Dreaming</li>
         </ul>
         <p class="map-hint">Drag to spin · scroll to zoom · Shift + drag to tilt</p>
       </div>
     </div>
-    <div class="atlas-cta-row"><button class="atlas-cta" id="see-expedition" type="button">See the current expedition</button></div>
+    <div class="atlas-cta-row"><button class="atlas-cta" id="see-expedition" type="button">See the September route</button></div>
   </section>
 
   <script>
@@ -647,7 +661,7 @@
         on('routes-solid',function(p){ return p.label||''; });
         on('routes-dot',function(p){ return p.label||''; });
         on('routes-plan',function(p){ return p.label||''; });
-        var _b=document.getElementById('see-expedition'); if(_b) _b.addEventListener('click',function(){ map.flyTo({center:[2.99,39.62],zoom:8.4,pitch:35,duration:2600}); });
+        var _b=document.getElementById('see-expedition'); if(_b) _b.addEventListener('click',function(){ if(matchMedia('(prefers-reduced-motion: reduce)').matches){ map.jumpTo({center:[2.99,39.62],zoom:8.4,pitch:35}); } else { map.flyTo({center:[2.99,39.62],zoom:8.4,pitch:35,duration:2600}); } });
         on('places',function(p){ return p.label||''; });
       });
     }
