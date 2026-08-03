@@ -767,17 +767,28 @@
 (function(){
   var track=document.querySelector('.marquee-track'); if(!track) return;
   if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(track.querySelectorAll('.grp').length<3){
+    var c=track.querySelector('.grp').cloneNode(true); c.setAttribute('aria-hidden','true');
+    c.querySelectorAll('a').forEach(function(a){a.setAttribute('tabindex','-1');});
+    track.appendChild(c);
+  }
   var paused=false,last=0,SPEED=45;
   track.addEventListener('pointerenter',function(){paused=true;});
   track.addEventListener('pointerleave',function(){paused=false;});
   track.addEventListener('pointerdown',function(){paused=true;});
   window.addEventListener('pointerup',function(){paused=false;});
+  function W(){var g=track.querySelector('.grp');return g?g.offsetWidth:0;}
   function step(t){
     if(!last)last=t; var dt=Math.min((t-last)/1000,0.05); last=t;
-    if(!paused){var g=track.querySelector('.grp'); if(g){var w=g.offsetWidth; if(w>0){track.scrollLeft+=SPEED*dt; if(track.scrollLeft>=w) track.scrollLeft-=w;}}}
+    var w=W();
+    if(w>0){
+      if(!paused) track.scrollLeft+=SPEED*dt;
+      if(track.scrollLeft>=2*w) track.scrollLeft-=w;
+      else if(track.scrollLeft<w) track.scrollLeft+=w;
+    }
     requestAnimationFrame(step);
   }
-  requestAnimationFrame(step);
+  (function initpos(){ var w=W(); if(w>0){track.scrollLeft=w; requestAnimationFrame(step);} else requestAnimationFrame(initpos); })();
 })();
 </script>
 </body>
