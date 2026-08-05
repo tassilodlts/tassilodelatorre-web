@@ -56,6 +56,26 @@
   .lede{color:var(--muted);max-width:34em}
   em{font-style:italic}
 
+
+  /* ---------- writing ---------- */
+  .writing{padding:clamp(60px,9vw,110px) 0;border-top:1px solid var(--line)}
+  .writing .sec-head{margin-bottom:clamp(28px,4vw,46px)}
+  .wr-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3.4vw,44px)}
+  .wr-card{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+  .wr-card figure{margin:0 0 18px;overflow:hidden;border-radius:2px;background:var(--bg-2)}
+  .wr-card img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .wr-card:hover img{transform:scale(1.035)}
+  .wr-kicker{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+             color:var(--muted);margin-bottom:9px}
+  .wr-card h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;
+              font-size:clamp(1.45rem,2.6vw,2rem);line-height:1.14;margin:0 0 .6rem}
+  .wr-card:hover h3{color:var(--rust-deep)}
+  .wr-card p{color:var(--muted);margin:0 0 .9rem}
+  .wr-links{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+            color:var(--rust-deep);margin-top:auto}
+  .writing-all{margin-top:clamp(28px,4vw,44px)}
+  @media(max-width:820px){ .wr-grid{grid-template-columns:1fr;gap:38px} }
+
   /* ---------- live bar ---------- */
   .livebar{position:sticky;top:0;z-index:40;background:var(--rust-deep);color:#fff;font-family:var(--sans);font-size:12px;letter-spacing:.04em;padding:9px 16px;display:flex;gap:10px 14px;justify-content:center;align-items:center;flex-wrap:wrap;line-height:1.4}
   .livebar a{color:#fff;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
@@ -367,7 +387,7 @@
         <a href="#about">About</a>
         <a href="#partners">Partners</a>
         <a href="#nuka">Nuka</a>
-        <a href="/writing/">Writing</a>
+        <a href="#writing">Writing</a>
         <a href="#prints">Prints</a>
         <a class="nav-keep" href="#contact">Contact</a>
       </nav>
@@ -572,6 +592,36 @@
         <li><span class="k-name">GoPro Hero 10 Black</span><span class="k-desc">In the water, on the hull, wherever a bigger camera cannot go.</span></li>
       </ul>
       <p class="kit-note">Plus a few smaller cameras for the moments the others miss.</p>
+    </div>
+  </section>
+
+  <section class="writing" id="writing" aria-labelledby="writing-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Writing</p>
+        <h2 id="writing-h">What I bring back besides pictures.</h2>
+        <p class="lede">Two pieces from the rivers. One is an essay about a boat and a continent. The other is the only continuous report of the navigable Tiber that exists, written so the next person has something I did not.</p>
+      </div>
+
+      <div class="wr-grid reveal">
+        <a class="wr-card" href="/writing/europa-en.html">
+          <figure><img src="photos/p15.jpg" loading="lazy" width="1600" height="1200" alt="Tassilo kneeling on the grass, hand-painting the name EUROPA on the bow of his folding kayak"></figure>
+          <p class="wr-kicker">Essay · The Danube</p>
+          <h3>Hold On, Europa</h3>
+          <p>On the roof of a Soviet boathouse in Budapest, patching a seventy year old folding kayak named Europa, the Parliament shining on the far bank. A thousand kilometres down, sixty days to the Black Sea, and a continent that needs repairing.</p>
+          <p class="wr-links">Read in English &nbsp;·&nbsp; <span>Auch auf Deutsch</span></p>
+        </a>
+
+        <a class="wr-card" href="/writing/befahrung-des-tibers.html">
+          <figure><img src="writing/img/tiber-camp.jpg" loading="lazy" width="1364" height="1023" alt="Aerial view of a bivouac on a gravel bank of the Tiber, canoe, tent and all the gear of the journey"></figure>
+          <p class="wr-kicker">Report · Italy · Deutsch</p>
+          <h3>Befahrung des Tibers</h3>
+          <p>380 kilometres alone by canoe from Sansepolcro to the sea, in a boat bought from an 88 year old woman. Every weir, portage, rapid and campsite, day by day, with the annotated aerial maps. Written because no complete report of this river existed.</p>
+          <p class="wr-links">Read the report &rarr;</p>
+        </a>
+      </div>
+
+      <p class="writing-all"><a class="cta-ghost" href="/writing/">All writing &rarr;</a></p>
     </div>
   </section>
 
