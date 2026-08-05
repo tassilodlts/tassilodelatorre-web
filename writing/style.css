@@ -87,3 +87,14 @@ footer{border-top:1px solid var(--line);margin-top:clamp(60px,10vw,110px);
   .standfirst{font-size:19px}
   .topbar nav{gap:14px}
 }
+
+/* imagenes de los reportajes */
+figure{margin:2.2rem 0}
+figure img{border:1px solid var(--line);border-radius:2px;background:#dcd4c0}
+figcaption{font-family:var(--sans);font-size:13.5px;line-height:1.5;color:var(--muted);
+           margin-top:9px;padding-left:2px}
+figcaption strong{color:var(--rust-deep)}
+figure.lead{margin:0 0 2.6rem}
+@media(min-width:1080px){
+  figure.wide{width:calc(100% + 180px);margin-left:-90px}
+}
