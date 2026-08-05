@@ -95,6 +95,23 @@ figcaption{font-family:var(--sans);font-size:13.5px;line-height:1.5;color:var(--
            margin-top:9px;padding-left:2px}
 figcaption strong{color:var(--rust-deep)}
 figure.lead{margin:0 0 2.6rem}
+
+/* descarga del informe */
+.download{display:flex;align-items:center;gap:16px;text-decoration:none;
+          border:1px solid var(--line);border-left:3px solid var(--rust);
+          background:rgba(116,133,90,.07);padding:18px 20px;margin:2.6rem 0 .9rem;
+          transition:background .18s ease,border-color .18s ease}
+.download:hover{background:rgba(116,133,90,.15);border-color:rgba(75,74,61,.3);
+                border-left-color:var(--rust-deep)}
+.download-ico{font-family:var(--sans);font-size:20px;line-height:1;color:var(--rust-deep);
+              border:1px solid var(--rust);border-radius:50%;width:38px;height:38px;
+              flex:0 0 38px;display:flex;align-items:center;justify-content:center}
+.download-txt{display:block}
+.download-txt strong{display:block;font-family:var(--serif);font-weight:400;
+                     font-size:19px;line-height:1.3;margin-bottom:3px}
+.download-txt span{font-family:var(--sans);font-size:13px;letter-spacing:.02em;
+                   color:var(--muted);line-height:1.45}
+.offline{font-family:var(--sans);font-size:13px;color:var(--muted);margin:0 0 1.2rem}
 @media(min-width:1080px){
   figure.wide{width:calc(100% + 180px);margin-left:-90px}
 }
