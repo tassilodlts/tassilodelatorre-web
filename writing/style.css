@@ -1,0 +1,89 @@
+/* Hoja de estilo de las paginas de textos. Mismos tokens que index.html */
+:root{
+  --bg:#e8e1cf;
+  --ink:#4b4a3d;
+  --muted:#676552;
+  --rust:#74855a;
+  --rust-deep:#5f7047;
+  --brown:#8a7c60;
+  --line:rgba(75,74,61,.17);
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);
+     font-size:19px;line-height:1.72;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--rust);outline-offset:3px;border-radius:2px}
+::selection{background:var(--rust);color:#fff}
+
+.wrap{max-width:720px;margin:0 auto;padding:0 clamp(20px,5vw,32px)}
+
+/* barra superior */
+.topbar{border-bottom:1px solid var(--line);background:var(--bg);
+        position:sticky;top:0;z-index:10}
+.topbar .wrap{max-width:1220px;display:flex;justify-content:space-between;
+              align-items:center;gap:20px;padding-top:16px;padding-bottom:16px}
+.brand{font-family:var(--serif);font-size:17px;text-decoration:none;letter-spacing:-.01em}
+.topbar nav{display:flex;gap:clamp(12px,2.4vw,26px);flex-wrap:wrap}
+.topbar nav a{font-family:var(--sans);font-size:11px;letter-spacing:.18em;
+              text-transform:uppercase;text-decoration:none;opacity:.85;
+              padding-bottom:3px;border-bottom:1px solid transparent}
+.topbar nav a:hover{opacity:1;border-bottom-color:var(--rust)}
+
+/* cabecera de articulo */
+.eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.24em;
+         text-transform:uppercase;color:var(--muted);
+         display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--rust);display:inline-block}
+article header{padding:clamp(48px,9vw,96px) 0 0}
+h1{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;
+   font-size:clamp(2.1rem,6vw,3.5rem);line-height:1.06;margin:1.1rem 0 1.3rem}
+.standfirst{color:var(--muted);font-size:21px;line-height:1.6;margin-bottom:2rem}
+.meta{font-family:var(--sans);font-size:12px;letter-spacing:.06em;color:var(--muted);
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      padding:14px 0;margin-bottom:clamp(32px,6vw,56px);
+      display:flex;gap:8px 22px;flex-wrap:wrap}
+.langs{font-family:var(--sans);font-size:12px;letter-spacing:.06em;margin-bottom:2rem}
+.langs a{color:var(--rust-deep)}
+
+/* cuerpo */
+article p{margin:0 0 1.35rem}
+article h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,3.4vw,2rem);
+           line-height:1.2;margin:2.9rem 0 1.1rem;letter-spacing:-.015em}
+article h3{font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+           color:var(--rust-deep);margin:2.4rem 0 .9rem;font-weight:600}
+article ul{margin:0 0 1.35rem 1.2rem}
+article li{margin:.3rem 0}
+blockquote{border-left:3px solid var(--rust);padding:.2rem 0 .2rem 1.3rem;
+           margin:1.8rem 0;color:var(--muted);font-style:italic}
+hr{border:0;border-top:1px solid var(--line);margin:3rem 0}
+.note{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--muted);
+      background:rgba(116,133,90,.09);border-left:3px solid var(--rust);
+      padding:16px 18px;margin:2rem 0}
+.dropcap::first-letter{float:left;font-size:4.1rem;line-height:.86;
+                       padding:.05em .09em 0 0;color:var(--rust-deep)}
+table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:14px;margin:1.6rem 0}
+td,th{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.scroll{overflow-x:auto}
+
+/* indice de textos */
+.piece{border-top:1px solid var(--line);padding:30px 0;display:block;text-decoration:none}
+.piece:last-of-type{border-bottom:1px solid var(--line)}
+.piece h2{margin:.4rem 0 .5rem;font-size:clamp(1.5rem,3.6vw,2.1rem)}
+.piece p{color:var(--muted);margin:0}
+.piece:hover h2{color:var(--rust-deep)}
+
+footer{border-top:1px solid var(--line);margin-top:clamp(60px,10vw,110px);
+       padding:26px 0 60px;font-family:var(--sans);font-size:12px;
+       letter-spacing:.06em;color:var(--muted);
+       display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+@media(max-width:720px){
+  body{font-size:18px}
+  .standfirst{font-size:19px}
+  .topbar nav{gap:14px}
+}
