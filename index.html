@@ -200,6 +200,37 @@
   .marquee-track .item::after{content:"·";color:var(--rust);margin-left:clamp(18px,2.6vw,34px);opacity:.65}
   @keyframes scroll-x{to{transform:translateX(-50%)}}
 
+  .giving-line{font-family:var(--sans);font-size:14.5px;line-height:1.6;margin:1.6rem 0 0;max-width:34em}
+  .giving-line a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:1px}
+  .giving-line a:hover{border-bottom-color:currentColor}
+  .giving-line b{font-weight:600}
+  #prints .giving-line a{border-bottom-color:var(--line)}
+
+  /* ---------- añadidos 06/08 ---------- */
+  .livebar .lb-sep{margin:0 10px;opacity:.5}
+  #countdown{white-space:nowrap}
+  .hero-ig{display:inline-block;margin-top:14px;font-family:var(--sans);font-size:12.5px;
+    letter-spacing:.12em;text-transform:uppercase;color:#fff;opacity:.85;text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:3px}
+  .hero-ig:hover{opacity:1;border-bottom-color:#fff}
+  .atlas-note{margin-top:1rem;font-size:.95em;opacity:.9}
+  .atlas-note a{color:inherit}
+  .print-sizes{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin:2rem 0 1rem}
+  .print-sizes a{display:flex;flex-direction:column;gap:4px;padding:16px 18px;border:1px solid var(--line);
+    text-decoration:none;color:inherit;transition:border-color .18s ease,background .18s ease}
+  .print-sizes a:hover{border-color:var(--ink);background:rgba(75,74,61,.05)}
+  .print-sizes b{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1}
+  .print-sizes span{font-family:var(--sans);font-size:12px;letter-spacing:.1em;color:var(--muted)}
+  .press{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:clamp(34px,5vw,56px) 0}
+  .press-list{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:22px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .press-list li{border-left:3px solid var(--rust);padding-left:16px}
+  .press-list b{display:block;font-family:var(--serif);font-weight:400;font-size:1.5rem;margin-bottom:5px}
+  .press-list span{font-family:var(--sans);font-size:14px;line-height:1.55;color:var(--muted)}
+  .signup{padding:clamp(40px,6vw,72px) 0;border-top:1px solid var(--line)}
+  .signup h2{margin:.6rem 0 .8rem}
+  .signup .lede{max-width:34em;margin-bottom:1.6rem}
   /* ---------- partners ---------- */
   .partners{background:var(--green);color:var(--green-ink)}
   .partners .eyebrow{color:#9fb39c}
@@ -371,7 +402,7 @@
 <a class="skip" href="#work">Skip to content</a>
 
 <div class="livebar">
-  <span class="dot" aria-hidden="true"></span><a href="#partners">Partner slots open →</a>
+  <span class="dot" aria-hidden="true"></span><span id="countdown">Setting off 4 September</span><span class="lb-sep" aria-hidden="true">·</span><a href="#partners">Partner slots open →</a>
 </div>
 
 <div class="hero" id="top">
@@ -382,13 +413,11 @@
       <label for="navtoggle" class="burger" aria-hidden="true">&#9776;</label>
       <nav aria-label="Main">
         <a href="#work">Work</a>
-        <a href="#architecture">Architecture</a>
         <a href="#expeditions">Expeditions</a>
-        <a href="#about">About</a>
-        <a href="#partners">Partners</a>
-        <a href="#nuka">Nuka</a>
+        <a href="#atlas">Atlas</a>
         <a href="#writing">Writing</a>
         <a href="#prints">Prints</a>
+        <a href="#partners">Partners</a>
         <a class="nav-keep" href="#contact">Contact</a>
       </nav>
     </div>
@@ -400,6 +429,7 @@
     <h1>Journeys under human power, <em>told in photographs and film.</em></h1>
     <p class="roles"><b>Tassilo de la Torre</b>, from the water, from the air, and from wherever night falls on Fluffo and me.</p>
     <a class="hero-cta" href="#partners">Partner with the 2026 expeditions</a>
+    <a class="hero-ig" href="https://instagram.com/tassilodlts" target="_blank" rel="noopener">Follow the expedition on Instagram · @tassilodlts</a>
   </div>
   <a class="hero-cue" href="#work">Selected work</a>
 </div>
@@ -407,8 +437,8 @@
 <section class="marquee" aria-label="Brands currently on board">
   <p class="marquee-head">Currently <b>on board</b> · the brands backing the 2026 expeditions</p>
   <div class="marquee-track">
-    <div class="grp"><span class="item"><a class="lgl" href="https://www.vaude.com" target="_blank" rel="noopener" aria-label="Vaude"><img class="lg" src="logos/vaude.png" alt="Vaude"></a></span><span class="item"><a class="lgl" href="https://www.katadyn.com" target="_blank" rel="noopener" aria-label="Katadyn"><img class="lg" src="logos/katadyn.png" alt="Katadyn"></a></span><span class="item"><a class="lgl" href="https://www.ortlieb.com" target="_blank" rel="noopener" aria-label="Ortlieb"><img class="lg" src="logos/ortlieb.png" alt="Ortlieb"></a></span><span class="item"><a class="lgl" href="https://www.nutrisport.es" target="_blank" rel="noopener" aria-label="Nutrisport"><img class="lg" src="logos/nutrisport.png" alt="Nutrisport"></a></span><span class="item"><a class="lgl" href="https://www.danishendurance.com" target="_blank" rel="noopener" aria-label="Danish Endurance"><img class="lg" src="logos/danish-endurance.png" alt="Danish Endurance"></a></span><span class="item"><a class="lgl" href="https://www.kilpi.com" target="_blank" rel="noopener" aria-label="Kilpi"><img class="lg" src="logos/kilpi.png" alt="Kilpi"></a></span><span class="item"><a class="lgl" href="https://www.prabos.cz" target="_blank" rel="noopener" aria-label="Prabos"><img class="lg" src="logos/prabos.png" alt="Prabos"></a></span><span class="item"><a class="lgl" href="https://www.petromax.de" target="_blank" rel="noopener" aria-label="Petromax"><img class="lg" src="logos/petromax.png" alt="Petromax"></a></span><span class="item"><a class="lgl" href="https://www.eassun.com" target="_blank" rel="noopener" aria-label="Eassun"><img class="lg" src="logos/eassun.png" alt="Eassun"></a></span><span class="item"><a class="lgl" href="https://www.qwstion.com" target="_blank" rel="noopener" aria-label="Qwstion"><img class="lg" src="logos/qwstion.png" alt="Qwstion"></a></span><span class="item"><a class="lgl" href="https://www.sunwayfoto.com" target="_blank" rel="noopener" aria-label="Sunwayfoto"><img class="lg" src="logos/sunwayfoto.png" alt="Sunwayfoto"></a></span><span class="item"><a class="lgl" href="https://www.armytek.com" target="_blank" rel="noopener" aria-label="Armytek"><img class="lg" src="logos/armytek.png" alt="Armytek"></a></span><span class="item"><a class="lgl" href="https://www.wubenlight.com" target="_blank" rel="noopener" aria-label="Wuben"><img class="lg" src="logos/wuben.png" alt="Wuben"></a></span><span class="item"><a class="lgl" href="https://www.turtlefur.com" target="_blank" rel="noopener" aria-label="Turtle Fur"><img class="lg" src="logos/turtle-fur.png" alt="Turtle Fur"></a></span><span class="item"><a class="lgl" href="https://www.infisport.com" target="_blank" rel="noopener" aria-label="Infisport"><img class="lg" src="logos/infisport.png" alt="Infisport"></a></span><span class="item"><a class="lgl" href="https://www.lomo.co.uk" target="_blank" rel="noopener" aria-label="Lomo"><img class="lg" src="logos/lomo.png" alt="Lomo"></a></span><span class="item"><a class="lgl" href="https://sunslice-solar.com" target="_blank" rel="noopener" aria-label="Sunslice"><img class="lg" src="logos/sunslice.png" alt="Sunslice"></a></span><span class="item"><a class="lgl" href="https://silverantoutdoors.com" target="_blank" rel="noopener" aria-label="SilverAnt"><img class="lg" src="logos/silverant.png" alt="SilverAnt"></a></span><span class="item"><a class="lgl" href="https://holdfastgear.com" target="_blank" rel="noopener" aria-label="HoldFast"><img class="lg" src="logos/holdfast.png" alt="HoldFast"></a></span><span class="item"><a class="lgl" href="https://slipins.com" target="_blank" rel="noopener" aria-label="Slip-ins"><img class="lg" src="logos/slip-ins.png" alt="Slip-ins"></a></span><span class="item"><a class="lgl" href="https://www.aquapac.net" target="_blank" rel="noopener" aria-label="Aquapac"><img class="lg" src="logos/aquapac.png" alt="Aquapac"></a></span><span class="item"><a class="lgl" href="https://suntribesunscreen.com" target="_blank" rel="noopener" aria-label="Suntribe"><img class="lg" src="logos/suntribe.png" alt="Suntribe"></a></span><span class="item"><a class="lgl" href="https://shadecream.com" target="_blank" rel="noopener" aria-label="Shade"><img class="lg" src="logos/shade.png" alt="Shade"></a></span><span class="item"><a class="lgl" href="https://rokaisunscreen.com" target="_blank" rel="noopener" aria-label="RoKai"><img class="lg" src="logos/rokai.png" alt="RoKai"></a></span><span class="item"><a class="lgl" href="https://roselli.fi" target="_blank" rel="noopener" aria-label="Roselli"><img class="lg" src="logos/roselli.png" alt="Roselli"></a></span><span class="item">GD Andana</span><span class="item"><a class="lgl" href="https://www.abarcasmenorquinas.com" target="_blank" rel="noopener" aria-label="Avarcas MIBO"><img class="lg" src="logos/mibo.png" alt="Avarcas MIBO"></a></span><span class="item"><a class="lgl" href="https://www.tecnomar.es" target="_blank" rel="noopener" aria-label="Tecnomar"><img class="lg" src="logos/tecnomar.png" alt="Tecnomar"></a></span><span class="item"><a class="lgl" href="https://montane.com" target="_blank" rel="noopener" aria-label="Montane"><img class="lg" src="logos/montane.png" alt="Montane"></a></span><span class="item"><a class="lgl" href="https://www.vango.co.uk" target="_blank" rel="noopener" aria-label="Vango"><img class="lg" src="logos/vango.png" alt="Vango"></a></span><span class="item">SOTO</span></div>
-    <div class="grp" aria-hidden="true"><span class="item"><a class="lgl" tabindex="-1" href="https://www.vaude.com" target="_blank" rel="noopener" aria-label="Vaude"><img class="lg" src="logos/vaude.png" alt="Vaude"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.katadyn.com" target="_blank" rel="noopener" aria-label="Katadyn"><img class="lg" src="logos/katadyn.png" alt="Katadyn"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.ortlieb.com" target="_blank" rel="noopener" aria-label="Ortlieb"><img class="lg" src="logos/ortlieb.png" alt="Ortlieb"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.nutrisport.es" target="_blank" rel="noopener" aria-label="Nutrisport"><img class="lg" src="logos/nutrisport.png" alt="Nutrisport"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.danishendurance.com" target="_blank" rel="noopener" aria-label="Danish Endurance"><img class="lg" src="logos/danish-endurance.png" alt="Danish Endurance"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.kilpi.com" target="_blank" rel="noopener" aria-label="Kilpi"><img class="lg" src="logos/kilpi.png" alt="Kilpi"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.prabos.cz" target="_blank" rel="noopener" aria-label="Prabos"><img class="lg" src="logos/prabos.png" alt="Prabos"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.petromax.de" target="_blank" rel="noopener" aria-label="Petromax"><img class="lg" src="logos/petromax.png" alt="Petromax"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.eassun.com" target="_blank" rel="noopener" aria-label="Eassun"><img class="lg" src="logos/eassun.png" alt="Eassun"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.qwstion.com" target="_blank" rel="noopener" aria-label="Qwstion"><img class="lg" src="logos/qwstion.png" alt="Qwstion"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.sunwayfoto.com" target="_blank" rel="noopener" aria-label="Sunwayfoto"><img class="lg" src="logos/sunwayfoto.png" alt="Sunwayfoto"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.armytek.com" target="_blank" rel="noopener" aria-label="Armytek"><img class="lg" src="logos/armytek.png" alt="Armytek"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.wubenlight.com" target="_blank" rel="noopener" aria-label="Wuben"><img class="lg" src="logos/wuben.png" alt="Wuben"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.turtlefur.com" target="_blank" rel="noopener" aria-label="Turtle Fur"><img class="lg" src="logos/turtle-fur.png" alt="Turtle Fur"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.infisport.com" target="_blank" rel="noopener" aria-label="Infisport"><img class="lg" src="logos/infisport.png" alt="Infisport"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.lomo.co.uk" target="_blank" rel="noopener" aria-label="Lomo"><img class="lg" src="logos/lomo.png" alt="Lomo"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://sunslice-solar.com" target="_blank" rel="noopener" aria-label="Sunslice"><img class="lg" src="logos/sunslice.png" alt="Sunslice"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://silverantoutdoors.com" target="_blank" rel="noopener" aria-label="SilverAnt"><img class="lg" src="logos/silverant.png" alt="SilverAnt"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://holdfastgear.com" target="_blank" rel="noopener" aria-label="HoldFast"><img class="lg" src="logos/holdfast.png" alt="HoldFast"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://slipins.com" target="_blank" rel="noopener" aria-label="Slip-ins"><img class="lg" src="logos/slip-ins.png" alt="Slip-ins"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.aquapac.net" target="_blank" rel="noopener" aria-label="Aquapac"><img class="lg" src="logos/aquapac.png" alt="Aquapac"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://suntribesunscreen.com" target="_blank" rel="noopener" aria-label="Suntribe"><img class="lg" src="logos/suntribe.png" alt="Suntribe"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://shadecream.com" target="_blank" rel="noopener" aria-label="Shade"><img class="lg" src="logos/shade.png" alt="Shade"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://rokaisunscreen.com" target="_blank" rel="noopener" aria-label="RoKai"><img class="lg" src="logos/rokai.png" alt="RoKai"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://roselli.fi" target="_blank" rel="noopener" aria-label="Roselli"><img class="lg" src="logos/roselli.png" alt="Roselli"></a></span><span class="item">GD Andana</span><span class="item"><a class="lgl" tabindex="-1" href="https://www.abarcasmenorquinas.com" target="_blank" rel="noopener" aria-label="Avarcas MIBO"><img class="lg" src="logos/mibo.png" alt="Avarcas MIBO"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.tecnomar.es" target="_blank" rel="noopener" aria-label="Tecnomar"><img class="lg" src="logos/tecnomar.png" alt="Tecnomar"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://montane.com" target="_blank" rel="noopener" aria-label="Montane"><img class="lg" src="logos/montane.png" alt="Montane"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.vango.co.uk" target="_blank" rel="noopener" aria-label="Vango"><img class="lg" src="logos/vango.png" alt="Vango"></a></span><span class="item">SOTO</span></div>
+    <div class="grp"><span class="item"><a class="lgl" href="https://www.vaude.com" target="_blank" rel="noopener" aria-label="Vaude"><img class="lg" src="logos/vaude.png" alt="Vaude"></a></span><span class="item"><a class="lgl" href="https://www.katadyn.com" target="_blank" rel="noopener" aria-label="Katadyn"><img class="lg" src="logos/katadyn.png" alt="Katadyn"></a></span><span class="item"><a class="lgl" href="https://www.ortlieb.com" target="_blank" rel="noopener" aria-label="Ortlieb"><img class="lg" src="logos/ortlieb.png" alt="Ortlieb"></a></span><span class="item"><a class="lgl" href="https://www.nutrisport.es" target="_blank" rel="noopener" aria-label="Nutrisport"><img class="lg" src="logos/nutrisport.png" alt="Nutrisport"></a></span><span class="item"><a class="lgl" href="https://www.danishendurance.com" target="_blank" rel="noopener" aria-label="Danish Endurance"><img class="lg" src="logos/danish-endurance.png" alt="Danish Endurance"></a></span><span class="item"><a class="lgl" href="https://www.kilpi.com" target="_blank" rel="noopener" aria-label="Kilpi"><img class="lg" src="logos/kilpi.png" alt="Kilpi"></a></span><span class="item"><a class="lgl" href="https://www.prabos.cz" target="_blank" rel="noopener" aria-label="Prabos"><img class="lg" src="logos/prabos.png" alt="Prabos"></a></span><span class="item"><a class="lgl" href="https://www.petromax.de" target="_blank" rel="noopener" aria-label="Petromax"><img class="lg" src="logos/petromax.png" alt="Petromax"></a></span><span class="item"><a class="lgl" href="https://www.eassun.com" target="_blank" rel="noopener" aria-label="Eassun"><img class="lg" src="logos/eassun.png" alt="Eassun"></a></span><span class="item"><a class="lgl" href="https://www.qwstion.com" target="_blank" rel="noopener" aria-label="Qwstion"><img class="lg" src="logos/qwstion.png" alt="Qwstion"></a></span><span class="item"><a class="lgl" href="https://www.sunwayfoto.com" target="_blank" rel="noopener" aria-label="Sunwayfoto"><img class="lg" src="logos/sunwayfoto.png" alt="Sunwayfoto"></a></span><span class="item"><a class="lgl" href="https://www.armytek.com" target="_blank" rel="noopener" aria-label="Armytek"><img class="lg" src="logos/armytek.png" alt="Armytek"></a></span><span class="item"><a class="lgl" href="https://www.wubenlight.com" target="_blank" rel="noopener" aria-label="Wuben"><img class="lg" src="logos/wuben.png" alt="Wuben"></a></span><span class="item"><a class="lgl" href="https://www.turtlefur.com" target="_blank" rel="noopener" aria-label="Turtle Fur"><img class="lg" src="logos/turtle-fur.png" alt="Turtle Fur"></a></span><span class="item"><a class="lgl" href="https://www.infisport.com" target="_blank" rel="noopener" aria-label="Infisport"><img class="lg" src="logos/infisport.png" alt="Infisport"></a></span><span class="item"><a class="lgl" href="https://www.lomo.co.uk" target="_blank" rel="noopener" aria-label="Lomo"><img class="lg" src="logos/lomo.png" alt="Lomo"></a></span><span class="item"><a class="lgl" href="https://sunslice-solar.com" target="_blank" rel="noopener" aria-label="Sunslice"><img class="lg" src="logos/sunslice.png" alt="Sunslice"></a></span><span class="item"><a class="lgl" href="https://silverantoutdoors.com" target="_blank" rel="noopener" aria-label="SilverAnt"><img class="lg" src="logos/silverant.png" alt="SilverAnt"></a></span><span class="item"><a class="lgl" href="https://holdfastgear.com" target="_blank" rel="noopener" aria-label="HoldFast"><img class="lg" src="logos/holdfast.png" alt="HoldFast"></a></span><span class="item"><a class="lgl" href="https://slipins.com" target="_blank" rel="noopener" aria-label="Slip-ins"><img class="lg" src="logos/slip-ins.png" alt="Slip-ins"></a></span><span class="item"><a class="lgl" href="https://www.aquapac.net" target="_blank" rel="noopener" aria-label="Aquapac"><img class="lg" src="logos/aquapac.png" alt="Aquapac"></a></span><span class="item"><a class="lgl" href="https://suntribesunscreen.com" target="_blank" rel="noopener" aria-label="Suntribe"><img class="lg" src="logos/suntribe.png" alt="Suntribe"></a></span><span class="item"><a class="lgl" href="https://shadecream.com" target="_blank" rel="noopener" aria-label="Shade"><img class="lg" src="logos/shade.png" alt="Shade"></a></span><span class="item"><a class="lgl" href="https://rokaisunscreen.com" target="_blank" rel="noopener" aria-label="RoKai"><img class="lg" src="logos/rokai.png" alt="RoKai"></a></span><span class="item"><a class="lgl" href="https://roselli.fi" target="_blank" rel="noopener" aria-label="Roselli"><img class="lg" src="logos/roselli.png" alt="Roselli"></a></span><span class="item">GD Andana</span><span class="item"><a class="lgl" href="https://www.abarcasmenorquinas.com" target="_blank" rel="noopener" aria-label="Avarcas MIBO"><img class="lg" src="logos/mibo.png" alt="Avarcas MIBO"></a></span><span class="item"><a class="lgl" href="https://www.tecnomar.es" target="_blank" rel="noopener" aria-label="Tecnomar"><img class="lg" src="logos/tecnomar.png" alt="Tecnomar"></a></span><span class="item"><a class="lgl" href="https://montane.com" target="_blank" rel="noopener" aria-label="Montane"><img class="lg" src="logos/montane.png" alt="Montane"></a></span><span class="item"><a class="lgl" href="https://www.vango.co.uk" target="_blank" rel="noopener" aria-label="Vango"><img class="lg" src="logos/vango.png" alt="Vango"></a></span><span class="item">SOTO</span><span class="item"><a class="lgl" href="https://immersionresearch.com" target="_blank" rel="noopener" aria-label="Immersion Research"><img class="lg" src="logos/immersion-research.png" alt="Immersion Research"></a></span><span class="item"><a class="lgl" href="https://www.spetton.com" target="_blank" rel="noopener" aria-label="Spetton"><img class="lg" src="logos/spetton.png" alt="Spetton"></a></span></div>
+    <div class="grp" aria-hidden="true"><span class="item"><a class="lgl" tabindex="-1" href="https://www.vaude.com" target="_blank" rel="noopener" aria-label="Vaude"><img class="lg" src="logos/vaude.png" alt="Vaude"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.katadyn.com" target="_blank" rel="noopener" aria-label="Katadyn"><img class="lg" src="logos/katadyn.png" alt="Katadyn"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.ortlieb.com" target="_blank" rel="noopener" aria-label="Ortlieb"><img class="lg" src="logos/ortlieb.png" alt="Ortlieb"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.nutrisport.es" target="_blank" rel="noopener" aria-label="Nutrisport"><img class="lg" src="logos/nutrisport.png" alt="Nutrisport"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.danishendurance.com" target="_blank" rel="noopener" aria-label="Danish Endurance"><img class="lg" src="logos/danish-endurance.png" alt="Danish Endurance"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.kilpi.com" target="_blank" rel="noopener" aria-label="Kilpi"><img class="lg" src="logos/kilpi.png" alt="Kilpi"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.prabos.cz" target="_blank" rel="noopener" aria-label="Prabos"><img class="lg" src="logos/prabos.png" alt="Prabos"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.petromax.de" target="_blank" rel="noopener" aria-label="Petromax"><img class="lg" src="logos/petromax.png" alt="Petromax"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.eassun.com" target="_blank" rel="noopener" aria-label="Eassun"><img class="lg" src="logos/eassun.png" alt="Eassun"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.qwstion.com" target="_blank" rel="noopener" aria-label="Qwstion"><img class="lg" src="logos/qwstion.png" alt="Qwstion"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.sunwayfoto.com" target="_blank" rel="noopener" aria-label="Sunwayfoto"><img class="lg" src="logos/sunwayfoto.png" alt="Sunwayfoto"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.armytek.com" target="_blank" rel="noopener" aria-label="Armytek"><img class="lg" src="logos/armytek.png" alt="Armytek"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.wubenlight.com" target="_blank" rel="noopener" aria-label="Wuben"><img class="lg" src="logos/wuben.png" alt="Wuben"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.turtlefur.com" target="_blank" rel="noopener" aria-label="Turtle Fur"><img class="lg" src="logos/turtle-fur.png" alt="Turtle Fur"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.infisport.com" target="_blank" rel="noopener" aria-label="Infisport"><img class="lg" src="logos/infisport.png" alt="Infisport"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.lomo.co.uk" target="_blank" rel="noopener" aria-label="Lomo"><img class="lg" src="logos/lomo.png" alt="Lomo"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://sunslice-solar.com" target="_blank" rel="noopener" aria-label="Sunslice"><img class="lg" src="logos/sunslice.png" alt="Sunslice"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://silverantoutdoors.com" target="_blank" rel="noopener" aria-label="SilverAnt"><img class="lg" src="logos/silverant.png" alt="SilverAnt"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://holdfastgear.com" target="_blank" rel="noopener" aria-label="HoldFast"><img class="lg" src="logos/holdfast.png" alt="HoldFast"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://slipins.com" target="_blank" rel="noopener" aria-label="Slip-ins"><img class="lg" src="logos/slip-ins.png" alt="Slip-ins"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.aquapac.net" target="_blank" rel="noopener" aria-label="Aquapac"><img class="lg" src="logos/aquapac.png" alt="Aquapac"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://suntribesunscreen.com" target="_blank" rel="noopener" aria-label="Suntribe"><img class="lg" src="logos/suntribe.png" alt="Suntribe"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://shadecream.com" target="_blank" rel="noopener" aria-label="Shade"><img class="lg" src="logos/shade.png" alt="Shade"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://rokaisunscreen.com" target="_blank" rel="noopener" aria-label="RoKai"><img class="lg" src="logos/rokai.png" alt="RoKai"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://roselli.fi" target="_blank" rel="noopener" aria-label="Roselli"><img class="lg" src="logos/roselli.png" alt="Roselli"></a></span><span class="item">GD Andana</span><span class="item"><a class="lgl" tabindex="-1" href="https://www.abarcasmenorquinas.com" target="_blank" rel="noopener" aria-label="Avarcas MIBO"><img class="lg" src="logos/mibo.png" alt="Avarcas MIBO"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.tecnomar.es" target="_blank" rel="noopener" aria-label="Tecnomar"><img class="lg" src="logos/tecnomar.png" alt="Tecnomar"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://montane.com" target="_blank" rel="noopener" aria-label="Montane"><img class="lg" src="logos/montane.png" alt="Montane"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.vango.co.uk" target="_blank" rel="noopener" aria-label="Vango"><img class="lg" src="logos/vango.png" alt="Vango"></a></span><span class="item">SOTO</span><span class="item"><a class="lgl" tabindex="-1" href="https://immersionresearch.com" target="_blank" rel="noopener" aria-label="Immersion Research"><img class="lg" src="logos/immersion-research.png" alt="Immersion Research"></a></span><span class="item"><a class="lgl" tabindex="-1" href="https://www.spetton.com" target="_blank" rel="noopener" aria-label="Spetton"><img class="lg" src="logos/spetton.png" alt="Spetton"></a></span></div>
   </div>
 </section>
 
@@ -530,6 +560,85 @@
     </div>
   </section>
 
+  <section class="atlas" id="atlas" aria-labelledby="atlas-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">The Atlas</p>
+        <h2 id="atlas-h">All the routes, on one globe.</h2>
+        <p class="lede">The real routes, by bike, kayak, boat and thumb, from the Camino to Kyrgyzstan. Spin the globe, zoom in, follow the lines across the world.</p>
+        <p class="lede atlas-note">Every line here was travelled under my own power and recorded on the way. I am building this into something anyone can use: a proper satellite and terrain atlas where you plot your own journeys and plan the next one, the tool that went missing when FATMAP was shut down. If you run an expedition and want your own globe, <a href="mailto:tassilo@tassilodelatorre.com?subject=Atlas">write to me</a>.</p>
+      </div>
+    </div>
+    <div class="globe-map reveal">
+      <div id="atlas-map" role="application" aria-label="Interactive satellite globe of Tassilo's journeys"></div>
+      <div class="map-legend">
+        <h4>By transport</h4>
+        <ul>
+          <li><span class="ln" style="background:#f4a261"></span> Bike</li>
+          <li><span class="ln" style="background:#2a9d8f"></span> Kayak</li>
+          <li><span class="ln" style="background:#118ab2"></span> Boat / ferry</li>
+          <li><span class="ln" style="background:#e9c46a"></span> Hitchhiking</li>
+          <li><span class="ln" style="background:#06d6a0"></span> On foot</li>
+          <li><span class="ln" style="background:#8ecae6"></span> Train</li>
+          <li><span class="ln" style="background:#fff"></span> Planned · Sept. 2026</li>
+          <li><span class="ln" style="background:#ff3b30"></span> Dreaming</li>
+        </ul>
+        <p class="map-hint">Drag to spin · scroll to zoom · Shift + drag to tilt</p>
+      </div>
+    </div>
+    <div class="atlas-cta-row"><button class="atlas-cta" id="see-expedition" type="button">See the September route</button></div>
+  </section>
+
+  <script>
+  (function(){
+    var sec=document.getElementById('atlas'); if(!sec) return; var started=false;
+    function start(){ if(started) return; started=true;
+      var l=document.createElement('link'); l.rel='stylesheet'; l.href='atlas/maplibre-gl.css'; document.head.appendChild(l);
+      var s=document.createElement('script'); s.src='atlas/maplibre-gl.js'; s.onload=initAtlas; document.body.appendChild(s); }
+    function initAtlas(){
+      if(!window.maplibregl) return;
+      var ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+      var map=new maplibregl.Map({container:'atlas-map', attributionControl:true, center:[10,44], zoom:2.1, minZoom:1.2, maxZoom:17, fadeDuration:0, maxPitch:85, pitchWithRotate:true, dragRotate:true,
+        style:{version:8, projection:{type:'globe'},
+          sources:{sat:{type:'raster',tiles:[ESRI],tileSize:256,maxzoom:19,attribution:'Esri, Maxar, Earthstar Geographics'}},
+          layers:[{id:'bg',type:'background',paint:{'background-color':'#05070d'}},{id:'sat',type:'raster',source:'sat'}]}});
+      map.addControl(new maplibregl.NavigationControl({showCompass:true, visualizePitch:true}),'top-right');
+      map.dragRotate.enable(); map.touchZoomRotate.enableRotation();
+      try{ map.touchPitch.enable(); }catch(e){}
+      map.boxZoom.disable();
+      (function(){ var sDrag=false,sx=0,sy=0; var cc=map.getCanvasContainer();
+        cc.addEventListener('mousedown',function(e){ if(!e.shiftKey)return; sDrag=true; sx=e.clientX; sy=e.clientY; map.dragPan.disable(); e.preventDefault(); e.stopPropagation(); }, true);
+        window.addEventListener('mousemove',function(e){ if(!sDrag)return; var dx=e.clientX-sx,dy=e.clientY-sy; sx=e.clientX; sy=e.clientY; map.setPitch(Math.max(0,Math.min(85,map.getPitch()-dy*0.5))); map.setBearing(map.getBearing()+dx*0.6); },true);
+        window.addEventListener('mouseup',function(){ if(sDrag){ sDrag=false; map.dragPan.enable(); } },true); })();
+      map.on('style.load',function(){ if(map.setSky) map.setSky({'sky-color':'#05070d','horizon-color':'#1b3a63','fog-color':'#182236','sky-horizon-blend':0.8,'horizon-fog-blend':0.6,'fog-ground-blend':0.5,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,10,1,12,0]}); });
+      map.on('load',function(){
+        map.addSource('dem',{type:'raster-dem',tiles:['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'],encoding:'terrarium',tileSize:256,maxzoom:13});
+        if(map.setTerrain) map.setTerrain({source:'dem',exaggeration:1.3});
+        map.addSource('routes',{type:'geojson',data:'atlas/routes.geojson'});
+        map.addLayer({id:'routes-solid',type:'line',source:'routes',filter:['all',['!=',['get','dashed'],1],['==',['get','cat'],'done']],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],1,1.4,4,2.8,8,4.5],'line-opacity':0.95}});
+        map.addLayer({id:'routes-plan-casing',type:'line',source:'routes',filter:['==',['get','cat'],'plan'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#05070d','line-width':['interpolate',['linear'],['zoom'],3,3.2,9,9],'line-opacity':0.85}});
+        map.addLayer({id:'routes-plan',type:'line',source:'routes',filter:['==',['get','cat'],'plan'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],3,1.8,9,5],'line-opacity':1}});
+        map.addLayer({id:'routes-dot',type:'line',source:'routes',filter:['==',['get','cat'],'dream'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],1,2.6,6,4.6],'line-dasharray':[0,2],'line-opacity':1}});
+        map.addSource('places',{type:'geojson',data:'atlas/places.geojson'});
+        map.addLayer({id:'places',type:'circle',source:'places',paint:{'circle-radius':['interpolate',['linear'],['zoom'],4,1.1,6,2.1,8,3.3,11,5],'circle-color':'#ffffff','circle-opacity':['interpolate',['linear'],['zoom'],4,0.25,6,0.7,8,1],'circle-stroke-width':['interpolate',['linear'],['zoom'],4,0,7,0.8,9,1.3],'circle-stroke-color':'#05070d','circle-stroke-opacity':['interpolate',['linear'],['zoom'],4,0.25,6,0.7,8,1]}});
+        var popup=new maplibregl.Popup({closeButton:false,closeOnClick:false});
+        function on(layer,html){
+          map.on('mouseenter',layer,function(e){ map.getCanvas().style.cursor='pointer'; var f=e.features[0]; popup.setLngLat(f.geometry.type==='Point'?f.geometry.coordinates:e.lngLat).setHTML(html(f.properties)).addTo(map); });
+          map.on('mousemove',layer,function(e){ if(e.features[0].geometry.type!=='Point') popup.setLngLat(e.lngLat); });
+          map.on('mouseleave',layer,function(){ map.getCanvas().style.cursor=''; popup.remove(); });
+        }
+        on('routes-solid',function(p){ return p.label||''; });
+        on('routes-dot',function(p){ return p.label||''; });
+        on('routes-plan',function(p){ return p.label||''; });
+        var _b=document.getElementById('see-expedition'); if(_b) _b.addEventListener('click',function(){ if(matchMedia('(prefers-reduced-motion: reduce)').matches){ map.jumpTo({center:[2.99,39.62],zoom:8.4,pitch:35}); } else { map.flyTo({center:[2.99,39.62],zoom:8.4,pitch:35,duration:2600}); } });
+        on('places',function(p){ return p.label||''; });
+      });
+    }
+    if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){start(); io.disconnect();}});},{rootMargin:'350px'}); io.observe(sec); }
+    else start();
+  })();
+  </script>
+
   <section id="about" aria-labelledby="about-h" style="padding-top:clamp(24px,4vw,56px)">
     <div class="wrap">
       <div class="sec-head reveal">
@@ -625,6 +734,16 @@
     </div>
   </section>
 
+  <section class="press" id="press" aria-labelledby="press-h">
+    <div class="wrap">
+      <p class="eyebrow" id="press-h">Commissioned by</p>
+      <ul class="press-list">
+        <li><b>outdoor Magazin</b><span>Photography and route reports from the 2026 expeditions. Motor Presse Stuttgart.</span></li>
+        <li><b>ALPIN</b><span>Text and photography from the Spanish stages, on commission.</span></li>
+      </ul>
+    </div>
+  </section>
+
   <section class="partners" id="partners" aria-labelledby="partners-h">
     <div class="wrap">
       <div class="reveal">
@@ -637,6 +756,7 @@
         <li class="reveal"><b>Proof</b><p>Your product in months of honest use, in salt, rain and sun that no studio can fake.</p></li>
       </ul>
       <p class="pledge reveal">"Every collaboration is a first step, and I'd love to take the good ones a great deal further."</p>
+      <p class="giving-line reveal"><a href="/giving/"><b>And every collaboration plants ten trees.</b> I dig the holes myself, in the emptiest highlands in Spain, and you get the coordinates.</a></p>
       <div class="cta-row reveal">
         <a class="cta" href="mailto:tassilo@tassilodelatorre.com">Write to me</a>
         <a class="cta secondary" href="media-kit.pdf" download>Download media kit (PDF)</a>
@@ -658,90 +778,18 @@
         <figure class="reveal"><img width="1280" height="1600" decoding="async" src="photos/p17.jpg" loading="lazy" alt="A stone church ruin clinging to a sheer cliff in Artvin, a lone figure lit in the doorway"><figcaption>The cliff church of Artvin</figcaption></figure>
         <figure class="reveal"><img width="1440" height="1080" decoding="async" src="photos/p09.jpg" loading="lazy" alt="Dawn camp on Monte Molare above the Bay of Naples, Vesuvius on the horizon"><figcaption>Dawn on Monte Molare, Naples</figcaption></figure>
       </div>
-      <div class="cta-row reveal">
-        <a class="cta" href="mailto:tassilo@tassilodelatorre.com?subject=Print%20order">Order a print</a>
-        <span class="prints-note">Write to me for sizes and papers, and I will ship anywhere in the world. A proper shop is on the way.</span>
+      <p class="giving-line reveal"><a href="/giving/"><b>Every print plants a tree.</b> One native tree, planted by hand in Guadalajara for every photograph sold. Not a donation: my own shovel, and the coordinates published.</a></p>
+      <div class="print-sizes reveal">
+        <a href="mailto:tassilo@tassilodelatorre.com?subject=Print%20order%20%C2%B7%20A3&amp;body=Which%20photograph%3A%20%0ASize%3A%20A3%20(30%20x%2042%20cm)%0AShipping%20address%3A%20">
+          <b>A3</b><span>30 × 42 cm</span></a>
+        <a href="mailto:tassilo@tassilodelatorre.com?subject=Print%20order%20%C2%B7%20A2&amp;body=Which%20photograph%3A%20%0ASize%3A%20A2%20(42%20x%2059%20cm)%0AShipping%20address%3A%20">
+          <b>A2</b><span>42 × 59 cm</span></a>
+        <a href="mailto:tassilo@tassilodelatorre.com?subject=Print%20order%20%C2%B7%20A1&amp;body=Which%20photograph%3A%20%0ASize%3A%20A1%20(59%20x%2084%20cm)%0AShipping%20address%3A%20">
+          <b>A1</b><span>59 × 84 cm</span></a>
       </div>
+      <p class="prints-note reveal">Archival cotton paper, signed and numbered, shipped worldwide. Pick a size above and tell me which photograph you want. If you would rather have a size that is not listed, ask.</p>
     </div>
   </section>
-
-  <section class="atlas" id="atlas" aria-labelledby="atlas-h">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <p class="eyebrow">The Atlas</p>
-        <h2 id="atlas-h">All the routes, on one globe.</h2>
-        <p class="lede">The real routes, by bike, kayak, boat and thumb, from the Camino to Kyrgyzstan. Spin the globe, zoom in, follow the lines across the world.</p>
-      </div>
-    </div>
-    <div class="globe-map reveal">
-      <div id="atlas-map" role="application" aria-label="Interactive satellite globe of Tassilo's journeys"></div>
-      <div class="map-legend">
-        <h4>By transport</h4>
-        <ul>
-          <li><span class="ln" style="background:#f4a261"></span> Bike</li>
-          <li><span class="ln" style="background:#2a9d8f"></span> Kayak</li>
-          <li><span class="ln" style="background:#118ab2"></span> Boat / ferry</li>
-          <li><span class="ln" style="background:#e9c46a"></span> Hitchhiking</li>
-          <li><span class="ln" style="background:#06d6a0"></span> On foot</li>
-          <li><span class="ln" style="background:#8ecae6"></span> Train</li>
-          <li><span class="ln" style="background:#fff"></span> Planned · Sept. 2026</li>
-          <li><span class="ln" style="background:#ff3b30"></span> Dreaming</li>
-        </ul>
-        <p class="map-hint">Drag to spin · scroll to zoom · Shift + drag to tilt</p>
-      </div>
-    </div>
-    <div class="atlas-cta-row"><button class="atlas-cta" id="see-expedition" type="button">See the September route</button></div>
-  </section>
-
-  <script>
-  (function(){
-    var sec=document.getElementById('atlas'); if(!sec) return; var started=false;
-    function start(){ if(started) return; started=true;
-      var l=document.createElement('link'); l.rel='stylesheet'; l.href='atlas/maplibre-gl.css'; document.head.appendChild(l);
-      var s=document.createElement('script'); s.src='atlas/maplibre-gl.js'; s.onload=initAtlas; document.body.appendChild(s); }
-    function initAtlas(){
-      if(!window.maplibregl) return;
-      var ESRI='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
-      var map=new maplibregl.Map({container:'atlas-map', attributionControl:true, center:[10,44], zoom:2.1, minZoom:1.2, maxZoom:17, fadeDuration:0, maxPitch:85, pitchWithRotate:true, dragRotate:true,
-        style:{version:8, projection:{type:'globe'},
-          sources:{sat:{type:'raster',tiles:[ESRI],tileSize:256,maxzoom:19,attribution:'Esri, Maxar, Earthstar Geographics'}},
-          layers:[{id:'bg',type:'background',paint:{'background-color':'#05070d'}},{id:'sat',type:'raster',source:'sat'}]}});
-      map.addControl(new maplibregl.NavigationControl({showCompass:true, visualizePitch:true}),'top-right');
-      map.dragRotate.enable(); map.touchZoomRotate.enableRotation();
-      try{ map.touchPitch.enable(); }catch(e){}
-      map.boxZoom.disable();
-      (function(){ var sDrag=false,sx=0,sy=0; var cc=map.getCanvasContainer();
-        cc.addEventListener('mousedown',function(e){ if(!e.shiftKey)return; sDrag=true; sx=e.clientX; sy=e.clientY; map.dragPan.disable(); e.preventDefault(); e.stopPropagation(); }, true);
-        window.addEventListener('mousemove',function(e){ if(!sDrag)return; var dx=e.clientX-sx,dy=e.clientY-sy; sx=e.clientX; sy=e.clientY; map.setPitch(Math.max(0,Math.min(85,map.getPitch()-dy*0.5))); map.setBearing(map.getBearing()+dx*0.6); },true);
-        window.addEventListener('mouseup',function(){ if(sDrag){ sDrag=false; map.dragPan.enable(); } },true); })();
-      map.on('style.load',function(){ if(map.setSky) map.setSky({'sky-color':'#05070d','horizon-color':'#1b3a63','fog-color':'#182236','sky-horizon-blend':0.8,'horizon-fog-blend':0.6,'fog-ground-blend':0.5,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,10,1,12,0]}); });
-      map.on('load',function(){
-        map.addSource('dem',{type:'raster-dem',tiles:['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'],encoding:'terrarium',tileSize:256,maxzoom:13});
-        if(map.setTerrain) map.setTerrain({source:'dem',exaggeration:1.3});
-        map.addSource('routes',{type:'geojson',data:'atlas/routes.geojson'});
-        map.addLayer({id:'routes-solid',type:'line',source:'routes',filter:['all',['!=',['get','dashed'],1],['==',['get','cat'],'done']],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],1,1.4,4,2.8,8,4.5],'line-opacity':0.95}});
-        map.addLayer({id:'routes-plan-casing',type:'line',source:'routes',filter:['==',['get','cat'],'plan'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':'#05070d','line-width':['interpolate',['linear'],['zoom'],3,3.2,9,9],'line-opacity':0.85}});
-        map.addLayer({id:'routes-plan',type:'line',source:'routes',filter:['==',['get','cat'],'plan'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],3,1.8,9,5],'line-opacity':1}});
-        map.addLayer({id:'routes-dot',type:'line',source:'routes',filter:['==',['get','cat'],'dream'],layout:{'line-cap':'round','line-join':'round'},paint:{'line-color':['get','color'],'line-width':['interpolate',['linear'],['zoom'],1,2.6,6,4.6],'line-dasharray':[0,2],'line-opacity':1}});
-        map.addSource('places',{type:'geojson',data:'atlas/places.geojson'});
-        map.addLayer({id:'places',type:'circle',source:'places',paint:{'circle-radius':['interpolate',['linear'],['zoom'],4,1.1,6,2.1,8,3.3,11,5],'circle-color':'#ffffff','circle-opacity':['interpolate',['linear'],['zoom'],4,0.25,6,0.7,8,1],'circle-stroke-width':['interpolate',['linear'],['zoom'],4,0,7,0.8,9,1.3],'circle-stroke-color':'#05070d','circle-stroke-opacity':['interpolate',['linear'],['zoom'],4,0.25,6,0.7,8,1]}});
-        var popup=new maplibregl.Popup({closeButton:false,closeOnClick:false});
-        function on(layer,html){
-          map.on('mouseenter',layer,function(e){ map.getCanvas().style.cursor='pointer'; var f=e.features[0]; popup.setLngLat(f.geometry.type==='Point'?f.geometry.coordinates:e.lngLat).setHTML(html(f.properties)).addTo(map); });
-          map.on('mousemove',layer,function(e){ if(e.features[0].geometry.type!=='Point') popup.setLngLat(e.lngLat); });
-          map.on('mouseleave',layer,function(){ map.getCanvas().style.cursor=''; popup.remove(); });
-        }
-        on('routes-solid',function(p){ return p.label||''; });
-        on('routes-dot',function(p){ return p.label||''; });
-        on('routes-plan',function(p){ return p.label||''; });
-        var _b=document.getElementById('see-expedition'); if(_b) _b.addEventListener('click',function(){ if(matchMedia('(prefers-reduced-motion: reduce)').matches){ map.jumpTo({center:[2.99,39.62],zoom:8.4,pitch:35}); } else { map.flyTo({center:[2.99,39.62],zoom:8.4,pitch:35,duration:2600}); } });
-        on('places',function(p){ return p.label||''; });
-      });
-    }
-    if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){start(); io.disconnect();}});},{rootMargin:'350px'}); io.observe(sec); }
-    else start();
-  })();
-  </script>
 
   <section class="nuka" id="nuka" aria-labelledby="nuka-h">
     <div class="wrap nuka-grid">
@@ -765,6 +813,15 @@
           <a class="cta-ghost" href="https://studiokotorre.com/nuka" target="_blank" rel="noopener">See the full proposal &rarr;</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="signup" aria-labelledby="signup-h">
+    <div class="wrap reveal">
+      <p class="eyebrow" id="signup-h">The dispatch</p>
+      <h2>One email when a route is finished.</h2>
+      <p class="lede">No newsletter, no schedule. A note when a new expedition report goes up, when the Atlas gains a line, or when new prints are ready. That is all.</p>
+      <a class="cta" href="mailto:tassilo@tassilodelatorre.com?subject=Dispatch&amp;body=Add%20me%20to%20the%20list.">Put me on the list</a>
     </div>
   </section>
 
@@ -844,6 +901,18 @@
     requestAnimationFrame(step);
   }
   (function initpos(){ var w=W(); if(w>0){track.scrollLeft=w; requestAnimationFrame(step);} else requestAnimationFrame(initpos); })();
+})();
+</script>
+
+<script>
+(function(){
+  var el=document.getElementById('countdown'); if(!el) return;
+  var salida=new Date('2026-09-04T08:00:00+02:00');
+  var dias=Math.ceil((salida-new Date())/86400000);
+  if(dias>1) el.textContent='Setting off in '+dias+' days · Mallorca and Menorca by sea kayak';
+  else if(dias===1) el.textContent='Setting off tomorrow · Mallorca and Menorca by sea kayak';
+  else if(dias===0) el.textContent='Setting off today · Mallorca and Menorca by sea kayak';
+  else el.textContent='On the water · Mallorca and Menorca by sea kayak';
 })();
 </script>
 </body>
