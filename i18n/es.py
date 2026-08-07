@@ -3,12 +3,8 @@ T = {
 # ---------- metas ----------
 "Tassilo de la Torre, Adventure Photographer · Model · Architect · Madrid":
     "Tassilo de la Torre, fotógrafo de aventura · modelo · arquitecto · Madrid",
-"Tassilo de la Torre, adventure photographer, model and architect based in Madrid. I photograph the places you can only get to slowly: by sea kayak, on foot, and from the air.":
-    "Tassilo de la Torre, fotógrafo de aventura, modelo y arquitecto afincado en Madrid. Fotografío los sitios a los que solo se llega despacio: en kayak de mar, a pie y desde el aire.",
 "Tassilo de la Torre - Adventure photographer, model and architect":
     "Tassilo de la Torre, fotógrafo de aventura, modelo y arquitecto",
-"I photograph the places you can only get to slowly. Spain and the Balearics, 2026.":
-    "Fotografío los sitios a los que solo se llega despacio. España y Baleares, 2026.",
 
 # ---------- cabecera / hero ----------
 "Skip to content": "Ir al contenido",
@@ -22,8 +18,6 @@ T = {
 "Contact": "Contacto",
 "Adventure photographer · Model · Architect · Madrid":
     "Fotógrafo de aventura · modelo · arquitecto · Madrid",
-"I photograph the places": "Fotografío los sitios",
-"you can only get to slowly.": "a los que solo se llega despacio.",
 ", from the water, from the air, and from wherever night falls on Fluffo and me.":
     ", desde el agua, desde el aire y desde donde nos pille la noche a Fluffo y a mí.",
 "Partner with the 2026 expeditions": "Patrocina las expediciones de 2026",
@@ -36,9 +30,6 @@ T = {
     "· las marcas que apoyan las expediciones de 2026",
 
 # ---------- trabajo ----------
-"I was there for all of it.": "Yo estuve allí en todas.",
-"Every photograph here comes from a journey I actually made. I get there by sea kayak or on foot, I shoot from the water and from the air, and I sleep outside the whole way, in caves, in ruins, on gravel bars and on summits. A journey takes me weeks or months instead of an afternoon, and that is the only reason these pictures exist: I was still there the next morning, when the light came back.":
-    "Cada fotografía de esta página sale de un viaje que hice de verdad. Llego en kayak de mar o andando, disparo desde el agua y desde el aire, y duermo fuera todo el camino, en cuevas, en ruinas, en playas de grava y en cumbres. Un viaje me lleva semanas o meses en vez de una tarde, y esa es la única razón de que existan estas fotos: seguía allí a la mañana siguiente, cuando volvió la luz.",
 "The Danube beneath the Walhalla. EUROPA, fully loaded, Fluffo at the bow.":
     "El Danubio bajo el Walhalla. EUROPA, cargado hasta arriba, Fluffo en la proa.",
 "The river, straight down, by drone. Paddling the Tiber, Italy.":
@@ -70,8 +61,6 @@ T = {
 # ---------- arquitectura ----------
 "The architect's eye": "El ojo del arquitecto",
 "Architecture, the other subject.": "La arquitectura, el otro tema.",
-"I trained as an architect (B.A., TU München), and it never quite leaves the eye: I frame ruins, structures and landscapes the way I once drew buildings. Lattice, rib, façade, cliff, seen from the water and from the air.":
-    "Estudié arquitectura (B.A., TU München) y eso no se te va del ojo: encuadro ruinas, estructuras y paisajes igual que antes dibujaba edificios. Celosía, nervio, fachada, acantilado, vistos desde el agua y desde el aire.",
 "La Vela di Calatrava, Rome, by drone at dusk.":
     "La Vela di Calatrava, Roma, con dron al anochecer.",
 "Ribs, light, and a puddle for a mirror.":
@@ -140,8 +129,6 @@ T = {
 # ---------- equipo ----------
 "What I shoot with": "Con qué fotografío",
 "The kit that comes along.": "El equipo que viene conmigo.",
-"Light enough to carry for months, tough enough for salt, sand and rain. Nothing here is for show; every piece earns its place on the boat.":
-    "Suficientemente ligero para llevarlo meses, suficientemente duro para la sal, la arena y la lluvia. Aquí no hay nada de adorno: cada pieza se gana su sitio en el barco.",
 "My main camera, weather-sealed and built to keep working when the conditions do not.":
     "Mi cámara principal, sellada y hecha para seguir funcionando cuando las condiciones dejan de hacerlo.",
 "The everyday zoom, wide to short tele, for camp, coast and the people I meet.":
@@ -188,8 +175,6 @@ T = {
 "Fifty to a hundred finished photographs, with full commercial rights.":
     "De cincuenta a cien fotografías acabadas, con derechos comerciales completos.",
 "Proof": "Prueba",
-"Your product in months of honest use, in salt, rain and sun that no studio can fake.":
-    "Vuestro producto en meses de uso honesto, con una sal, una lluvia y un sol que no se pueden falsear en un estudio.",
 "\"Every collaboration is a first step, and I'd love to take the good ones a great deal further.\"":
     "\"Cada colaboración es un primer paso, y las buenas me encantaría llevarlas mucho más lejos.\"",
 "And every collaboration plants ten trees.": "Y cada colaboración planta diez árboles.",
@@ -265,4 +250,24 @@ T = {
     "Salgo hoy · Mallorca y Menorca en kayak de mar",
 "On the water · Mallorca and Menorca by sea kayak":
     "En el agua · Mallorca y Menorca en kayak de mar",
+
+# ---------- titular y textos nuevos ----------
+"Small boats, long journeys,":
+    "Barcos pequeños, viajes largos",
+"and a lot of world to look at.":
+    "y mucho mundo que mirar.",
+"Tassilo de la Torre, adventure photographer, model and architect based in Madrid. Photographs from long journeys by sea kayak and on foot, with my dog Fluffo.":
+    "Tassilo de la Torre, fotógrafo de aventura, modelo y arquitecto afincado en Madrid. Fotografías de viajes largos en kayak de mar y a pie, con mi perro Fluffo.",
+"Small boats, long journeys, and a lot of world to look at. Spain and the Balearics, 2026.":
+    "Barcos pequeños, viajes largos y mucho mundo que mirar. España y Baleares, 2026.",
+"Where these come from.":
+    "De dónde salen estas fotos.",
+"All of them come from journeys made by sea kayak and on foot. I sleep outside for the whole trip, in caves, in ruins, on gravel bars and on summits, so I am there early and late, when the light is good. A trip runs for weeks or months, and nothing here was set up for the camera.":
+    "Todas salen de viajes hechos en kayak de mar y a pie. Duermo fuera todo el viaje, en cuevas, en ruinas, en barras de grava y en cumbres, así que estoy allí temprano y tarde, que es cuando hay buena luz. Un viaje dura semanas o meses, y aquí no hay nada montado para la cámara.",
+"I studied architecture (B.A., TU München), so I tend to look at ruins, structures and landscapes the way I used to draw buildings. Most of these were taken from the water or from the air.":
+    "Estudié arquitectura (B.A., TU München), así que tiendo a mirar las ruinas, las estructuras y el paisaje como antes dibujaba los edificios. La mayoría están hechas desde el agua o desde el aire.",
+"Light enough to carry for months, and able to take salt, sand and rain. This is the whole list, nothing extra.":
+    "Suficientemente ligero para llevarlo meses y capaz de aguantar sal, arena y lluvia. Esta es la lista entera, no hay nada más.",
+"Your product after months of real use, in salt, rain and sun.":
+    "Vuestro producto después de meses de uso real, con sal, lluvia y sol.",
 }
