@@ -18,8 +18,6 @@ T = {
 "Contact": "Contacto",
 "Adventure photographer · Model · Architect · Madrid":
     "Fotógrafo de aventura · modelo · arquitecto · Madrid",
-", from the water, from the air, and from wherever night falls on Fluffo and me.":
-    ", desde el agua, desde el aire y desde donde nos pille la noche a Fluffo y a mí.",
 "Partner with the 2026 expeditions": "Patrocina las expediciones de 2026",
 "Follow the expedition on Instagram · @tassilodlts":
     "Sigue la expedición en Instagram · @tassilodlts",
@@ -77,8 +75,6 @@ T = {
 "Two journeys. One camera.": "Dos viajes. Una cámara.",
 "Spain, under human power": "España, a fuerza de brazos y piernas",
 "On the trail now · Two months": "En marcha · dos meses",
-"Across Spain on foot and by sea kayak: the Almería desert, the plains of Castilla, the wet green north coast. Sleeping outside the whole way, with Fluffo.":
-    "Cruzar España a pie y en kayak de mar: el desierto de Almería, las llanuras de Castilla, el norte verde y mojado. Durmiendo fuera todo el camino, con Fluffo.",
 "A lap of the Balearics, filmed": "Una vuelta a Baleares, filmada",
 "September · ~250 nautical miles": "Septiembre · unas 250 millas náuticas",
 "Around Mallorca and Menorca by sea kayak in stages, with Fluffo as crew, and I'll bring home a short documentary, daily films and a real body of photography.":
@@ -256,18 +252,24 @@ T = {
     "Barcos pequeños, viajes largos",
 "and a lot of world to look at.":
     "y mucho mundo que mirar.",
-"Tassilo de la Torre, adventure photographer, model and architect based in Madrid. Photographs from long journeys by sea kayak and on foot, with my dog Fluffo.":
-    "Tassilo de la Torre, fotógrafo de aventura, modelo y arquitecto afincado en Madrid. Fotografías de viajes largos en kayak de mar y a pie, con mi perro Fluffo.",
 "Small boats, long journeys, and a lot of world to look at. Spain and the Balearics, 2026.":
     "Barcos pequeños, viajes largos y mucho mundo que mirar. España y Baleares, 2026.",
 "Where these come from.":
     "De dónde salen estas fotos.",
-"All of them come from journeys made by sea kayak and on foot. I sleep outside for the whole trip, in caves, in ruins, on gravel bars and on summits, so I am there early and late, when the light is good. A trip runs for weeks or months, and nothing here was set up for the camera.":
-    "Todas salen de viajes hechos en kayak de mar y a pie. Duermo fuera todo el viaje, en cuevas, en ruinas, en barras de grava y en cumbres, así que estoy allí temprano y tarde, que es cuando hay buena luz. Un viaje dura semanas o meses, y aquí no hay nada montado para la cámara.",
 "I studied architecture (B.A., TU München), so I tend to look at ruins, structures and landscapes the way I used to draw buildings. Most of these were taken from the water or from the air.":
     "Estudié arquitectura (B.A., TU München), así que tiendo a mirar las ruinas, las estructuras y el paisaje como antes dibujaba los edificios. La mayoría están hechas desde el agua o desde el aire.",
 "Light enough to carry for months, and able to take salt, sand and rain. This is the whole list, nothing extra.":
     "Suficientemente ligero para llevarlo meses y capaz de aguantar sal, arena y lluvia. Esta es la lista entera, no hay nada más.",
 "Your product after months of real use, in salt, rain and sun.":
     "Vuestro producto después de meses de uso real, con sal, lluvia y sol.",
+
+# ---------- correcciones de agosto ----------
+". By sea kayak, on foot, by bike and by thumb, usually with my dog Fluffo.":
+    ". En kayak de mar, a pie, en bici y a dedo, casi siempre con mi perro Fluffo.",
+"Tassilo de la Torre, adventure photographer, model and architect based in Madrid. Photographs from long journeys by sea kayak, on foot, by bike and hitchhiking, usually with my dog Fluffo.":
+    "Tassilo de la Torre, fotógrafo de aventura, modelo y arquitecto afincado en Madrid. Fotografías de viajes largos en kayak de mar, a pie, en bici y a dedo, casi siempre con mi perro Fluffo.",
+"These come from journeys by sea kayak, on foot, by bike and hitchhiking. I sleep outside most nights, in caves, in ruins, on gravel bars and on summits, so I am usually there early and late, when the light is good. A trip runs for weeks or months.":
+    "Salen de viajes en kayak de mar, a pie, en bici y a dedo. Casi todas las noches duermo fuera, en cuevas, en ruinas, en barras de grava y en cumbres, así que suelo estar allí temprano y tarde, que es cuando hay buena luz. Un viaje dura semanas o meses.",
+"Across Spain on foot and by sea kayak: the Almería desert, the plains of Castilla, the wet green north coast. Sleeping outside most nights, with Fluffo.":
+    "Cruzar España a pie y en kayak de mar: el desierto de Almería, las llanuras de Castilla, el norte verde y mojado. Durmiendo fuera casi todas las noches, con Fluffo.",
 }

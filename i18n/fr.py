@@ -18,8 +18,6 @@ T = {
 "Contact": "Contact",
 "Adventure photographer · Model · Architect · Madrid":
     "Photographe d'aventure · mannequin · architecte · Madrid",
-", from the water, from the air, and from wherever night falls on Fluffo and me.":
-    ", depuis l'eau, depuis les airs, et depuis l'endroit où la nuit nous surprend, Fluffo et moi.",
 "Partner with the 2026 expeditions": "Devenir partenaire des expéditions 2026",
 "Follow the expedition on Instagram · @tassilodlts":
     "Suivre l'expédition sur Instagram · @tassilodlts",
@@ -77,8 +75,6 @@ T = {
 "Two journeys. One camera.": "Deux voyages. Un seul appareil.",
 "Spain, under human power": "L'Espagne, à la seule force du corps",
 "On the trail now · Two months": "En route · deux mois",
-"Across Spain on foot and by sea kayak: the Almería desert, the plains of Castilla, the wet green north coast. Sleeping outside the whole way, with Fluffo.":
-    "Traverser l'Espagne à pied et en kayak de mer : le désert d'Almería, les plaines de Castille, la côte nord verte et mouillée. Dormir dehors tout le long, avec Fluffo.",
 "A lap of the Balearics, filmed": "Un tour des Baléares, filmé",
 "September · ~250 nautical miles": "Septembre · environ 250 milles nautiques",
 "Around Mallorca and Menorca by sea kayak in stages, with Fluffo as crew, and I'll bring home a short documentary, daily films and a real body of photography.":
@@ -256,18 +252,24 @@ T = {
     "Des petits bateaux, de longs voyages",
 "and a lot of world to look at.":
     "et beaucoup de monde à regarder.",
-"Tassilo de la Torre, adventure photographer, model and architect based in Madrid. Photographs from long journeys by sea kayak and on foot, with my dog Fluffo.":
-    "Tassilo de la Torre, photographe d'aventure, mannequin et architecte installé à Madrid. Des photographies de longs voyages en kayak de mer et à pied, avec mon chien Fluffo.",
 "Small boats, long journeys, and a lot of world to look at. Spain and the Balearics, 2026.":
     "Des petits bateaux, de longs voyages, et beaucoup de monde à regarder. Espagne et Baléares, 2026.",
 "Where these come from.":
     "D'où viennent ces images.",
-"All of them come from journeys made by sea kayak and on foot. I sleep outside for the whole trip, in caves, in ruins, on gravel bars and on summits, so I am there early and late, when the light is good. A trip runs for weeks or months, and nothing here was set up for the camera.":
-    "Elles viennent toutes de voyages faits en kayak de mer et à pied. Je dors dehors pendant tout le voyage, dans des grottes, dans des ruines, sur des bancs de galets et sur des sommets, donc je suis là tôt et tard, quand la lumière est bonne. Un voyage dure des semaines ou des mois, et rien ici n'a été mis en scène pour l'appareil.",
 "I studied architecture (B.A., TU München), so I tend to look at ruins, structures and landscapes the way I used to draw buildings. Most of these were taken from the water or from the air.":
     "J'ai étudié l'architecture (B.A., TU München), alors j'ai tendance à regarder les ruines, les structures et les paysages comme je dessinais autrefois des bâtiments. La plupart ont été prises depuis l'eau ou depuis les airs.",
 "Light enough to carry for months, and able to take salt, sand and rain. This is the whole list, nothing extra.":
     "Assez léger pour être porté des mois, et capable d'encaisser le sel, le sable et la pluie. C'est toute la liste, il n'y a rien de plus.",
 "Your product after months of real use, in salt, rain and sun.":
     "Votre produit après des mois d'usage réel, dans le sel, la pluie et le soleil.",
+
+# ---------- correcciones de agosto ----------
+". By sea kayak, on foot, by bike and by thumb, usually with my dog Fluffo.":
+    ". En kayak de mer, à pied, à vélo et en stop, le plus souvent avec mon chien Fluffo.",
+"Tassilo de la Torre, adventure photographer, model and architect based in Madrid. Photographs from long journeys by sea kayak, on foot, by bike and hitchhiking, usually with my dog Fluffo.":
+    "Tassilo de la Torre, photographe d'aventure, mannequin et architecte installé à Madrid. Des photographies de longs voyages en kayak de mer, à pied, à vélo et en stop, le plus souvent avec mon chien Fluffo.",
+"These come from journeys by sea kayak, on foot, by bike and hitchhiking. I sleep outside most nights, in caves, in ruins, on gravel bars and on summits, so I am usually there early and late, when the light is good. A trip runs for weeks or months.":
+    "Elles viennent de voyages en kayak de mer, à pied, à vélo et en stop. La plupart des nuits, je dors dehors, dans des grottes, dans des ruines, sur des bancs de galets et sur des sommets, donc je suis en général là tôt et tard, quand la lumière est bonne. Un voyage dure des semaines ou des mois.",
+"Across Spain on foot and by sea kayak: the Almería desert, the plains of Castilla, the wet green north coast. Sleeping outside most nights, with Fluffo.":
+    "Traverser l'Espagne à pied et en kayak de mer : le désert d'Almería, les plaines de Castille, la côte nord verte et mouillée. La plupart des nuits dehors, avec Fluffo.",
 }
