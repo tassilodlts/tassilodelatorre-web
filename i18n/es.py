@@ -264,10 +264,10 @@ T = {
     "Vuestro producto después de meses de uso real, con sal, lluvia y sol.",
 
 # ---------- correcciones de agosto ----------
-". By sea kayak, on foot, by bike and by thumb, usually with my dog Fluffo.":
-    ". En kayak de mar, a pie, en bici y a dedo, casi siempre con mi perro Fluffo.",
-"Tassilo de la Torre, adventure photographer, model and architect based in Madrid. Photographs from long journeys by sea kayak, on foot, by bike and hitchhiking, usually with my dog Fluffo.":
-    "Tassilo de la Torre, fotógrafo de aventura, modelo y arquitecto afincado en Madrid. Fotografías de viajes largos en kayak de mar, a pie, en bici y a dedo, casi siempre con mi perro Fluffo.",
+". By sea kayak, on foot, by bike and by thumb, always with my dog Fluffo.":
+    ". En kayak de mar, a pie, en bici y a dedo, siempre con mi perro Fluffo.",
+"Tassilo de la Torre, adventure photographer, model and architect based in Madrid. Photographs from long journeys by sea kayak, on foot, by bike and hitchhiking, always with my dog Fluffo.":
+    "Tassilo de la Torre, fotógrafo de aventura, modelo y arquitecto afincado en Madrid. Fotografías de viajes largos en kayak de mar, a pie, en bici y a dedo, siempre con mi perro Fluffo.",
 "These come from journeys by sea kayak, on foot, by bike and hitchhiking. I sleep outside most nights, in caves, in ruins, on gravel bars and on summits, so I am usually there early and late, when the light is good. A trip runs for weeks or months.":
     "Salen de viajes en kayak de mar, a pie, en bici y a dedo. Casi todas las noches duermo fuera, en cuevas, en ruinas, en barras de grava y en cumbres, así que suelo estar allí temprano y tarde, que es cuando hay buena luz. Un viaje dura semanas o meses.",
 "Across Spain on foot and by sea kayak: the Almería desert, the plains of Castilla, the wet green north coast. Sleeping outside most nights, with Fluffo.":
