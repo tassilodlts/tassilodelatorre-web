@@ -1,0 +1,1043 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas · Your journey on a satellite globe · Tassilo de la Torre</title>
+<meta name="description" content="Drop a GPX file and see your journey on a 3D satellite globe. Free poster export. Order it as a signed fine-art print, a hosted expedition page or a cinematic flythrough film.">
+<link rel="canonical" href="https://tassilodelatorre.com/atlas/">
+<meta name="theme-color" content="#0b0e12">
+<meta property="og:title" content="Atlas · Your journey on a satellite globe">
+<meta property="og:description" content="Drop your GPX. See the whole journey on satellite and terrain. Take home a print, a page or a film.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tassilodelatorre.com/atlas/">
+<meta property="og:image" content="https://tassilodelatorre.com/photos/p02.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Atlas · Your journey on a satellite globe">
+<meta name="twitter:description" content="Drop your GPX. See the whole journey on satellite and terrain. Take home a print, a page or a film.">
+<meta name="twitter:image" content="https://tassilodelatorre.com/photos/p02.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%8D%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="maplibre-gl.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"Atlas","description":"A fine-art print, a hosted page or a cinematic film of your own journey, drawn on satellite imagery and real terrain.","brand":{"@type":"Person","name":"Tassilo de la Torre"},"url":"https://tassilodelatorre.com/atlas/","offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"89","highPrice":"1900","offerCount":"4"}}
+</script>
+<style>
+  :root{
+    --bg:#0b0e12;
+    --bg-2:#12161c;
+    --bg-3:#171c23;
+    --ink:#f0eadc;
+    --muted:#a3a595;
+    --accent:#8aa06a;
+    --accent-deep:#74855a;
+    --warm:#f4a261;
+    --line:rgba(240,234,220,.14);
+    --line-2:rgba(240,234,220,.08);
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,label:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+  ::selection{background:var(--accent-deep);color:#fff}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--accent-deep);color:#fff;padding:.7rem 1.2rem;z-index:99;text-decoration:none}
+  .skip:focus{left:0}
+  .wrap{max-width:1220px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+  h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em}
+  h2{font-size:clamp(1.9rem,4vw,3.1rem);line-height:1.09;margin:1rem 0 1.2rem}
+  h3{font-size:1.3rem;line-height:1.2}
+  .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:14px}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--accent);display:inline-block}
+  .lede{color:var(--muted);max-width:36em}
+  section{padding:clamp(56px,8vw,104px) 0;border-top:1px solid var(--line-2)}
+
+  /* ---------- top bar ---------- */
+  .topbar{position:sticky;top:0;z-index:60;background:rgba(11,14,18,.92);backdrop-filter:blur(9px);border-bottom:1px solid var(--line-2)}
+  .topbar .bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:14px;padding-bottom:14px}
+  .brand{font-family:var(--serif);font-size:1.05rem;text-decoration:none;white-space:nowrap}
+  .brand b{font-weight:400;color:var(--accent)}
+  .tnav{display:flex;gap:clamp(12px,2vw,26px);flex-wrap:wrap}
+  .tnav a{font-size:11px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;opacity:.85;border-bottom:1px solid transparent;padding-bottom:3px}
+  .tnav a:hover{opacity:1;border-bottom-color:var(--accent)}
+  @media(max-width:760px){.tnav a:nth-child(n+4){display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(48px,7vw,92px) 0 clamp(28px,4vw,48px)}
+  .hero h1{font-size:clamp(2.4rem,6.2vw,4.6rem);line-height:1.03;margin:1.1rem 0 1.3rem;max-width:15ch}
+  .hero h1 em{color:var(--warm)}
+  .hero .lede{font-size:clamp(1.02rem,1.5vw,1.18rem);max-width:40em}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:2.1rem}
+  .btn{display:inline-block;background:var(--accent-deep);color:#fff;border:none;cursor:pointer;font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:1rem 1.9rem;text-decoration:none;transition:background .25s}
+  .btn:hover{background:var(--accent)}
+  .btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+  .btn.ghost:hover{background:rgba(240,234,220,.06);border-color:var(--ink)}
+  .btn[disabled]{opacity:.4;cursor:not-allowed}
+  .hero-note{margin-top:1.3rem;font-size:.86rem;color:var(--muted)}
+
+  /* ---------- studio ---------- */
+  .studio{padding-top:clamp(30px,4vw,50px)}
+  .studio-shell{display:grid;grid-template-columns:340px 1fr;gap:1px;background:var(--line-2);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:clamp(22px,3vw,38px)}
+  .panel{background:var(--bg-2);padding:20px;display:flex;flex-direction:column;gap:18px}
+  .stage{background:#05070d;position:relative;min-height:640px}
+  #map{position:absolute;inset:0}
+  #map canvas{outline:none}
+  @media(max-width:900px){
+    .studio-shell{grid-template-columns:1fr}
+    .stage{min-height:66vh}
+  }
+
+  .drop{border:1px dashed rgba(240,234,220,.34);border-radius:8px;padding:22px 16px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s}
+  .drop:hover,.drop.over{border-color:var(--accent);background:rgba(138,160,106,.10)}
+  .drop b{display:block;font-family:var(--serif);font-size:1.12rem;margin-bottom:.3rem}
+  .drop span{font-size:.82rem;color:var(--muted);line-height:1.45;display:block}
+  .drop input{display:none}
+
+  .fld{display:flex;flex-direction:column;gap:6px}
+  .fld label,.grp-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .fld input[type=text],.fld select,.fld textarea,.form input,.form select,.form textarea{
+    background:var(--bg-3);border:1px solid var(--line);color:var(--ink);font-family:var(--sans);
+    font-size:.92rem;padding:.6rem .7rem;border-radius:5px;width:100%}
+  .fld input[type=range]{width:100%;accent-color:var(--accent)}
+  .seg{display:flex;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .seg button{flex:1;background:var(--bg-3);border:none;color:var(--muted);cursor:pointer;font-family:var(--sans);
+    font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;padding:.62rem .2rem;transition:background .2s,color .2s}
+  .seg button[aria-pressed=true]{background:var(--accent-deep);color:#fff}
+  .swatches{display:flex;gap:8px;flex-wrap:wrap}
+  .sw{width:26px;height:26px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0}
+  .sw[aria-pressed=true]{border-color:var(--ink)}
+
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-2);border:1px solid var(--line);border-radius:7px;overflow:hidden}
+  .stats div{background:var(--bg-3);padding:10px 12px}
+  .stats b{display:block;font-family:var(--serif);font-size:1.22rem;line-height:1.1}
+  .stats span{font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+
+  .panel-actions{display:flex;flex-direction:column;gap:9px;margin-top:auto;padding-top:4px}
+  .panel-actions .btn{text-align:center;padding:.85rem 1rem}
+  .tiny{font-size:.76rem;color:var(--muted);line-height:1.45}
+  .status{font-size:.8rem;color:var(--warm);min-height:1.2em}
+
+  .maphint{position:absolute;left:14px;bottom:34px;z-index:3;font-size:10.5px;letter-spacing:.11em;
+    text-transform:uppercase;color:rgba(240,234,220,.62);background:rgba(5,7,13,.55);padding:6px 10px;border-radius:4px;pointer-events:none}
+  .stage .maplibregl-ctrl-attrib{font-size:9px}
+  .stage .maplibregl-ctrl-group{background:var(--bg-2)!important;border:1px solid var(--line)!important;box-shadow:none!important}
+  .stage .maplibregl-ctrl button .maplibregl-ctrl-icon{filter:invert(1) brightness(1.5)}
+
+  /* ---------- products ---------- */
+  .prods{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-2);
+    border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:clamp(26px,3.5vw,44px)}
+  .prod{background:var(--bg-2);padding:26px 22px 24px;display:flex;flex-direction:column;gap:.7rem}
+  .prod.feature{background:var(--bg-3)}
+  .prod .tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+  .prod h3{margin-top:.1rem}
+  .prod .price{font-family:var(--serif);font-size:1.6rem;line-height:1}
+  .prod .price small{font-size:.8rem;color:var(--muted);font-family:var(--sans)}
+  .prod p{font-size:.9rem;color:var(--muted)}
+  .prod ul{list-style:none;font-size:.86rem;color:var(--muted);display:flex;flex-direction:column;gap:.42rem;margin:.2rem 0 .4rem}
+  .prod li{padding-left:16px;position:relative}
+  .prod li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:1px;background:var(--accent)}
+  .prod .btn{margin-top:auto;text-align:center;font-size:11px;padding:.8rem .9rem}
+  @media(max-width:1040px){.prods{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.prods{grid-template-columns:1fr}}
+
+  /* ---------- steps / audience ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(22px,3vw,40px);margin-top:clamp(24px,3vw,40px)}
+  .step .no{font-family:var(--serif);font-size:2.1rem;color:var(--accent);line-height:1}
+  .step h3{margin:.5rem 0 .4rem}
+  .step p{color:var(--muted);font-size:.93rem}
+  @media(max-width:820px){.steps{grid-template-columns:1fr}}
+
+  .who{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-2);border:1px solid var(--line);
+    border-radius:10px;overflow:hidden;margin-top:clamp(24px,3vw,40px)}
+  .who div{background:var(--bg-2);padding:22px}
+  .who b{font-family:var(--serif);font-size:1.15rem;font-weight:400;display:block;margin-bottom:.4rem}
+  .who p{font-size:.9rem;color:var(--muted)}
+  @media(max-width:820px){.who{grid-template-columns:1fr}}
+
+  /* ---------- faq ---------- */
+  .faq{margin-top:clamp(22px,3vw,38px);border-top:1px solid var(--line-2)}
+  .faq details{border-bottom:1px solid var(--line-2);padding:16px 0}
+  .faq summary{cursor:pointer;font-family:var(--serif);font-size:1.12rem;list-style:none}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::before{content:"+";color:var(--accent);margin-right:12px}
+  .faq details[open] summary::before{content:"–"}
+  .faq p{color:var(--muted);font-size:.94rem;margin-top:.7rem;max-width:60ch;padding-left:26px}
+
+  /* ---------- order ---------- */
+  .order{background:var(--bg-2);border-top:1px solid var(--line)}
+  .form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(22px,3vw,36px);max-width:760px}
+  .form .full{grid-column:1/-1}
+  .form label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+  .form textarea{min-height:110px;resize:vertical}
+  @media(max-width:640px){.form{grid-template-columns:1fr}}
+
+  footer{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:34px 0;
+    border-top:1px solid var(--line-2);font-size:.82rem;color:var(--muted)}
+  footer a{text-decoration:none;border-bottom:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#studio">Skip to the studio</a>
+
+<div class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="/">Tassilo de la Torre <b>· Atlas</b></a>
+    <nav class="tnav" aria-label="Atlas">
+      <a href="#studio">Studio</a>
+      <a href="#products">What you get</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#order">Order</a>
+    </nav>
+  </div>
+</div>
+
+<div class="wrap hero">
+  <p class="eyebrow">Atlas · a small studio for long journeys</p>
+  <h1>Your journey, drawn on <em>the real planet.</em></h1>
+  <p class="lede">Drop the GPX from your watch, your bike computer or your phone. It lands on satellite imagery and real terrain, on a globe you can spin and tilt. Then take it home: a signed fine-art print for the wall, a page you can send to a sponsor, or a cinematic flythrough of the whole route.</p>
+  <div class="hero-cta">
+    <a class="btn" href="#studio">Open the studio · free</a>
+    <a class="btn ghost" href="#products">See what you get</a>
+  </div>
+  <p class="hero-note">Free forever: upload, look, and download a 2000&nbsp;px poster. Nothing leaves your browser — the file is read on your own machine, never uploaded to a server.</p>
+</div>
+
+<section class="studio" id="studio" aria-labelledby="studio-h">
+  <div class="wrap">
+    <p class="eyebrow">The studio</p>
+    <h2 id="studio-h">Drop a track. Watch it land.</h2>
+    <p class="lede">GPX or GeoJSON, from Garmin, Wahoo, Suunto, Coros, Strava, Komoot, Gaia or anything else that exports a track.</p>
+  </div>
+  <div class="wrap">
+    <div class="studio-shell">
+      <div class="panel">
+        <label class="drop" id="drop" for="file">
+          <input type="file" id="file" accept=".gpx,.geojson,.json,application/gpx+xml,application/geo+json">
+          <b>Drop your GPX here</b>
+          <span>or click to choose a file · GPX, GeoJSON · up to ~50&nbsp;MB</span>
+        </label>
+
+        <div class="fld">
+          <span class="grp-label">Or start from an example</span>
+          <div class="seg" role="group" aria-label="Examples">
+            <button type="button" data-demo="tiber">The Tiber</button>
+            <button type="button" data-demo="camino">The Camino</button>
+            <button type="button" data-demo="all">Everything</button>
+          </div>
+        </div>
+
+        <div class="fld">
+          <label for="title">Title</label>
+          <input type="text" id="title" placeholder="The Tiber, source to sea" maxlength="60">
+        </div>
+        <div class="fld">
+          <label for="subtitle">Subtitle</label>
+          <input type="text" id="subtitle" placeholder="Sansepolcro → Ostia · by kayak" maxlength="70">
+        </div>
+
+        <div class="fld">
+          <span class="grp-label">Look</span>
+          <div class="seg" role="group" aria-label="Map look">
+            <button type="button" data-look="satellite" aria-pressed="true">Satellite</button>
+            <button type="button" data-look="relief" aria-pressed="false">Relief</button>
+            <button type="button" data-look="ink" aria-pressed="false">Ink</button>
+          </div>
+        </div>
+
+        <div class="fld">
+          <span class="grp-label">Line</span>
+          <div class="swatches" role="group" aria-label="Line colour">
+            <button class="sw" type="button" data-color="#f4a261" style="background:#f4a261" aria-label="Amber" aria-pressed="true"></button>
+            <button class="sw" type="button" data-color="#2a9d8f" style="background:#2a9d8f" aria-label="Teal" aria-pressed="false"></button>
+            <button class="sw" type="button" data-color="#ffffff" style="background:#ffffff" aria-label="White" aria-pressed="false"></button>
+            <button class="sw" type="button" data-color="#e63946" style="background:#e63946" aria-label="Red" aria-pressed="false"></button>
+            <button class="sw" type="button" data-color="#8aa06a" style="background:#8aa06a" aria-label="Green" aria-pressed="false"></button>
+            <button class="sw" type="button" data-color="#8ecae6" style="background:#8ecae6" aria-label="Ice" aria-pressed="false"></button>
+          </div>
+        </div>
+
+        <div class="fld">
+          <label for="exag">Terrain relief <span id="exagv" class="tiny">1.4×</span></label>
+          <input type="range" id="exag" min="0" max="3" step="0.1" value="1.4">
+        </div>
+
+        <div class="fld">
+          <span class="grp-label">Poster framing</span>
+          <div class="seg" role="group" aria-label="Poster framing">
+            <button type="button" data-frame="fit" aria-pressed="true">Whole route</button>
+            <button type="button" data-frame="screen" aria-pressed="false">As on screen</button>
+          </div>
+        </div>
+
+        <div class="fld">
+          <label for="ratio">Poster shape</label>
+          <select id="ratio">
+            <option value="0.7071">Portrait · A-series (1:1.41)</option>
+            <option value="0.6667">Portrait · 2:3</option>
+            <option value="1">Square · 1:1</option>
+            <option value="1.5">Landscape · 3:2</option>
+            <option value="0.5625">Story · 9:16</option>
+          </select>
+        </div>
+
+        <div class="stats" id="stats">
+          <div><b id="s-dist">—</b><span>Distance</span></div>
+          <div><b id="s-gain">—</b><span>Ascent</span></div>
+          <div><b id="s-days">—</b><span>Days</span></div>
+          <div><b id="s-pts">—</b><span>Track points</span></div>
+        </div>
+
+        <p class="status" id="status"></p>
+
+        <div class="panel-actions">
+          <button class="btn" type="button" id="export" disabled>Download poster · free</button>
+          <a class="btn ghost" href="#products" id="orderlink">Order this as a print, page or film</a>
+          <p class="tiny">The free download is 2000&nbsp;px with a small credit line. Ordered prints are re-rendered at 300&nbsp;dpi for the size you choose, with no credit line on the image.</p>
+        </div>
+      </div>
+      <div class="stage">
+        <div id="map" role="application" aria-label="Interactive satellite globe of your route"></div>
+        <p class="maphint">Drag to spin · scroll to zoom · Ctrl / right-drag to tilt</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products" aria-labelledby="prod-h">
+  <div class="wrap">
+    <p class="eyebrow">What you can buy</p>
+    <h2 id="prod-h">Four things, all made from one file.</h2>
+    <p class="lede">The studio is free and always will be. What I sell is the finished object: rendered properly, colour-graded by hand, and made to be looked at rather than scrolled past.</p>
+
+    <div class="prods">
+      <article class="prod">
+        <p class="tag">01 · For the wall</p>
+        <h3>Atlas Print</h3>
+        <p class="price">from €89 <small>one-off</small></p>
+        <p>Your route on satellite and terrain, rendered at 300&nbsp;dpi, printed on archival cotton paper, signed and numbered.</p>
+        <ul>
+          <li>A3 €89 · A2 €139 · A1 €199</li>
+          <li>Hand-graded, not a screenshot</li>
+          <li>Signed, numbered, shipped worldwide</li>
+          <li>One native tree planted per print</li>
+          <li>Digital 300 dpi file included</li>
+        </ul>
+        <a class="btn" href="#order" data-pick="Atlas Print">Order a print</a>
+      </article>
+
+      <article class="prod feature">
+        <p class="tag">02 · For your sponsors</p>
+        <h3>Atlas Page</h3>
+        <p class="price">€290 <small>+ €49/yr hosting</small></p>
+        <p>Your own interactive globe on the web, at your own link, with your photographs pinned along the route. The thing you send a brand instead of a PDF.</p>
+        <ul>
+          <li>Hosted page, your name in the URL</li>
+          <li>Up to 25 photo pins along the route</li>
+          <li>Stage-by-stage stats and captions</li>
+          <li>Sponsor logos, your colours</li>
+          <li>Embeddable in your own site</li>
+          <li>First year of hosting included</li>
+        </ul>
+        <a class="btn" href="#order" data-pick="Atlas Page">Order a page</a>
+      </article>
+
+      <article class="prod">
+        <p class="tag">03 · For the feed</p>
+        <h3>Atlas Film</h3>
+        <p class="price">from €690 <small>one-off</small></p>
+        <p>A cinematic flythrough of the whole route in 4K: the camera follows the line across real terrain, cut to length for Instagram, YouTube or a sponsor deck.</p>
+        <ul>
+          <li>30–60 s flythrough in 4K, 16:9 and 9:16</li>
+          <li>Sound design and titles included</li>
+          <li>+€290 for a 2–3 min edit with your photos</li>
+          <li>Full commercial rights</li>
+          <li>Delivered in 10 working days</li>
+        </ul>
+        <a class="btn" href="#order" data-pick="Atlas Film">Order a film</a>
+      </article>
+
+      <article class="prod">
+        <p class="tag">04 · For brands and events</p>
+        <h3>Atlas for Brands</h3>
+        <p class="price">from €1,900 <small>per year</small></p>
+        <p>A branded, embeddable Atlas for a race, a tour operator, a gear brand or an expedition team, running on your own domain and updated while the journey is happening.</p>
+        <ul>
+          <li>Unlimited routes and stages</li>
+          <li>Your typeface, colours and logo</li>
+          <li>Live updates during the event</li>
+          <li>Embed anywhere, no attribution bar</li>
+          <li>Print and film assets at partner rates</li>
+        </ul>
+        <a class="btn" href="#order" data-pick="Atlas for Brands">Talk it through</a>
+      </article>
+    </div>
+    <p class="tiny" style="margin-top:18px;max-width:60ch">Prices include VAT where applicable and are quoted in euros. Prints and films are made to order, so I take a look at every file before I confirm — if a track is too rough to make something beautiful from, I say so before you pay.</p>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2 id="how-h">File in, object out.</h2>
+    <div class="steps">
+      <div class="step">
+        <p class="no">01</p>
+        <h3>Drop the track</h3>
+        <p>Export a GPX from Strava, Komoot, Garmin Connect, Gaia or whatever recorded the journey. Drop it into the studio above and set the title, the look and the framing yourself.</p>
+      </div>
+      <div class="step">
+        <p class="no">02</p>
+        <h3>Tell me what you want</h3>
+        <p>Print, page, film or a brand build. You send me the file and the framing you liked; I confirm the price and how long it takes, before anything is paid.</p>
+      </div>
+      <div class="step">
+        <p class="no">03</p>
+        <h3>I make it properly</h3>
+        <p>The final render is not the browser preview: full-resolution terrain, hand-graded imagery, typography set by hand. Prints go out signed and numbered, with a tree planted for each one.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="who" aria-labelledby="who-h">
+  <div class="wrap">
+    <p class="eyebrow">Who this is for</p>
+    <h2 id="who-h">Journeys worth hanging on a wall.</h2>
+    <div class="who">
+      <div><b>The one big trip</b><p>The Camino, the Alps traverse, a summer down a river, a first long tour. One journey you will still be talking about in twenty years, on paper, at the right size.</p></div>
+      <div><b>Expedition athletes</b><p>You need something to put in front of a brand. A page with your route, your photographs and your sponsors on it does more than a deck ever will.</p></div>
+      <div><b>Brands, races, operators</b><p>You sell a route. Show it on the real mountain instead of a flat grey line, on your own domain, updated while the event is running.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <p class="eyebrow">Questions</p>
+    <h2 id="faq-h">The practical part.</h2>
+    <div class="faq">
+      <details open>
+        <summary>Which files can I drop in?</summary>
+        <p>GPX (tracks and routes) and GeoJSON, which covers essentially every watch, bike computer and planning app. FIT and KML I convert by hand for now — send them to me by email and I will deal with them. Files with several tracks or segments are drawn as one journey.</p>
+      </details>
+      <details>
+        <summary>Is my track uploaded anywhere?</summary>
+        <p>No. The studio reads the file inside your browser; it never leaves your machine and there is no account and no database. If you order something, you send me the file yourself, by email, and I keep it only as long as the job takes.</p>
+      </details>
+      <details>
+        <summary>Why is the free download only 2000 px?</summary>
+        <p>Because a browser cannot render terrain and satellite imagery at print resolution, and because a screenshot is not a print. When you order, I re-render the same framing at 300&nbsp;dpi on my own machine, grade it, and set the type by hand.</p>
+      </details>
+      <details>
+        <summary>How long does it take?</summary>
+        <p>Prints: five to ten working days from confirmation, plus shipping. Pages: about a week. Films: ten working days. During an expedition of my own it can be slower, and I will tell you before you pay rather than after.</p>
+      </details>
+      <details>
+        <summary>Can I use the poster commercially?</summary>
+        <p>The free download is for personal use — social posts, your own blog, printing at home. Commercial use, sponsor decks, advertising and anything a brand pays for is covered by the Page, Film and Brand products, which come with the rights written down.</p>
+      </details>
+      <details>
+        <summary>What about the imagery and the elevation data?</summary>
+        <p>The studio preview uses Esri World Imagery and the open Terrain Tiles elevation dataset, credited on the map. Anything I deliver commercially is rendered from imagery I hold a commercial licence for, so what you buy is clean to use.</p>
+      </details>
+      <details>
+        <summary>Where does the tree come from?</summary>
+        <p>Every print plants one native tree, planted by hand in the highlands of Guadalajara, Spain, and you get the coordinates. <a href="/giving/">The whole story is here.</a></p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="order" aria-labelledby="order-h">
+  <div class="wrap">
+    <p class="eyebrow">Order</p>
+    <h2 id="order-h">Tell me what to make.</h2>
+    <p class="lede">Fill this in and it opens an email to me with your framing and your route figures already filled in. Attach your GPX to that email. I answer every one myself, usually within a day.</p>
+    <div class="form">
+      <div class="full">
+        <label for="o-product">What do you want</label>
+        <select id="o-product">
+          <option>Atlas Print · A3 · €89</option>
+          <option>Atlas Print · A2 · €139</option>
+          <option>Atlas Print · A1 · €199</option>
+          <option>Atlas Page · €290</option>
+          <option>Atlas Film · from €690</option>
+          <option>Atlas for Brands · from €1,900/yr</option>
+          <option>Not sure yet, let's talk</option>
+        </select>
+      </div>
+      <div>
+        <label for="o-name">Your name</label>
+        <input type="text" id="o-name" autocomplete="name">
+      </div>
+      <div>
+        <label for="o-where">Shipping country (prints)</label>
+        <input type="text" id="o-where" autocomplete="country-name">
+      </div>
+      <div class="full">
+        <label for="o-msg">Anything I should know</label>
+        <textarea id="o-msg" placeholder="The journey, the dates, who it is for, a deadline…"></textarea>
+      </div>
+      <div class="full">
+        <button class="btn" type="button" id="o-send">Write the email</button>
+        <p class="tiny" style="margin-top:12px">Or just write to <a href="mailto:tassilo@tassilodelatorre.com?subject=Atlas">tassilo@tassilodelatorre.com</a> · WhatsApp <a href="https://wa.me/34608635863" rel="noopener">+34 608 635 863</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span>© 2026 Tassilo de la Torre Schönborn · Madrid · <a href="/">back to the main site</a></span>
+    <span>Under human power.</span>
+  </footer>
+</div>
+
+<script src="maplibre-gl.js"></script>
+<script>
+(function(){
+  'use strict';
+
+  /* ------------------------------------------------------------------
+     Config. Drop Stripe Payment Link URLs in here and the order buttons
+     go straight to checkout instead of opening an email.
+     ------------------------------------------------------------------ */
+  var PAY = {
+    /* 'Atlas Print · A3 · €89': 'https://buy.stripe.com/...', */
+  };
+  var MAIL = 'tassilo@tassilodelatorre.com';
+
+  var ESRI_SAT   = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+  var ESRI_RELIEF= 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}';
+  var DEM        = 'https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png';
+
+  var state = {
+    look:'satellite',
+    frame:'fit',
+    color:'#f4a261',
+    exag:1.4,
+    ratio:0.7071,
+    title:'',
+    subtitle:'',
+    stats:null,
+    hasRoute:false
+  };
+
+  var $ = function(id){ return document.getElementById(id); };
+  var statusEl = $('status');
+  function say(msg,keep){ statusEl.textContent = msg||''; if(msg && !keep) setTimeout(function(){ if(statusEl.textContent===msg) statusEl.textContent=''; },6000); }
+
+  /* ---------------- geo helpers ---------------- */
+  function haversine(a,b){
+    var R=6371008.8, t=Math.PI/180;
+    var dLat=(b[1]-a[1])*t, dLon=(b[0]-a[0])*t;
+    var la1=a[1]*t, la2=b[1]*t;
+    var h=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(la1)*Math.cos(la2)*Math.sin(dLon/2)*Math.sin(dLon/2);
+    return 2*R*Math.asin(Math.min(1,Math.sqrt(h)));
+  }
+
+  /* ---------------- parsing ---------------- */
+  function parseGPX(text){
+    var doc = new DOMParser().parseFromString(text,'application/xml');
+    if(doc.getElementsByTagName('parsererror').length) throw new Error('That GPX file could not be read.');
+    var lines=[], eles=[], times=[];
+    function collect(nodes){
+      var pts=[], el=[], tm=[];
+      for(var i=0;i<nodes.length;i++){
+        var n=nodes[i];
+        var lon=parseFloat(n.getAttribute('lon')), lat=parseFloat(n.getAttribute('lat'));
+        if(!isFinite(lon)||!isFinite(lat)) continue;
+        pts.push([lon,lat]);
+        var e=n.getElementsByTagName('ele')[0];
+        el.push(e?parseFloat(e.textContent):null);
+        var t=n.getElementsByTagName('time')[0];
+        tm.push(t?Date.parse(t.textContent):null);
+      }
+      if(pts.length>1){ lines.push(pts); eles.push(el); times.push(tm); }
+    }
+    var segs=doc.getElementsByTagName('trkseg');
+    for(var s=0;s<segs.length;s++) collect(segs[s].getElementsByTagName('trkpt'));
+    if(!lines.length){
+      var rtes=doc.getElementsByTagName('rte');
+      for(var r=0;r<rtes.length;r++) collect(rtes[r].getElementsByTagName('rtept'));
+    }
+    if(!lines.length) throw new Error('No track points in that GPX.');
+    var nameNode = doc.getElementsByTagName('name')[0];
+    return { lines:lines, eles:eles, times:times, name: nameNode? nameNode.textContent.trim() : '' };
+  }
+
+  function parseGeoJSON(text){
+    var gj = JSON.parse(text);
+    var feats = gj.type==='FeatureCollection' ? gj.features
+              : gj.type==='Feature' ? [gj]
+              : [{type:'Feature',properties:{},geometry:gj}];
+    var lines=[], name='';
+    feats.forEach(function(f){
+      if(!f || !f.geometry) return;
+      if(!name && f.properties){ name = f.properties.name || f.properties.title || ''; }
+      var g=f.geometry;
+      if(g.type==='LineString' && g.coordinates.length>1) lines.push(g.coordinates.map(xy));
+      else if(g.type==='MultiLineString') g.coordinates.forEach(function(c){ if(c.length>1) lines.push(c.map(xy)); });
+    });
+    function xy(c){ return [c[0],c[1]]; }
+    if(!lines.length) throw new Error('No lines found in that GeoJSON.');
+    var eles = lines.map(function(l){ return l.map(function(){ return null; }); });
+    return { lines:lines, eles:eles, times:eles, name:name };
+  }
+
+  /* ---------------- stats ---------------- */
+  function computeStats(track){
+    var dist=0, gain=0, pts=0, tMin=Infinity, tMax=-Infinity;
+    var bounds=[[180,90],[-180,-90]];
+    track.lines.forEach(function(line,li){
+      var el=track.eles[li]||[], tm=track.times[li]||[];
+      var ref=null;
+      for(var i=0;i<line.length;i++){
+        pts++;
+        var p=line[i];
+        if(p[0]<bounds[0][0])bounds[0][0]=p[0];
+        if(p[1]<bounds[0][1])bounds[0][1]=p[1];
+        if(p[0]>bounds[1][0])bounds[1][0]=p[0];
+        if(p[1]>bounds[1][1])bounds[1][1]=p[1];
+        if(i>0) dist+=haversine(line[i-1],p);
+        var e=el[i];
+        if(e!=null && isFinite(e)){
+          if(ref===null) ref=e;
+          else if(e-ref>4){ gain+=e-ref; ref=e; }
+          else if(e<ref) ref=e;
+        }
+        var t=tm[i];
+        if(t && isFinite(t)){ if(t<tMin)tMin=t; if(t>tMax)tMax=t; }
+      }
+    });
+    var days=null;
+    if(isFinite(tMin)&&isFinite(tMax)&&tMax>tMin) days=Math.max(1,Math.ceil((tMax-tMin)/86400000));
+    return {dist:dist, gain:gain, pts:pts, days:days, bounds:bounds};
+  }
+
+  function fmtKm(m){ var k=m/1000; return (k>=1000? Math.round(k).toLocaleString('en-GB') : k>=100? Math.round(k) : k.toFixed(1))+' km'; }
+  function fmtM(m){ return m>0 ? Math.round(m).toLocaleString('en-GB')+' m' : '—'; }
+
+  /* ---------------- thin very dense tracks for drawing ---------------- */
+  function thin(lines,budget){
+    var total=0; lines.forEach(function(l){ total+=l.length; });
+    if(total<=budget) return lines;
+    var stride=Math.ceil(total/budget);
+    return lines.map(function(l){
+      var out=[];
+      for(var i=0;i<l.length;i+=stride) out.push(l[i]);
+      if(out[out.length-1]!==l[l.length-1]) out.push(l[l.length-1]);
+      return out;
+    });
+  }
+
+  /* ---------------- map ---------------- */
+  var map, routeFC={type:'FeatureCollection',features:[]}, endFC={type:'FeatureCollection',features:[]};
+
+  function styleSpec(look,color){
+    return {
+      version:8,
+      projection:{type:'globe'},
+      sources:{
+        sat:{type:'raster',tiles:[ESRI_SAT],tileSize:256,maxzoom:19,attribution:'Esri, Maxar, Earthstar Geographics'},
+        relief:{type:'raster',tiles:[ESRI_RELIEF],tileSize:256,maxzoom:13,attribution:'Esri'},
+        dem:{type:'raster-dem',tiles:[DEM],encoding:'terrarium',tileSize:256,maxzoom:13,attribution:'Terrain Tiles, AWS Open Data'},
+        route:{type:'geojson',data:routeFC},
+        ends:{type:'geojson',data:endFC}
+      },
+      layers:[
+        {id:'bg',type:'background',paint:{'background-color': look==='relief'?'#0d1218':'#05070d'}},
+        {id:'sat',type:'raster',source:'sat',layout:{visibility: look==='satellite'?'visible':'none'}},
+        {id:'relief',type:'raster',source:'relief',layout:{visibility: look==='relief'?'visible':'none'},paint:{'raster-opacity':0.95,'raster-saturation':-0.25}},
+        {id:'hill',type:'hillshade',source:'dem',layout:{visibility: look==='ink'?'visible':'none'},
+         paint:{'hillshade-exaggeration':0.72,'hillshade-shadow-color':'#000308','hillshade-highlight-color':'#3d4a58','hillshade-accent-color':'#11161d'}},
+        {id:'route-casing',type:'line',source:'route',layout:{'line-cap':'round','line-join':'round'},
+         paint:{'line-color':'#05070d','line-opacity':0.55,'line-width':['interpolate',['linear'],['zoom'],2,3.4,8,8,14,15]}},
+        {id:'route',type:'line',source:'route',layout:{'line-cap':'round','line-join':'round'},
+         paint:{'line-color':color,'line-width':['interpolate',['linear'],['zoom'],2,1.7,8,4.4,14,9]}},
+        {id:'ends',type:'circle',source:'ends',
+         paint:{'circle-radius':['interpolate',['linear'],['zoom'],2,3.2,8,6,14,9],'circle-color':'#ffffff',
+                'circle-stroke-width':2,'circle-stroke-color':'#05070d'}}
+      ]
+    };
+  }
+
+  function makeMap(container,look,color,opts){
+    opts=opts||{};
+    var m=new maplibregl.Map(Object.assign({
+      container:container,
+      style:styleSpec(look,color),
+      center:[10,44], zoom:2.1, minZoom:1.1, maxZoom:16.5,
+      maxPitch:85, fadeDuration:0, attributionControl:{compact:true}
+    },opts));
+    m.on('style.load',function(){
+      if(m.setSky) m.setSky({'sky-color':'#05070d','horizon-color':'#1b3a63','fog-color':'#182236',
+        'sky-horizon-blend':0.8,'horizon-fog-blend':0.6,'fog-ground-blend':0.5,
+        'atmosphere-blend':['interpolate',['linear'],['zoom'],0,1,10,1,12,0]});
+      if(m.setTerrain && state.exag>0) m.setTerrain({source:'dem',exaggeration:state.exag});
+    });
+    return m;
+  }
+
+  map = makeMap('map', state.look, state.color);
+  map.addControl(new maplibregl.NavigationControl({showCompass:true,visualizePitch:true}),'top-right');
+  map.dragRotate.enable();
+  try{ map.touchPitch.enable(); }catch(e){}
+
+  /* ---------------- loading a track ---------------- */
+  function setTrack(track){
+    var stats = computeStats(track);
+    state.stats = stats;
+    state.hasRoute = true;
+
+    var drawn = thin(track.lines, 60000);
+    routeFC = {type:'FeatureCollection',features:drawn.map(function(l){
+      return {type:'Feature',properties:{},geometry:{type:'LineString',coordinates:l}};
+    })};
+    var first=track.lines[0][0], lastLine=track.lines[track.lines.length-1];
+    var last=lastLine[lastLine.length-1];
+    endFC = {type:'FeatureCollection',features:[first,last].map(function(c){
+      return {type:'Feature',properties:{},geometry:{type:'Point',coordinates:c}};
+    })};
+    if(map.isStyleLoaded() && map.getSource('route')){
+      map.getSource('route').setData(routeFC);
+      map.getSource('ends').setData(endFC);
+    } else {
+      map.once('load',function(){
+        map.getSource('route').setData(routeFC);
+        map.getSource('ends').setData(endFC);
+        frameRoute();
+      });
+    }
+
+    $('s-dist').textContent = fmtKm(stats.dist);
+    $('s-gain').textContent = fmtM(stats.gain);
+    $('s-days').textContent = stats.days ? stats.days : '—';
+    $('s-pts').textContent = stats.pts.toLocaleString('en-GB');
+    $('export').disabled = false;
+
+    if(!state.titleTouched){
+      $('title').value = track.name ? track.name.slice(0,60) : '';
+      state.title = $('title').value;
+    }
+
+    frameRoute();
+  }
+
+  function frameRoute(){
+    if(!state.stats) return;
+    var b=state.stats.bounds;
+    var pad = Math.min(110, Math.max(40, Math.round(map.getContainer().clientWidth*0.09)));
+    try{
+      map.fitBounds(b,{padding:pad,duration:1500,pitch:38,bearing:0,maxZoom:13});
+    }catch(e){
+      map.jumpTo({center:[(b[0][0]+b[1][0])/2,(b[0][1]+b[1][1])/2],zoom:8});
+    }
+  }
+
+  function readFile(file){
+    if(!file) return;
+    if(file.size > 50*1024*1024){ say('That file is bigger than 50 MB — send it to me by email instead.'); return; }
+    say('Reading '+file.name+'…',true);
+    var fr=new FileReader();
+    fr.onerror=function(){ say('The file could not be read.'); };
+    fr.onload=function(){
+      try{
+        var txt=String(fr.result), track;
+        if(/\.(json|geojson)$/i.test(file.name) || /^\s*[{[]/.test(txt)) track=parseGeoJSON(txt);
+        else track=parseGPX(txt);
+        if(!state.subtitleTouched){ $('subtitle').value=''; state.subtitle=''; }
+        setTrack(track);
+        say('');
+      }catch(err){ say(err.message||'That file could not be read.'); }
+    };
+    fr.readAsText(file);
+  }
+
+  /* file input + drag and drop */
+  $('file').addEventListener('change',function(e){ readFile(e.target.files[0]); });
+  var drop=$('drop');
+  ['dragenter','dragover'].forEach(function(ev){
+    drop.addEventListener(ev,function(e){ e.preventDefault(); drop.classList.add('over'); });
+    document.addEventListener(ev,function(e){ e.preventDefault(); });
+  });
+  ['dragleave','drop'].forEach(function(ev){
+    drop.addEventListener(ev,function(){ drop.classList.remove('over'); });
+  });
+  document.addEventListener('drop',function(e){
+    e.preventDefault();
+    if(e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files.length) readFile(e.dataTransfer.files[0]);
+  });
+
+  /* ---------------- examples ---------------- */
+  var demoCache=null;
+  function loadDemo(which){
+    say('Loading the example…',true);
+    var p = demoCache ? Promise.resolve(demoCache)
+      : fetch('routes.geojson').then(function(r){ if(!r.ok) throw new Error('Could not load the example.'); return r.json(); })
+        .then(function(j){ demoCache=j; return j; });
+    p.then(function(gj){
+      var pick, title, sub;
+      if(which==='tiber'){
+        pick=gj.features.filter(function(f){ return /Tiber/i.test(f.properties.label||''); });
+        title='The Tiber, source to sea'; sub='Sansepolcro → Ostia · by kayak';
+      } else if(which==='camino'){
+        pick=gj.features.filter(function(f){ return /Camino/i.test(f.properties.label||''); });
+        title='The Camino and the Portuguese coast'; sub='Pamplona → Lisboa · by bike';
+      } else {
+        pick=gj.features.filter(function(f){ return (f.properties.cat||'')==='done'; });
+        title='Everything, under human power'; sub='Bike, kayak, foot and thumb';
+      }
+      if(!pick.length) throw new Error('Example not found.');
+      var lines=[];
+      pick.forEach(function(f){
+        if(f.geometry.type==='LineString') lines.push(f.geometry.coordinates);
+        else if(f.geometry.type==='MultiLineString') f.geometry.coordinates.forEach(function(c){ lines.push(c); });
+      });
+      var blanks=lines.map(function(l){ return l.map(function(){ return null; }); });
+      state.titleTouched=false; state.subtitleTouched=false;
+      $('title').value=title; $('subtitle').value=sub;
+      state.title=title; state.subtitle=sub;
+      setTrack({lines:lines,eles:blanks,times:blanks,name:title});
+      say('');
+    }).catch(function(err){ say(err.message||'Could not load the example.'); });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-demo]'),function(b){
+    b.addEventListener('click',function(){ loadDemo(b.getAttribute('data-demo')); });
+  });
+
+  /* ---------------- controls ---------------- */
+  function press(group,el){
+    Array.prototype.forEach.call(document.querySelectorAll(group),function(b){ b.setAttribute('aria-pressed', b===el ? 'true':'false'); });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-look]'),function(b){
+    b.addEventListener('click',function(){
+      state.look=b.getAttribute('data-look');
+      press('[data-look]',b);
+      map.setLayoutProperty('sat','visibility', state.look==='satellite'?'visible':'none');
+      map.setLayoutProperty('relief','visibility', state.look==='relief'?'visible':'none');
+      map.setLayoutProperty('hill','visibility', state.look==='ink'?'visible':'none');
+      map.setPaintProperty('bg','background-color', state.look==='relief'?'#0d1218':'#05070d');
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-color]'),function(b){
+    b.addEventListener('click',function(){
+      state.color=b.getAttribute('data-color');
+      press('[data-color]',b);
+      map.setPaintProperty('route','line-color',state.color);
+    });
+  });
+  $('exag').addEventListener('input',function(e){
+    state.exag=parseFloat(e.target.value);
+    $('exagv').textContent=state.exag.toFixed(1)+'×';
+    if(map.setTerrain) map.setTerrain(state.exag>0?{source:'dem',exaggeration:state.exag}:null);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-frame]'),function(b){
+    b.addEventListener('click',function(){ state.frame=b.getAttribute('data-frame'); press('[data-frame]',b); });
+  });
+  $('ratio').addEventListener('change',function(e){ state.ratio=parseFloat(e.target.value); });
+  $('title').addEventListener('input',function(e){ state.title=e.target.value; state.titleTouched=true; });
+  $('subtitle').addEventListener('input',function(e){ state.subtitle=e.target.value; state.subtitleTouched=true; });
+
+  /* ---------------- poster export ---------------- */
+  function exportPoster(){
+    if(!state.hasRoute) return;
+    var btn=$('export');
+    btn.disabled=true; btn.textContent='Rendering…';
+    say('Rendering the poster. This takes a few seconds.',true);
+
+    var LONG=2000;
+    var r=state.ratio;                        /* width / height */
+    var W = r>=1 ? LONG : Math.round(LONG*r);
+    var H = r>=1 ? Math.round(LONG/r) : LONG;
+
+    var holder=document.createElement('div');
+    holder.style.cssText='position:fixed;left:-20000px;top:0;width:'+W+'px;height:'+H+'px;pointer-events:none';
+    document.body.appendChild(holder);
+
+    /* keep the same ground scale the user framed on screen: a wider canvas at the
+       same zoom would show more world and shrink the route, so lift the zoom by
+       the width ratio. Line widths follow the zoom, so they scale with it. */
+    var screenW = Math.max(320, map.getContainer().clientWidth);
+    var zoom = Math.min(16.4, map.getZoom() + Math.log(W/screenW)/Math.LN2);
+
+    var shot;
+    try{
+      shot = makeMap(holder, state.look, state.color, {
+        preserveDrawingBuffer:true,
+        center:map.getCenter(), zoom:zoom,
+        bearing:map.getBearing(), pitch:map.getPitch(),
+        interactive:false, attributionControl:false
+      });
+    }catch(e){ cleanup(); say('The poster could not be rendered in this browser.'); return; }
+
+    if(state.frame==='fit' && state.stats){
+      shot.once('load',function(){
+        try{
+          var pd=Math.round(Math.min(W,H)*0.10);
+          var plate=Math.round(H*((state.title||'').trim()?0.20:0.12));
+          shot.fitBounds(state.stats.bounds,{
+            padding:{top:pd,left:pd,right:pd,bottom:pd+plate},
+            bearing:map.getBearing(), pitch:map.getPitch(),
+            maxZoom:15.5, duration:0
+          });
+        }catch(e){}
+      });
+    }
+
+    var done=false, poll=null;
+    var giveUp=setTimeout(function(){ finish(); }, 24000);
+    shot.once('idle', function(){
+      /* idle can fire before every satellite and terrain tile is in; poll for a
+         few seconds rather than printing a half-loaded planet */
+      var waited=0;
+      poll=setInterval(function(){
+        waited+=400;
+        var ready = !shot.areTilesLoaded || shot.areTilesLoaded();
+        if(ready || waited>=9000){ clearInterval(poll); poll=null; setTimeout(finish,600); }
+      },400);
+    });
+
+    function finish(){
+      if(done) return; done=true;
+      clearTimeout(giveUp);
+      try{
+        var src=shot.getCanvas();
+        var out=document.createElement('canvas');
+        out.width=W; out.height=H;
+        var ctx=out.getContext('2d');
+        ctx.fillStyle='#05070d'; ctx.fillRect(0,0,W,H);
+        ctx.drawImage(src,0,0,W,H);
+        drawPlate(ctx,W,H);
+        var name=(state.title||'atlas').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'atlas';
+        out.toBlob(function(blob){
+          var url=URL.createObjectURL(blob);
+          var a=document.createElement('a');
+          a.href=url; a.download=name+'-atlas.png';
+          document.body.appendChild(a); a.click(); a.remove();
+          setTimeout(function(){ URL.revokeObjectURL(url); },4000);
+          say('Poster downloaded. Want it on the wall at 300 dpi? Order below.');
+        },'image/png');
+      }catch(e){
+        say('The poster could not be rendered in this browser.');
+      }
+      cleanup();
+    }
+
+    function cleanup(){
+      if(poll){ clearInterval(poll); poll=null; }
+      try{ if(shot) shot.remove(); }catch(e){}
+      try{ holder.remove(); }catch(e){}
+      btn.disabled=false; btn.textContent='Download poster · free';
+    }
+  }
+
+  /* the typographic plate at the foot of the poster */
+  function drawPlate(ctx,W,H){
+    var s=W/1000;                                   /* scale unit */
+    var st=state.stats||{dist:0,gain:0,days:null};
+    var title=(state.title||'').trim();
+    var sub=(state.subtitle||'').trim();
+
+    var plateH=Math.round(H*(title?0.20:0.12));
+    var g=ctx.createLinearGradient(0,H-plateH*1.9,0,H);
+    g.addColorStop(0,'rgba(5,7,13,0)');
+    g.addColorStop(0.45,'rgba(5,7,13,.72)');
+    g.addColorStop(1,'rgba(5,7,13,.96)');
+    ctx.fillStyle=g; ctx.fillRect(0,H-plateH*1.9,W,plateH*1.9);
+
+    var m=Math.round(58*s);
+    var y=H-m;
+
+    /* credit line, bottom right */
+    ctx.textAlign='right'; ctx.textBaseline='alphabetic';
+    ctx.fillStyle='rgba(240,234,220,.5)';
+    ctx.font=(11*s)+'px '+'-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif';
+    ctx.fillText('ATLAS · TASSILODELATORRE.COM', W-m, y);
+
+    /* stats row */
+    ctx.textAlign='left';
+    var items=[['DISTANCE',fmtKm(st.dist)]];
+    if(st.gain>0) items.push(['ASCENT',fmtM(st.gain)]);
+    if(st.days) items.push(['DAYS',String(st.days)]);
+    var x=m;
+    items.forEach(function(it){
+      ctx.fillStyle='rgba(240,234,220,.55)';
+      ctx.font=(11*s)+'px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif';
+      ctx.fillText(it[0].split('').join(' '), x, y-Math.round(26*s));
+      ctx.fillStyle='#f0eadc';
+      ctx.font=(26*s)+'px Georgia,Times New Roman,serif';
+      ctx.fillText(it[1], x, y);
+      x += Math.max(ctx.measureText(it[1]).width, 120*s) + 58*s;
+    });
+
+    var top = y-Math.round(60*s);
+
+    /* rule */
+    ctx.fillStyle='rgba(240,234,220,.22)';
+    ctx.fillRect(m, top, W-2*m, Math.max(1,Math.round(s)));
+
+    /* subtitle + title */
+    if(sub){
+      ctx.fillStyle='rgba(240,234,220,.66)';
+      ctx.font=(14.5*s)+'px -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif';
+      ctx.fillText(sub, m, top-Math.round(22*s));
+      top -= Math.round(46*s);
+    } else { top -= Math.round(20*s); }
+    if(title){
+      var size=Math.round(52*s);
+      ctx.fillStyle='#ffffff';
+      do{
+        ctx.font=size+'px Georgia,Times New Roman,serif';
+        if(ctx.measureText(title).width <= W-2*m) break;
+        size -= Math.round(2*s)||1;
+      } while(size>Math.round(18*s));
+      ctx.fillText(title, m, top);
+    }
+  }
+
+  $('export').addEventListener('click',exportPoster);
+
+  /* ---------------- order form ---------------- */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-pick]'),function(a){
+    a.addEventListener('click',function(){
+      var want=a.getAttribute('data-pick');
+      var sel=$('o-product');
+      for(var i=0;i<sel.options.length;i++){
+        if(sel.options[i].text.indexOf(want)===0){ sel.selectedIndex=i; break; }
+      }
+    });
+  });
+
+  $('o-send').addEventListener('click',function(){
+    var product=$('o-product').value;
+    if(PAY[product]){ window.location.href=PAY[product]; return; }
+    var st=state.stats;
+    var lines=[
+      'What I want: '+product,
+      'Name: '+($('o-name').value||''),
+      'Country: '+($('o-where').value||''),
+      '',
+      'Route title: '+($('title').value||'—'),
+      'Subtitle: '+($('subtitle').value||'—'),
+      'Look: '+state.look+' · line '+state.color+' · relief '+state.exag.toFixed(1)+'× · shape '+$('ratio').selectedOptions[0].text,
+      st ? ('Figures: '+fmtKm(st.dist)+(st.gain>0?' · '+fmtM(st.gain)+' ascent':'')+(st.days?' · '+st.days+' days':'')) : 'Figures: no track loaded yet',
+      '',
+      ($('o-msg').value||''),
+      '',
+      '— Please attach the GPX file to this email. —'
+    ];
+    window.location.href='mailto:'+MAIL+'?subject='+encodeURIComponent('Atlas order · '+product)
+      +'&body='+encodeURIComponent(lines.join('\n'));
+  });
+
+  /* nudge: load the Tiber example so the studio is never empty */
+  setTimeout(function(){ if(!state.hasRoute) loadDemo('tiber'); }, 900);
+})();
+</script>
+</body>
+</html>

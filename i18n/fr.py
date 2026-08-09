@@ -96,6 +96,7 @@ T = {
 "On foot": "À pied",
 "Planned · Sept. 2026": "Prévu · sept. 2026",
 "Dreaming": "En rêve",
+"Put your own journey on it": "Ajoutez votre propre voyage",
 "Drag to spin · scroll to zoom · Shift + drag to tilt":
     "Glissez pour tourner · molette pour zoomer · Maj et glisser pour incliner",
 "See the September route": "Voir l'itinéraire de septembre",
@@ -272,4 +273,6 @@ T = {
     "Elles viennent de voyages en kayak de mer, à pied, à vélo et en stop. La plupart des nuits, je dors dehors, dans des grottes, dans des ruines, sur des bancs de galets et sur des sommets, donc je suis en général là tôt et tard, quand la lumière est bonne. Un voyage dure des semaines ou des mois.",
 "Across Spain on foot and by sea kayak: the Almería desert, the plains of Castilla, the wet green north coast. Sleeping outside most nights, with Fluffo.":
     "Traverser l'Espagne à pied et en kayak de mer : le désert d'Almería, les plaines de Castille, la côte nord verte et mouillée. La plupart des nuits dehors, avec Fluffo.",
+    'Journeys': 'Voyages',
+    'Where I have already been: rivers, coasts and roads, in photographs →': 'Où je suis déjà allé: fleuves, côtes et routes, en photographies →',
 }

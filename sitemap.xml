@@ -47,7 +47,20 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://tassilodelatorre.com/it/"/>
     <priority>0.9</priority>
   </url>
+  <url><loc>https://tassilodelatorre.com/atlas/</loc><priority>0.9</priority></url>
   <url><loc>https://tassilodelatorre.com/giving/</loc><priority>0.7</priority></url>
   <url><loc>https://tassilodelatorre.com/writing/</loc><priority>0.7</priority></url>
   <url><loc>https://tassilodelatorre.com/writing/befahrung-des-tibers.html</loc><priority>0.6</priority></url>
+  <url><loc>https://tassilodelatorre.com/journeys/</loc></url>
+  <url><loc>https://tassilodelatorre.com/journeys/danubio.html</loc></url>
+  <url><loc>https://tassilodelatorre.com/journeys/corcega.html</loc></url>
+  <url><loc>https://tassilodelatorre.com/journeys/turquia-grecia.html</loc></url>
+  <url><loc>https://tassilodelatorre.com/journeys/balcanes.html</loc></url>
+  <url><loc>https://tassilodelatorre.com/journeys/normandia.html</loc></url>
+  <url><loc>https://tassilodelatorre.com/journeys/tiber.html</loc></url>
+  <url><loc>https://tassilodelatorre.com/journeys/egipto.html</loc></url>
+  <url><loc>https://tassilodelatorre.com/journeys/esqui.html</loc></url>
+  <url><loc>https://tassilodelatorre.com/journeys/gente.html</loc></url>
+  <url><loc>https://tassilodelatorre.com/journeys/dibujos.html</loc></url>
+  <url><loc>https://tassilodelatorre.com/journeys/sin-clasificar.html</loc></url>
 </urlset>
