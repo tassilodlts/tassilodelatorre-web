@@ -8,7 +8,6 @@ T = {
 
 # ---------- en-tête / hero ----------
 "Skip to content": "Aller au contenu",
-"Setting off 4 September": "Départ le 4 septembre",
 "Partner slots open →": "Places de partenaire encore libres →",
 "Work": "Travaux",
 "Expeditions": "Expéditions",
@@ -37,16 +36,10 @@ T = {
 "Dawn inside Nuka Sakdari, Fluffo still asleep.":
     "Aube à l'intérieur de Nuka Sakdari, Fluffo dort encore.",
 "The boat gets her name.": "Le bateau reçoit son nom.",
-"A long night in an abandoned Armenian house. Türkiye.":
-    "Une longue nuit dans une maison arménienne abandonnée. Turquie.",
 "More from the road": "Encore de la route",
 "Frames from the expeditions.": "Images des expéditions.",
 "Rivers and ruins, camps and coastlines, and Fluffo, who never misses a launch.":
     "Des fleuves et des ruines, des bivouacs et des côtes, et Fluffo, qui ne rate jamais une mise à l'eau.",
-"A bed among the columns · Lycian tomb, Türkiye":
-    "Un lit entre les colonnes · tombeau lycien, Turquie",
-"Golden hour with Fluffo · Türkiye": "Heure dorée avec Fluffo · Turquie",
-"The temple still stands · Türkiye": "Le temple tient encore debout · Turquie",
 "Slung above the river · Regensburg, Germany":
     "Suspendu au-dessus du fleuve · Ratisbonne, Allemagne",
 "The stranded giant · Egypt": "Le géant échoué · Égypte",
@@ -94,7 +87,6 @@ T = {
 "Boat / ferry": "Bateau / ferry",
 "Hitchhiking": "En stop",
 "On foot": "À pied",
-"Planned · Sept. 2026": "Prévu · sept. 2026",
 "Dreaming": "En rêve",
 "Put your own journey on it": "Ajoutez votre propre voyage",
 "Drag to spin · scroll to zoom · Shift + drag to tilt":
@@ -107,8 +99,6 @@ T = {
 "The other kind of shoot.": "L'autre genre de séance.",
 "I've had folding boats since I was twelve. Last summer I paddled a 1950s folding kayak 2,580 km down the Danube, from Ulm to the Black Sea, with my dog Fluffo as crew. I trained as an architect and I've spent years in product photography. This year I'm crossing Spain on foot and by kayak, and paddling around Mallorca and Menorca.":
     "J'ai des bateaux pliants depuis mes douze ans. L'été dernier, j'ai descendu 2 580 km du Danube dans un kayak pliant des années cinquante, d'Ulm à la mer Noire, avec mon chien Fluffo comme équipage. J'ai une formation d'architecte et j'ai passé des années en photographie de produit. Cette année, je traverse l'Espagne à pied et en kayak, et je fais le tour de Majorque et de Minorque à la pagaie.",
-"Five languages, and a lifetime racing and paddling the coasts of southern Spain, Corsica and the Mediterranean.":
-    "Cinq langues, et toute une vie de régates et de pagaie le long des côtes du sud de l'Espagne, de la Corse et de la Méditerranée.",
 "down the Danube": "de Danube",
 "Age 12": "À 12 ans",
 "first folding boat": "premier bateau pliant",
@@ -126,8 +116,6 @@ T = {
 # ---------- matériel ----------
 "What I shoot with": "Avec quoi je photographie",
 "The kit that comes along.": "Le matériel qui fait le voyage.",
-"My main camera, weather-sealed and built to keep working when the conditions do not.":
-    "Mon boîtier principal, tropicalisé et fait pour continuer quand les conditions, elles, s'arrêtent.",
 "The everyday zoom, wide to short tele, for camp, coast and the people I meet.":
     "Le zoom de tous les jours, du grand-angle au petit télé, pour le bivouac, la côte et les gens que je croise.",
 "The reach: wildlife, far shorelines and the small details across the water.":
@@ -172,8 +160,6 @@ T = {
 "Fifty to a hundred finished photographs, with full commercial rights.":
     "De cinquante à cent photographies finies, avec tous les droits commerciaux.",
 "Proof": "La preuve",
-"\"Every collaboration is a first step, and I'd love to take the good ones a great deal further.\"":
-    "« Chaque collaboration est un premier pas, et les bonnes, j'aimerais beaucoup les mener bien plus loin. »",
 "And every collaboration plants ten trees.": "Et chaque collaboration plante dix arbres.",
 "I dig the holes myself, in the emptiest highlands in Spain, and you get the coordinates.":
     "Les trous, je les creuse moi-même, dans les hauts plateaux les plus vides d'Espagne, et vous recevez les coordonnées.",
@@ -196,28 +182,14 @@ T = {
     "Papier coton de conservation, signés et numérotés, expédiés dans le monde entier. Choisissez un format ci-dessus et dites-moi quelle photographie vous voulez. Si vous préférez un format qui n'est pas dans la liste, demandez.",
 
 # ---------- nuka sakdari ----------
-"Nuka Sakdari, on its shelf of rock above the valley. Artvin, Türkiye.":
-    "Nuka Sakdari, sur sa vire rocheuse au-dessus de la vallée. Artvin, Turquie.",
 "A project to support": "Un projet à soutenir",
 "Eleven hundred years old, and running out of time.":
     "Mille cent ans d'âge, et le temps lui manque.",
-"High above a roadless valley in Artvin stands":
-    "Bien au-dessus d'une vallée sans route, à Artvin, se dresse",
-", a ninth-century Georgian basilica of the Tao-Klarjeti school: its stone roof open to the sky, its walls deteriorating, never restored and scarcely documented. With a small team of architects I am making the first complete architectural record in its history, and using film to fund its emergency stabilisation. We fund, document, advocate and film, always under the authority of the Ministry of Culture. We do not touch the stones.":
-    ", une basilique géorgienne du IXe siècle de l'école de Tao-Klardjétie : sa toiture de pierre ouverte au ciel, ses murs qui se dégradent, jamais restaurée et à peine documentée. Avec une petite équipe d'architectes, je réalise le premier relevé architectural complet de son histoire, et je me sers du film pour financer sa consolidation d'urgence. Nous finançons, nous documentons, nous plaidons et nous filmons, toujours sous l'autorité du ministère de la Culture. Nous ne touchons pas aux pierres.",
 "Ways to help": "Comment aider",
 "Gear": "Matériel",
-"Cameras, a drone, and access and documentation kit for the survey.":
-    "Des appareils, un drone, et du matériel d'accès et de relevé pour le chantier.",
 "Funding": "Financement",
-"To pay for the architectural survey and the emergency stabilisation.":
-    "Pour payer le relevé architectural et la consolidation d'urgence.",
 "Contacts": "Contacts",
-"Heritage bodies, foundations, film funds, Turkish authorities.":
-    "Organismes du patrimoine, fondations, fonds cinéma, autorités turques.",
 "Experience": "Expérience",
-"Conservation architects, engineers, photogrammetry, Georgian-heritage experts, film.":
-    "Architectes du patrimoine, ingénieurs, photogrammétrie, spécialistes du patrimoine géorgien, cinéma.",
 "Support the project": "Soutenir le projet",
 "See the full proposal →": "Voir le dossier complet →",
 
@@ -275,4 +247,78 @@ T = {
     'Where I have already been: rivers, coasts and roads, in photographs →': 'Où je suis déjà allé: fleuves, côtes et routes, en photographies →',
 "Brands": "Marques",
 "See the work →": "Voir le travail →",
+"· the brands backing the 2026 expeditions ·": "· les marques qui soutiennent les expéditions 2026 ·",
+"Doors out of a house, waiting on the pavement.": "Des portes sorties d'une maison, qui attendent sur le trottoir.",
+"A door taken out, a doorway left open.": "Une porte enlevée, une ouverture laissée béante.",
+"The whole set, lined up along the street.": "Le lot au complet, aligné le long de la rue.",
+"A seventeenth century grille, and a bad idea.": "Une grille du dix-septième siècle, et une mauvaise idée.",
+"A studded door, still in its frame.": "Une porte cloutée, encore dans son cadre.",
+"Concrete steps, scaffolding, dusk.": "Des gradins de béton, un échafaudage, le crépuscule.",
+"Borrowing a horse.": "Un cheval emprunté.",
+"A Roman bridge, still doing its job.": "Un pont romain, toujours en service.",
+"Two windows, and everything else dark.": "Deux fenêtres, et tout le reste dans le noir.",
+"Tassilo standing upright on his loaded folding kayak, paddle raised, gliding a mirror-calm Danube at golden hour with Fluffo at the bow and the neoclassical Walhalla temple on the wooded hill behind": "Tassilo debout sur son kayak pliant chargé, pagaie levée, glissant sur un Danube lisse comme un miroir à l'heure dorée, Fluffo à la proue et le temple néoclassique du Walhalla sur la colline boisée derrière",
+"Drone view straight down onto a weathered wooden boat moored at a green riverbank, Tassilo's folding kayak tied alongside": "Vue de drone à la verticale sur une barque en bois patiné amarrée à une rive verte, le kayak pliant de Tassilo attaché le long",
+"A small tent pitched on the rocky summit of Monte Molare at dawn, Tassilo on the crag above a sea of pink mist, the Bay of Naples and Vesuvius on the horizon": "Une petite tente plantée au sommet rocheux du Monte Molare à l'aube, Tassilo sur l'arête au-dessus d'une mer de brume rose, la baie de Naples et le Vésuve à l'horizon",
+"Tassilo and Fluffo, his black dog, asleep in a sleeping bag inside Nuka Sakdari, the frescoed ninth-century Georgian basilica, at dawn": "Tassilo et Fluffo, son chien noir, endormis dans un sac de couchage à l'intérieur de Nuka Sakdari, la basilique géorgienne du neuvième siècle aux fresques, à l'aube",
+"Tassilo kneeling on the grass, hand-painting the name EUROPA on the bow of his folding kayak, a marked-up map of Europe spread on the hull beside him": "Tassilo à genoux dans l'herbe, peignant à la main le nom EUROPA sur la proue de son kayak pliant, une carte de l'Europe annotée étalée sur la coque à côté de lui",
+"A teal hammock strung across a doorway in a derelict plastered room; Tassilo in a red wool hat rests inside it with Fluffo the black dog on his chest": "Un hamac bleu-vert tendu dans l'embrasure d'une porte, dans une pièce délabrée aux murs plâtrés ; Tassilo, en bonnet de laine rouge, s'y repose avec Fluffo le chien noir sur la poitrine",
+"A rock-cut classical tomb facade with a figure in a sleeping bag between the pillars": "Une façade de tombeau antique taillée dans la roche, une silhouette en sac de couchage entre les piliers",
+"Tassilo with Fluffo, his black dog, among Roman colonnade ruins at sunset": "Tassilo avec Fluffo, son chien noir, parmi les ruines d'une colonnade romaine au coucher du soleil",
+"An intact Roman tomb-temple with columns and a small figure inside in golden light": "Un temple-tombeau romain intact avec des colonnes et une petite silhouette à l'intérieur dans une lumière dorée",
+"A man reading in a hammock strung over trees, a loaded kayak on the bank": "Un homme lisant dans un hamac tendu entre des arbres, un kayak chargé sur la rive",
+"A man walking the surf beside a beached, rusting fishing trawler at golden hour": "Un homme marchant dans l'écume près d'un chalutier échoué et rouillé, à l'heure dorée",
+"An ornate Baroque church interior with a frescoed dome and gilded columns": "L'intérieur chargé d'une église baroque, avec une coupole à fresques et des colonnes dorées",
+"A young man caught mid-air leaping by a big riverside tree, kayak and dog on the beach": "Un jeune homme saisi en plein saut près d'un grand arbre au bord de l'eau, kayak et chien sur la plage",
+"Stepped hillside vineyards with a small stone chapel-gate": "Des vignes en terrasses sur la colline, avec une petite chapelle-porche de pierre",
+"Top-down drone view of a man asleep beside his loaded kayak on the sand": "Vue de drone à la verticale d'un homme endormi près de son kayak chargé sur le sable",
+"Aerial of a hammock and a blue kayak on a riverbank in warm evening light": "Vue aérienne d'un hamac et d'un kayak bleu sur une berge, dans la lumière chaude du soir",
+"Aerial drone photograph at dusk of La Vela di Calatrava, Santiago Calatrava's vast white steel structure over the unfinished Città dello Sport in Rome, city lights on the horizon": "Photographie aérienne par drone, au crépuscule, de La Vela di Calatrava, l'immense structure d'acier blanc de Santiago Calatrava au-dessus de la Città dello Sport inachevée à Rome, les lumières de la ville à l'horizon",
+"Looking down a colonnade of sculptural white concrete ribs in raking evening light, their zigzag shadows mirrored in a dark pool of rainwater": "Vue en enfilade d'une colonnade de nervures sculpturales en béton blanc dans la lumière rasante du soir, leurs ombres en zigzag reflétées dans une flaque d'eau de pluie sombre",
+"A symmetrical honey-stone neoclassical palace at golden hour, perfectly mirrored in a long, still reflecting pool": "Un palais néoclassique symétrique en pierre couleur miel à l'heure dorée, parfaitement reflété dans un long bassin immobile",
+"A ruined stone tower clinging to a sheer dark cliff face, a tiny figure in a red hat waving from its doorway": "Une tour de pierre en ruine accrochée à une falaise sombre et abrupte, une minuscule silhouette au bonnet rouge saluant depuis sa porte",
+"Four tall panelled wooden doors standing upright on the street outside a doorway, a man in a cap and leather jacket between them with a black dog at his feet": "Quatre hautes portes de bois à panneaux dressées dans la rue devant une entrée, un homme en casquette et blouson de cuir entre elles, un chien noir à ses pieds",
+"Ochre palace facade with iron-grilled windows, a carved wooden door leaning against the opening and a man standing in the dark doorway": "Façade de palais ocre aux fenêtres grillagées, une porte de bois sculptée appuyée contre l'ouverture et un homme debout dans l'entrée sombre",
+"A row of heavy panelled wooden doors leaning against a historic ochre facade, a man standing in the empty doorway behind them": "Une rangée de lourdes portes de bois à panneaux appuyées contre une façade ocre historique, un homme debout dans l'entrée vide derrière elles",
+"A man gripping the bars of a large wrought iron window grille mounted upright on a frame, pretending to be caged behind it": "Un homme agrippé aux barreaux d'une grande grille de fenêtre en fer forgé dressée sur un cadre, faisant semblant d'être en cage",
+"A man standing in the opening of an old studded wooden door in a stripped building with bare plaster and a raw timber lintel": "Un homme debout dans l'ouverture d'une vieille porte de bois cloutée, dans un bâtiment mis à nu au plâtre brut et au linteau de bois grossier",
+"White concrete stadium steps rising towards scaffolding against a pink and blue dusk sky, a lone figure sitting on the edge": "Des gradins de béton blanc d'un stade montant vers un échafaudage sur un ciel de crépuscule rose et bleu, une silhouette solitaire assise sur le bord",
+"A bronze equestrian statue in front of a neoclassical facade, a young man sitting on the horse with one arm raised": "Une statue équestre en bronze devant une façade néoclassique, un jeune homme assis sur le cheval, un bras levé",
+"A Roman stone bridge of low arches over a calm river, a man standing waist deep in the water below it": "Un pont romain de pierre aux arches basses sur une rivière calme, un homme debout dans l'eau jusqu'à la taille en dessous",
+"The dark interior of a church with two tall gothic windows of leaded glass glowing against black stone walls": "L'intérieur sombre d'une église, deux hautes fenêtres gothiques aux vitraux plombés luisant contre des murs de pierre noire",
+"Portrait of Tassilo in a red wool hat lying in a teal hammock, cradling Fluffo the black dog asleep on his chest": "Portrait de Tassilo en bonnet de laine rouge allongé dans un hamac bleu-vert, Fluffo le chien noir endormi sur sa poitrine",
+"Portrait of Tassilo in a white tee and open dark shirt, leaning against a wood-panelled doorway": "Portrait de Tassilo en t-shirt blanc et chemise sombre ouverte, adossé à une embrasure lambrissée",
+"Fluffo the black dog in a red life vest sitting on a sandy beach, a long driftwood stick in his mouth": "Fluffo le chien noir en gilet de sauvetage rouge, assis sur une plage de sable, un long bout de bois flotté dans la gueule",
+"Tassilo skiing at speed, carving a deep turn with snow spray flying against dark pines": "Tassilo skiant à toute vitesse, taillant un virage profond, la neige giclant sur fond de pins sombres",
+"Tassilo laughing at the centre of a group of ski instructors in red uniforms, lifted off his feet at a sunny mountain bar": "Tassilo riant au milieu d'un groupe de moniteurs de ski en uniforme rouge, soulevé de terre dans un bar d'altitude ensoleillé",
+"Tassilo kneeling on the grass, hand-painting the name EUROPA on the bow of his folding kayak": "Tassilo à genoux dans l'herbe, peignant à la main le nom EUROPA sur la proue de son kayak pliant",
+"Aerial view of a bivouac on a gravel bank of the Tiber, canoe, tent and all the gear of the journey": "Vue aérienne d'un bivouac sur un banc de gravier du Tibre, canoë, tente et tout le matériel du voyage",
+"The Danube beneath the Walhalla, Tassilo standing on his loaded folding kayak at golden hour": "Le Danube sous le Walhalla, Tassilo debout sur son kayak pliant chargé à l'heure dorée",
+"Aerial of La Vela di Calatrava, Rome, at dusk": "Vue aérienne de La Vela di Calatrava, Rome, au crépuscule",
+"A stone church ruin clinging to a sheer cliff in Artvin, a lone figure lit in the doorway": "Une église de pierre en ruine accrochée à une falaise abrupte à Artvin, une silhouette seule éclairée dans l'embrasure",
+"Dawn camp on Monte Molare above the Bay of Naples, Vesuvius on the horizon": "Campement à l'aube sur le Monte Molare au-dessus de la baie de Naples, le Vésuve à l'horizon",
+"Nuka Sakdari, a ninth-century Georgian basilica on its shelf of rock above a valley in Artvin": "Nuka Sakdari, une basilique géorgienne du neuvième siècle sur sa corniche rocheuse au-dessus d'une vallée d'Artvin",
+"Tassilo barefoot beside a bright campfire inside a dark rock cave at night, his kayak paddle drying against the wall": "Tassilo pieds nus près d'un feu vif à l'intérieur d'une grotte sombre, la nuit, sa pagaie de kayak séchant contre la paroi",
+"vi.": "vi.",
+"vii.": "vii.",
+"viii.": "viii.",
+"ix.": "ix.",
+"xi.": "xi.",
+"xii.": "xii.",
+"xiii.": "xiii.",
+"On a ledge above a roadless valley in Artvin stands Nuka Sakdari, a Georgian church of the ninth century: parts of the stone roof open to the sky, the walls failing, never restored and never drawn. In October a group of us, architectural designers, filmmakers, artists and historians from seven countries, make the first measured record in its history and film the two weeks we spend living inside it. The record is what makes a repair possible. The film raises part of the money. Turkish restoration architects do the work; we do not restore.": "Sur une corniche au-dessus d'une vallée sans route, à Artvin, se dresse Nuka Sakdari, une église géorgienne du neuvième siècle : des parties du toit de pierre ouvertes sur le ciel, les murs qui cèdent, jamais restaurée et jamais dessinée. En octobre, un groupe d'entre nous, concepteurs en architecture, cinéastes, artistes et historiens de sept pays, réalise le premier relevé de son histoire et filme les deux semaines que nous passons à vivre à l'intérieur. Le relevé est ce qui rend une réparation possible. Le film rapporte une partie de l'argent. Les architectes restaurateurs turcs font le travail ; nous ne restaurons pas.",
+"Five languages, and a lifetime of racing and paddling along the coasts of southern Spain, Corsica and the Mediterranean.": "Cinq langues, et toute une vie de régates et de pagaie le long des côtes du sud de l'Espagne, de la Corse et de la Méditerranée.",
+"My main camera. Weather sealed, so it keeps shooting when the weather turns.": "Mon appareil principal. Tropicalisé, il continue de déclencher quand le temps se gâte.",
+"\"Every collaboration starts small. The good ones I want to keep for years.\"": "«Toute collaboration commence petit. Les bonnes, je veux les garder pendant des années.»",
+"Packs, mats, a stove, cameras and lighting for the film. The measuring instruments are already covered.": "Des sacs, des matelas, un réchaud, des caméras et de la lumière pour le film. Les instruments de mesure sont déjà couverts.",
+"The overland journey, insurance for a remote site, and the film equipment.": "Le voyage par la route, l'assurance pour un site isolé et le matériel de tournage.",
+"Heritage foundations, the authorities in Erzurum and Ankara, Georgian universities, journals.": "Des fondations du patrimoine, les autorités d'Erzurum et d'Ankara, des universités géorgiennes, des revues.",
+"Conservation, structural engineering, photogrammetry, archives, heritage law, film. There is room in the group.": "Conservation, ingénierie des structures, photogrammétrie, archives, droit du patrimoine, cinéma. Il y a de la place dans le groupe.",
+"Nuka Sakdari, on its shelf of rock above the valley. Artvin, Turkey.": "Nuka Sakdari, sur sa vire rocheuse au-dessus de la vallée. Artvin, Turquie.",
+"Underway · Sept. 2026": "En cours · sept. 2026",
+"On the water · Mallorca and Menorca by sea kayak": "Sur l'eau · Majorque et Minorque en kayak de mer",
+"A long night in an abandoned Armenian house. Turkey.": "Une longue nuit dans une maison arménienne abandonnée. Turquie.",
+"A bed among the columns · Lycian tomb, Turkey": "Un lit entre les colonnes · tombeau lycien, Turquie",
+"Golden hour with Fluffo · Turkey": "Heure dorée avec Fluffo · Turquie",
+"The temple still stands · Turkey": "Le temple tient encore debout · Turquie",
 }
