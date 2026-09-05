@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nuka Sakdari · A ninth-century church nobody has ever drawn</title>
-<meta name="description" content="In October 2026 a team of five to eight architects travels to Artvin province in northeast Türkiye to make the first architectural survey of Nuka Sakdari, a ninth-century Georgian basilica on a cliff ledge. No section, elevation or site plan of it exists in any language.">
+<title>Saving Nuka Sakdari · A ninth-century church nobody has ever drawn</title>
+<meta name="description" content="In October 2026 a group of young architectural designers, filmmakers, artists and historians travels to Artvin province in northeastern Turkey to make the first measured record of Nuka Sakdari, a Georgian church of the ninth century on a cliff ledge. No plan, section, elevation or scan of it exists in any language.">
 <link rel="canonical" href="https://tassilodelatorre.com/nuka/">
-<meta property="og:title" content="Nuka Sakdari · A ninth-century church nobody has ever drawn">
-<meta property="og:description" content="Five to eight architects, fourteen days, one building that has never been measured. Artvin province, Türkiye, October 2026.">
+<meta property="og:title" content="Saving Nuka Sakdari">
+<meta property="og:description" content="A church of the ninth century is about to collapse. A young group travels to northeastern Turkey to measure it, and to save it. 7 to 20 October 2026.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://tassilodelatorre.com/nuka/">
 <meta property="og:image" content="https://tassilodelatorre.com/nuka/img/nuka-lead.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nuka Sakdari · A ninth-century church nobody has ever drawn">
-<meta name="twitter:description" content="Five to eight architects, fourteen days, one building that has never been measured. Artvin province, Türkiye, October 2026.">
+<meta name="twitter:title" content="Saving Nuka Sakdari">
+<meta name="twitter:description" content="Eleven hundred years standing. Nobody has ever drawn it. Artvin province, Turkey, October 2026.">
 <meta name="twitter:image" content="https://tassilodelatorre.com/nuka/img/nuka-lead.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%AD%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="/writing/style.css">
@@ -26,6 +26,23 @@
   .figures .n{font-family:var(--serif);font-size:1.7rem;line-height:1.1;margin-bottom:5px}
   .figures .l{font-family:var(--sans);font-size:11px;letter-spacing:.16em;
               text-transform:uppercase;color:var(--muted);line-height:1.5}
+  /* Unterstuetzerleiste */
+  .supporters{border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+              padding:22px 0 24px;margin:0 0 clamp(30px,6vw,48px)}
+  .supporters .lbl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;
+                   text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  .supporters .row{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px}
+  .supporters img{height:19px;width:auto;opacity:.85;border:0;background:none}
+  .supporters img.big{height:26px}
+  .supporters img.sq{height:30px}
+  /* Wer was beitraegt */
+  .kit{list-style:none;margin:1.4rem 0 0;padding:0}
+  .kit li{border-top:1px solid var(--line);padding:16px 0 15px;
+          display:grid;grid-template-columns:132px 1fr;gap:6px 22px;align-items:start}
+  .kit li:last-child{border-bottom:1px solid var(--line)}
+  .kit img{height:22px;width:auto;opacity:.9;border:0;background:none;margin-top:3px}
+  .kit p{margin:0;font-size:17px;line-height:1.58}
+  @media(max-width:640px){.kit li{grid-template-columns:1fr}}
   .people{list-style:none;margin:1.4rem 0 0;padding:0}
   .people li{border-left:1px solid var(--line);padding:0 0 0 16px;margin:0 0 1.1rem}
   .people strong{display:block;font-weight:600}
@@ -35,9 +52,23 @@
   .ask p{margin:0 0 .9rem}
   .ask p:last-child{margin-bottom:0}
   .ask strong{color:var(--rust-deep)}
+  /* Aufruf */
+  .cta{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);
+       padding:30px 0 32px;margin:clamp(40px,7vw,64px) 0 0}
+  .cta h2{margin:0 0 1rem;font-size:clamp(1.5rem,4vw,2.1rem)}
+  .cta .lines{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
+              gap:20px 30px;margin-top:1.6rem}
+  .cta .who{font-family:var(--sans);font-size:11px;letter-spacing:.16em;
+            text-transform:uppercase;color:var(--rust-deep);margin-bottom:5px}
+  .cta .val{font-family:var(--serif);font-size:clamp(1.15rem,2.6vw,1.45rem);line-height:1.3}
+  .cta .val a{text-decoration:none;border-bottom:1px solid var(--line)}
+  .cta .val a:hover{border-bottom-color:var(--rust)}
+  .pull{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,3.4vw,1.75rem);
+        line-height:1.35;color:var(--muted);margin:2.6rem 0}
+  .pull b{font-style:italic;color:var(--ink)}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Nuka Sakdari, a ninth-century church nobody has ever drawn","inLanguage":"en","author":{"@type":"Person","name":"Tassilo de la Torre Schönborn","url":"https://tassilodelatorre.com"},"about":{"@type":"Place","name":"Nuka Sakdari","address":{"@type":"PostalAddress","addressRegion":"Artvin","addressCountry":"TR"}}}
+{"@context":"https://schema.org","@type":"Article","headline":"Saving Nuka Sakdari, a ninth-century church nobody has ever drawn","inLanguage":"en","author":{"@type":"Person","name":"Tassilo de la Torre Schönborn","url":"https://tassilodelatorre.com"},"about":{"@type":"Place","name":"Nuka Sakdari","geo":{"@type":"GeoCoordinates","latitude":41.2569,"longitude":42.0880},"address":{"@type":"PostalAddress","addressRegion":"Artvin","addressCountry":"TR"}}}
 </script>
 </head>
 <body>
@@ -57,13 +88,14 @@
 <div class="wrap">
 <article>
   <header>
-    <p class="eyebrow">Expedition · Artvin, Türkiye</p>
-    <h1>Nuka Sakdari</h1>
-    <p class="standfirst">A ninth-century church on a ledge of rock that nobody has ever drawn. In October, five to eight architects go up to draw it.</p>
+    <p class="eyebrow">Expedition · Artvin, Turkey</p>
+    <h1>Saving Nuka Sakdari</h1>
+    <p class="standfirst">A church of the ninth century is about to collapse. A young group of architects, designers, filmmakers, artists and historians is travelling to northeastern Turkey to measure it, and to save it.</p>
     <div class="meta">
-      <span>7 to 20 October 2026</span>
-      <span>Artvin province, northeast Türkiye</span>
-      <span>Five to eight architects, fourteen days</span>
+      <span>From 7 to 20 October 2026</span>
+      <span>41.2569° N, 42.0880° E</span>
+      <span>Artvin province, northeastern Turkey</span>
+      <span>Five to ten people, fourteen days</span>
     </div>
   </header>
 
@@ -72,19 +104,38 @@
     <figcaption>Nuka Sakdari from above. The opening in the stone roof is visible, and so is the ledge: there is no road, and the only way in is on foot.</figcaption>
   </figure>
 
+  <div class="supporters">
+    <p class="lbl">Supported by</p>
+    <div class="row">
+      <img class="big" src="/logos/lamy.png" alt="LAMY">
+      <img src="/logos/emlid.png" alt="Emlid">
+      <img src="/logos/bimm.png" alt="BIMm Solutions">
+      <img src="/logos/agisoft.png" alt="Agisoft">
+      <img src="/logos/powerfilm.png" alt="PowerFilm Solar">
+      <img src="/logos/schneider.png" alt="Schneider-Kreuznach">
+      <img src="/logos/colourlab.png" alt="Colourlab.ai">
+      <img src="/logos/ableton.png" alt="Ableton">
+      <img src="/logos/vaude.png" alt="VAUDE">
+      <img src="/logos/ortlieb-dark.png" alt="Ortlieb">
+      <img src="/logos/katadyn.png" alt="Katadyn">
+      <img class="sq" src="/logos/ruhla.png" alt="Ruhla">
+    </div>
+  </div>
+
   <div class="figures">
-    <div><span class="n">9th c.</span><span class="l">Georgian basilica<br>Tao-Klarjeti school</span></div>
-    <div><span class="n">Zero</span><span class="l">Sections, elevations<br>or site plans, ever</span></div>
+    <div><span class="n">9th c.</span><span class="l">Georgian church<br>two naves</span></div>
+    <div><span class="n">Zero</span><span class="l">Plans, sections<br>or elevations, ever</span></div>
     <div><span class="n">No road</span><span class="l">Reachable<br>on foot only</span></div>
     <div><span class="n">14 days</span><span class="l">Survey and film<br>October 2026</span></div>
   </div>
 
-  <h2>Standing, and running out of winters</h2>
-  <p class="dropcap">High above a valley in the province of Artvin, in the far northeast of Türkiye, a two-naved basilica of the ninth century sits on a shelf of rock. It belongs to the Tao-Klarjeti school, the same constellation of medieval Georgian monasteries as Öşkvank, İşhan and Barhal. Unlike those, it has never been restored, has never been the object of a state programme, and is scarcely documented at all.</p>
-  <p>The stone roof has an opening. Water enters freely, vegetation is working at the masonry, and one wall needs urgent structural attention. Buildings of this construction fail slowly and then suddenly.</p>
+  <h2>It has stood for eleven hundred years. Nobody has ever drawn it. Soon it will be too late.</h2>
+  <p class="dropcap">Nuka Sakdari is a Georgian church of the ninth century in the province of Artvin, in northeastern Turkey, the last standing part of a monastery complex. It sits on a narrow ledge in a valley wall and is inaccessible by vehicle. It has two naves separated by a round column, parts of the stone roof are open to the sky, and the walls are actively failing. It belongs to an important family of Georgian churches in the region, and it has been left to decay.</p>
+  <p>Expeditions have reached it. Nikolai Marr photographed it in 1904. <strong>But nobody has ever measured it or drawn it. No plan, no section, no elevation, no scan, in any language.</strong> And in Turkey nothing may be repaired that has not first been drawn.</p>
+  <p><strong>That is what this expedition is for.</strong> Over fourteen days we make the first measured record the building has ever had, and we film it. The record makes a repair possible. The film raises part of the money and reaches the people who can raise the rest.</p>
 
   <h2>The entire record of eleven hundred years</h2>
-  <p>This is not a building that is under-published. It is a building that has never been measured. There is no section, no elevation, no site plan of the complex, no Turkish <em>rölöve</em>, no academic thesis, and no digital record of any kind, in any language.</p>
+  <p>This is not a building that is under-published. It is a building that has never been measured. There is no section, no elevation, no site plan of the complex, no Turkish <em>rölöve</em> and no digital record of any kind, in any language.</p>
   <div class="scroll">
   <table>
     <thead><tr><th>Year</th><th>What exists</th></tr></thead>
@@ -97,30 +148,131 @@
   </div>
   <div class="note">A conservation council cannot approve what has not been drawn. That sentence is the whole reason this expedition exists. Nothing moves without drawings: not a permit, not a grant, not a single scaffold pole. The absence of paper is what keeps the roof open.</div>
 
-  <h2>A building held by a ledger</h2>
-  <p>Restoration of Georgian churches in Türkiye has for years been entangled in reciprocity talks between Ankara and Tbilisi, church restorations counted against mosque restorations. That ledger has failed to balance for over a decade, and while it does, nobody touches anything.</p>
-  <p>We keep the project strictly outside that frame. The money is raised in Europe by the project team, a Turkish heritage organisation acts as local partner, Georgian scholars participate academically and as observers, and any physical intervention is designed, approved and executed by Turkish experts under the authority of the Ministry of Culture and Tourism and its regional conservation council. We fund, we document, we advocate, we film. We do not touch the stone.</p>
+  <figure class="wide">
+    <img src="img/nuka-east-wall.jpg" width="1600" height="1200" alt="First light on the east wall of Nuka Sakdari, the valley falling away to the right and the sun rising over the ridge.">
+    <figcaption>First light on the east wall. The road on the far side of the valley is as close as any vehicle gets.</figcaption>
+  </figure>
 
-  <h2>Fourteen days, one building nobody has drawn</h2>
-  <p>On 7 October we fly to Batumi, cross the land border at Sarp on foot and travel up into the valley. We stay two weeks, sleeping inside the building, and produce the first complete architectural record of it: measured drawings, condition mapping and a photogrammetric model. The material is delivered to the regional conservation council in Erzurum, as a gift and as an invitation.</p>
-  <p>We film all of it. The result is a short documentary, quiet and made of available light, whose single purpose is to raise the money to close the roof and consolidate the endangered wall in 2027.</p>
+  <h2>A detailed survey, made far from any infrastructure</h2>
+  <p>There is no road to the church, no electricity and no phone signal, and no chance of coming back the following week to correct a mistake. So the building is drawn the way it has always been drawn: by hand, on paper, on the ledge. Around that hand survey we build two machine records. Inside, a laser scanner takes the room as a point cloud. Outside, where the cliff leaves a scanner nowhere to stand, a drone photographs the church and the rock it sits on, and those photographs become a second point cloud. Everything is tied to coordinates measured on the ground, and the three records check each other.</p>
+  <p>What comes back down the valley is a set of plans, sections, elevations, a site plan and a georeferenced model, accurate enough to build a restoration project on.</p>
 
-  <h3>Who goes</h3>
-  <ul class="people">
-    <li><strong>Ekin Öztürk</strong><span>Architect, Türkiye. Institutional relations, the Turkish architectural context, documentation on site.</span></li>
-    <li><strong>Lorenz Bühler</strong><span>Photographer, filmmaker and architect, Germany. Direction, camera and the edit.</span></li>
-    <li><strong>Tassilo de la Torre</strong><span>Architect and photographer, Spain and Germany. Survey, stills, expedition lead.</span></li>
+  <h3>Who makes that possible</h3>
+  <ul class="kit">
+    <li><img src="/logos/lamy.png" alt="LAMY"><p>The writing instrument manufacturer from Heidelberg. LAMY supply the pens and pencils the survey is drawn with. They also contribute to the funding and carry the project on their global channels.</p></li>
+    <li><img src="/logos/emlid.png" alt="Emlid"><p>A Reach RS4 base and a Reach RS3 rover, linked by radio. They put the survey into real coordinates and feed corrections to the drone in a valley with no network at all.</p></li>
+    <li><img src="/logos/bimm.png" alt="BIMm Solutions"><p>A Leica BLK360 for the interior, the smallest laser scanner on the market. BIMm Solutions are a Leica partner, and their software turns the scan into the orthophotos and the meshed model the conservation council needs.</p></li>
+    <li><img src="/logos/agisoft.png" alt="Agisoft"><p>Two Metashape Professional licences. This is the software that turns the drone photographs into the second point cloud and the measured three dimensional model.</p></li>
+    <li><img src="/logos/powerfilm.png" alt="PowerFilm Solar"><p>Foldable 120 watt and 60 watt solar panels. With a battery station they are the whole power supply on site: the scanner, the instruments, the cameras and the laptops all run off them.</p></li>
+    <li><img src="/logos/schneider.png" alt="Schneider-Kreuznach"><p>A B+W 810 ND filter for the filming. There are about ten stops of light between the wall we are drawing and the open sky above it, and the filter is how the camera holds both.</p></li>
+    <li><img src="/logos/colourlab.png" alt="Colourlab.ai"><p>Colourlab for the colour of the film, and a Live 12 Intro licence from Ableton for its sound.</p></li>
   </ul>
-  <p>Named above are the three who carry the project. On site during the survey week the team is five to eight, with further architects and assistants joining for the measured work.</p>
 
-  <h2>Partners</h2>
-  <p>We are not creators looking for equipment. We are architects, and this is the first measured survey this building will ever have. The drawings go to the Turkish heritage authority, because nothing there can be repaired that has not been drawn, and nobody has drawn this one.</p>
-  <div class="ask">
-    <p><strong>What we are looking for.</strong> A handful of companies willing to put their name to a rescue and carry part of the expedition with us. Not a product placement, and not for a single week: the survey is this year, the repair of the building is in 2027, and there is a film for each. We would rather do this properly with a few partners over two years than with thirty for one week.</p>
-    <p><strong>What a partner gets.</strong> Named in the film and on this page. A defined package of edited photographs and film sequences from the expedition, delivered on a fixed date, with the rights to use them in your own channels. For a lead partner, a short film of its own and the category to itself.</p>
+  <h2>A measured survey is what makes the repair possible</h2>
+  <p><strong>The record goes to the Turkish heritage authority in Erzurum.</strong> Nothing may be repaired there that has not first been drawn, which is the practical reason nothing has ever been done here. Once it is in their hands, the aim is stabilisation from 2027 onwards, carried out by Turkish restoration architects and Turkish specialists. We do not restore. We measure, we document, we raise the money and we make the case for it.</p>
+
+  <h3>The film</h3>
+  <p>Ten to twenty minutes, shot during the expedition: the survey itself, and the work, the sleeping and the living inside the church. We use it to present the project, and we enter it into film competitions around the world, both to make the building known and to put any prize money straight back into its repair. Everyone who supports the expedition is named in the film.</p>
+
+  <h3>Where the work goes afterwards</h3>
+  <p>The work goes to the architecture press first, to titles like <strong>Domus</strong>, <strong>The Architectural Review</strong> and <strong>Detail</strong>, and to the many smaller journals that publish measured surveys and restoration work. Beyond the field it belongs in the wider press: in design magazines, in the culture pages, and in the news itself. We will be pitching it to papers such as <strong>Die Zeit</strong>, <strong>Le Monde</strong>, <strong>The Guardian</strong> and <strong>The New York Times</strong>.</p>
+
+  <h3>The journals</h3>
+  <p>We come back with the first published sections, elevations and site plan of a building that no architectural library holds in full. For journals on architecture, design and history, that is a first publication, not a reprint.</p>
+
+  <p class="pull">No documentary has ever been made about the churches of Tao-Klarjeti. Not one. <b>Not yet.</b></p>
+
+  <h2>A building held by a ledger</h2>
+  <p>Restoration of Georgian churches in Turkey has for years been entangled in reciprocity talks between Ankara and Tbilisi, church restorations counted against mosque restorations. That ledger has failed to balance for over a decade, and while it does, nobody touches anything.</p>
+  <p>We keep the project strictly outside that frame. The money is raised in Europe by the project team, Georgian scholars participate academically and as observers, and any physical intervention is designed, approved and executed by Turkish experts under the authority of the Ministry of Culture and Tourism and its regional conservation council. We fund, we document, we advocate, we film. We do not touch the stone.</p>
+
+  <h2>What we are asking for</h2>
+  <p>The instruments and the software are covered by the companies above. Everything around them is still open, and that is where a partner makes a real difference: how many of us can come, how long we can stay on the ledge, how much of the work gets done on the mountain instead of months later, and how far the result travels once we are back. We would like to find those partners.</p>
+
+  <h3>1 · Funding</h3>
+  <p>What is still open are the running costs of getting there and working there: the overland journey, insurance for a remote site, and the film equipment, the cameras and the software the record and the film are made with. A contribution can be earmarked for a single line, and we send a line by line budget on request.</p>
+
+  <h3>2 · Introductions</h3>
+  <p>A name opens doors that money cannot. We are looking for introductions to heritage foundations and cultural programmes, to the heritage authority in Erzurum and the ministry in Ankara, to Georgian institutions and universities working on Tao-Klarjeti, to journals of architecture and conservation, and to companies that could supply what is still missing.</p>
+
+  <h3>3 · Equipment</h3>
+  <p>Still open: packs for carrying heavy loads, mats and sleeping bags for two weeks at altitude in October, a stove, cameras and lighting for the film, medical and safety equipment for a site hours from the nearest road, and drawing paper and boards that survive two weeks of weather on a ledge. Everything supplied is named in the film credits.</p>
+
+  <h3>4 · Expertise, and coming with us</h3>
+  <p>If anything on this page is close to what you do, we would like to hear from you: conservation, structural engineering, photogrammetry, archives, heritage law, drawing, photography, film, or something we have not thought of. <strong>There is room in the group for people who bring a skill to it, and the invitation to join the expedition is a real one.</strong></p>
+
+  <h2>An international team, assembled to make one survey possible</h2>
+  <figure>
+    <img src="img/route.svg" alt="Map of Europe and Anatolia. A solid line runs overland from Vienna through Transylvania and Bucharest to Istanbul and on to Nuka Sakdari in northeastern Turkey. Dashed lines come in from Madrid, Paris, Marseille, Geneva, Munich and Copenhagen." width="1240" height="780">
+    <figcaption>Overland with the equipment, dashed for those flying in and joining.</figcaption>
+  </figure>
+  <p>The team comes together from seven countries. One group drives from Vienna through Transylvania and Bucharest to Istanbul, then east across the whole of Anatolia. The instruments, the cameras and the camp kit travel by car, and the car is not a convenience: the valley is isolated and the last villages are far apart, and without a vehicle of our own nothing gets up there, nothing gets resupplied, and nobody gets out in a hurry. One of us comes down from Copenhagen and joins the caravan in Vienna. The others fly in from Madrid, Paris, Marseille, Geneva and Munich. We regroup in Artvin, drive as far as the track allows, and then walk.</p>
+
+  <h2>Between five and ten people, from seven countries</h2>
+  <p>The group is made up of architectural designers, architecture students, an architect, a filmmaker, an artist and a conservationist. On site we are joined by a Turkish fixer and a licensed survey office, which is what makes the documentation acceptable to the ministry.</p>
+  <ul class="people">
+    <li><strong>Tassilo de la Torre Schönborn</strong><span>Expedition lead · Architectural designer · Spain and Germany</span></li>
+    <li><strong>Lorenz Bühler</strong><span>Filmmaker · Architectural designer</span></li>
+    <li><strong>Ekin Öztürk</strong><span>Architectural designer · Turkey</span></li>
+    <li><strong>Nico Witt</strong><span>Architectural designer and artist · Spain</span></li>
+    <li><strong>Raphaëlle Rousseau</strong><span>Architectural designer · France</span></li>
+    <li><strong>Emma Lambot</strong><span>Architectural designer · France</span></li>
+    <li><strong>Imanol Vilasetru</strong><span>Architect · Argentina and Italy</span></li>
+    <li><strong>Emanuele Lovatelli</strong><span>Conservationist · Italy and Kenya</span></li>
+  </ul>
+  <p class="offline">Further members are joining; their names are not confirmed yet.</p>
+
+  <h3>Where the team stays</h3>
+  <p>There is no accommodation within reach of the site. For two weeks the church is the camp: we sleep in it, cook in it, eat in it and work in it. There is no infrastructure anywhere near. Solar panels from PowerFilm and a battery station are what keep us working up there.</p>
+
+  <h3>The camp is covered too</h3>
+  <ul class="kit">
+    <li><img src="/logos/vaude.png" alt="VAUDE"><p>Packs and camp equipment for the group.</p></li>
+    <li><img src="/logos/ortlieb-dark.png" alt="Ortlieb"><p>Waterproof transport. The instruments, the laptops and the drawings have to come back down dry.</p></li>
+    <li><img src="/logos/katadyn.png" alt="Katadyn"><p>Water filters and the camp stove, so that not every litre has to be carried up the slope.</p></li>
+    <li><img class="sq" src="/logos/ruhla.png" alt="Ruhla"><p>Ruhla, from Pointtec in Munich. The watch that goes up with the survey.</p></li>
+  </ul>
+
+  <figure class="wide">
+    <img src="img/nuka-interior.jpg" width="1200" height="1500" alt="Inside Nuka Sakdari: blue plaster on the apse, the stone roof open to the sky, and the camp laid out on the ground.">
+    <figcaption>Ninth century plaster, parts of the roof open to the sky, and walls that are losing stone every winter. For the two weeks of the survey this room is also the camp, and our home.</figcaption>
+  </figure>
+
+  <h2>In short</h2>
+  <div class="scroll">
+  <table>
+    <tbody>
+      <tr><th>The project</th><td><strong>Saving Nuka Sakdari.</strong> The first measured record of a Georgian church of the ninth century, made so that it can be repaired.</td></tr>
+      <tr><th>Where</th><td>41.2569° N, 42.0880° E. Nuk'as Saq'dari Kilisesi, Artvin province, Turkey.</td></tr>
+      <tr><th>When</th><td>On site from 7 to 20 October 2026</td></tr>
+      <tr><th>Team</th><td>Five to ten people from seven countries, plus a fixer and a licensed survey office</td></tr>
+      <tr><th>Output</th><td>Plans, sections, elevations, site plan, georeferenced model, a short film</td></tr>
+      <tr><th>After</th><td>File to the heritage authority in Erzurum, stabilisation from 2027</td></tr>
+      <tr><th>Asking for</th><td>Funding, introductions, equipment, expertise</td></tr>
+    </tbody>
+  </table>
   </div>
-  <p>Equipment is welcome where we would otherwise have to buy it, and it comes in addition rather than instead of a partnership.</p>
-  <p>If this sounds like something for you, write to <a href="mailto:tassilo@antiga.es">tassilo@antiga.es</a> or send a message to +34 608 635 863. Fifteen minutes on the phone is usually enough to know.</p>
+
+  <a class="download" href="SAVING-NUKA-SAKDARI.pdf">
+    <span class="download-ico">↓</span>
+    <span class="download-txt"><strong>Saving Nuka Sakdari, the full document</strong>
+    <span>Nine pages, PDF. The building, the method, the team and what we are asking for.</span></span>
+  </a>
+
+  <figure class="wide">
+    <img src="img/nuka-from-below.jpg" width="1600" height="1200" alt="Nuka Sakdari seen from the valley floor, standing on its rock spur against a blue sky, with the autumn slope behind.">
+    <figcaption>Seen from the valley floor. The figure standing on the wall gives the scale.</figcaption>
+  </figure>
+
+  <div class="cta">
+    <h2>If you want to help or come along, contact us.</h2>
+    <p>Money, equipment, a contact, a piece of information about this building that we do not have, or your own hands on the mountain in October. Call, write, or send a message.</p>
+    <div class="lines">
+      <div><p class="who">Phone and WhatsApp</p><p class="val"><a href="tel:+34608635863">+34 608 635 863</a></p></div>
+      <div><p class="who">Email</p><p class="val"><a href="mailto:tassilo@tassilodelatorre.com">tassilo@tassilodelatorre.com</a></p></div>
+      <div><p class="who">Expedition lead</p><p class="val">Tassilo de la Torre Schönborn</p></div>
+    </div>
+  </div>
 
   <h2>Previous work</h2>
   <p>Long journeys under my own power, and the writing that came out of them.</p>
@@ -131,7 +283,7 @@
   </ul>
 
   <hr>
-  <p class="offline">Nuka Sakdari, Artvin province, Türkiye. A proposal by a small group of European architects. Nothing on this page is a claim on the building: it is a registered Turkish cultural asset, and any work on it belongs to the Turkish authorities.</p>
+  <p class="offline">Nuka Sakdari, Artvin province, Turkey. A proposal by a small international group. Nothing on this page is a claim on the building: any work on it belongs to the Turkish authorities.</p>
 </article>
 
 <footer>
