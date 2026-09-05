@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 T = {
 # ---------- metas ----------
-"Tassilo de la Torre, Adventure Photographer · Model · Architect · Madrid":
-    "Tassilo de la Torre, photographe d'aventure · mannequin · architecte · Madrid",
-"Tassilo de la Torre - Adventure photographer, model and architect":
-    "Tassilo de la Torre, photographe d'aventure, mannequin et architecte",
+"Tassilo de la Torre, Adventure Photographer · Architect · Madrid":
+    "Tassilo de la Torre, photographe d'aventure · architecte · Madrid",
+"Tassilo de la Torre - Adventure photographer and architect":
+    "Tassilo de la Torre, photographe d'aventure et architecte",
 
 # ---------- en-tête / hero ----------
 "Skip to content": "Aller au contenu",
@@ -16,8 +16,8 @@ T = {
 "Prints": "Tirages",
 "Partners": "Marques",
 "Contact": "Contact",
-"Adventure photographer · Model · Architect · Madrid":
-    "Photographe d'aventure · mannequin · architecte · Madrid",
+"Adventure photographer · Architect · Madrid":
+    "Photographe d'aventure · architecte · Madrid",
 "Partner with the 2026 expeditions": "Devenir partenaire des expéditions 2026",
 "Follow the expedition on Instagram · @tassilodlts":
     "Suivre l'expédition sur Instagram · @tassilodlts",
@@ -105,8 +105,8 @@ T = {
 "About": "À propos",
 "Behind the camera.": "Derrière l'appareil.",
 "The other kind of shoot.": "L'autre genre de séance.",
-"I've had folding boats since I was twelve. Last summer I paddled a 1950s folding kayak 2,580 km down the Danube, from Ulm to the Black Sea, with my dog Fluffo as crew. I trained as an architect, I work as a model, and I've spent years in product photography. This year I'm crossing Spain on foot and by kayak, and paddling around Mallorca and Menorca.":
-    "J'ai des bateaux pliants depuis mes douze ans. L'été dernier, j'ai descendu 2 580 km du Danube dans un kayak pliant des années cinquante, d'Ulm à la mer Noire, avec mon chien Fluffo comme équipage. J'ai une formation d'architecte, je travaille comme mannequin et j'ai passé des années en photographie de produit. Cette année, je traverse l'Espagne à pied et en kayak, et je fais le tour de Majorque et de Minorque à la pagaie.",
+"I've had folding boats since I was twelve. Last summer I paddled a 1950s folding kayak 2,580 km down the Danube, from Ulm to the Black Sea, with my dog Fluffo as crew. I trained as an architect and I've spent years in product photography. This year I'm crossing Spain on foot and by kayak, and paddling around Mallorca and Menorca.":
+    "J'ai des bateaux pliants depuis mes douze ans. L'été dernier, j'ai descendu 2 580 km du Danube dans un kayak pliant des années cinquante, d'Ulm à la mer Noire, avec mon chien Fluffo comme équipage. J'ai une formation d'architecte et j'ai passé des années en photographie de produit. Cette année, je traverse l'Espagne à pied et en kayak, et je fais le tour de Majorque et de Minorque à la pagaie.",
 "Five languages, and a lifetime racing and paddling the coasts of southern Spain, Corsica and the Mediterranean.":
     "Cinq langues, et toute une vie de régates et de pagaie le long des côtes du sud de l'Espagne, de la Corse et de la Méditerranée.",
 "down the Danube": "de Danube",
@@ -163,8 +163,8 @@ T = {
 
 # ---------- marques ----------
 "For brands &amp; partners": "Pour les marques et les partenaires",
-"One person who is photographer, model and location at once.":
-    "Une seule personne qui est à la fois photographe, mannequin et décor.",
+"One person who is photographer, subject and location at once.":
+    "Une seule personne qui est à la fois photographe, sujet et décor.",
 "Film": "Vidéo",
 "A documentary of twenty to forty minutes, plus daily short films you are free to run on your own channels.":
     "Un documentaire de vingt à quarante minutes, plus des vidéos courtes quotidiennes que vous êtes libres de diffuser sur vos propres canaux.",
@@ -179,8 +179,6 @@ T = {
     "Les trous, je les creuse moi-même, dans les hauts plateaux les plus vides d'Espagne, et vous recevez les coordonnées.",
 "Write to me": "Écrivez-moi",
 "Download media kit (PDF)": "Télécharger le media kit (PDF)",
-"Casting or an agency?": "Casting ou agence ?",
-"Model digitals on request.": "Digitals de mannequin sur demande.",
 
 # ---------- tirages ----------
 "Prints &amp; editions": "Tirages et éditions",
@@ -267,12 +265,14 @@ T = {
 # ---------- correcciones de agosto ----------
 ". By sea kayak, on foot, by bike and by thumb, always with my dog Fluffo.":
     ". En kayak de mer, à pied, à vélo et en stop, toujours avec mon chien Fluffo.",
-"Tassilo de la Torre, adventure photographer, model and architect based in Madrid. Photographs from long journeys by sea kayak, on foot, by bike and hitchhiking, always with my dog Fluffo.":
-    "Tassilo de la Torre, photographe d'aventure, mannequin et architecte installé à Madrid. Des photographies de longs voyages en kayak de mer, à pied, à vélo et en stop, toujours avec mon chien Fluffo.",
+"Tassilo de la Torre, adventure photographer and architect based in Madrid. Photographs from long journeys by sea kayak, on foot, by bike and hitchhiking, always with my dog Fluffo.":
+    "Tassilo de la Torre, photographe d'aventure et architecte installé à Madrid. Des photographies de longs voyages en kayak de mer, à pied, à vélo et en stop, toujours avec mon chien Fluffo.",
 "These come from journeys by sea kayak, on foot, by bike and hitchhiking. I sleep outside most nights, in caves, in ruins, on gravel bars and on summits, so I am usually there early and late, when the light is good. A trip runs for weeks or months.":
     "Elles viennent de voyages en kayak de mer, à pied, à vélo et en stop. La plupart des nuits, je dors dehors, dans des grottes, dans des ruines, sur des bancs de galets et sur des sommets, donc je suis en général là tôt et tard, quand la lumière est bonne. Un voyage dure des semaines ou des mois.",
 "Across Spain on foot and by sea kayak: the Almería desert, the plains of Castilla, the wet green north coast. Sleeping outside most nights, with Fluffo.":
     "Traverser l'Espagne à pied et en kayak de mer : le désert d'Almería, les plaines de Castille, la côte nord verte et mouillée. La plupart des nuits dehors, avec Fluffo.",
     'Journeys': 'Voyages',
     'Where I have already been: rivers, coasts and roads, in photographs →': 'Où je suis déjà allé: fleuves, côtes et routes, en photographies →',
+"Brands": "Marques",
+"See the work →": "Voir le travail →",
 }

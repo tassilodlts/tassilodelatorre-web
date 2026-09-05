@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 T = {
 # ---------- metas ----------
-"Tassilo de la Torre, Adventure Photographer · Model · Architect · Madrid":
-    "Tassilo de la Torre, fotografo d'avventura · modello · architetto · Madrid",
-"Tassilo de la Torre - Adventure photographer, model and architect":
-    "Tassilo de la Torre, fotografo d'avventura, modello e architetto",
+"Tassilo de la Torre, Adventure Photographer · Architect · Madrid":
+    "Tassilo de la Torre, fotografo d'avventura · architetto · Madrid",
+"Tassilo de la Torre - Adventure photographer and architect":
+    "Tassilo de la Torre, fotografo d'avventura e architetto",
 
 # ---------- testata / hero ----------
 "Skip to content": "Vai al contenuto",
@@ -16,8 +16,8 @@ T = {
 "Prints": "Stampe",
 "Partners": "Marchi",
 "Contact": "Contatti",
-"Adventure photographer · Model · Architect · Madrid":
-    "Fotografo d'avventura · modello · architetto · Madrid",
+"Adventure photographer · Architect · Madrid":
+    "Fotografo d'avventura · architetto · Madrid",
 "Partner with the 2026 expeditions": "Diventa partner delle spedizioni 2026",
 "Follow the expedition on Instagram · @tassilodlts":
     "Segui la spedizione su Instagram · @tassilodlts",
@@ -105,8 +105,8 @@ T = {
 "About": "Chi sono",
 "Behind the camera.": "Dietro la macchina.",
 "The other kind of shoot.": "L'altro tipo di servizio.",
-"I've had folding boats since I was twelve. Last summer I paddled a 1950s folding kayak 2,580 km down the Danube, from Ulm to the Black Sea, with my dog Fluffo as crew. I trained as an architect, I work as a model, and I've spent years in product photography. This year I'm crossing Spain on foot and by kayak, and paddling around Mallorca and Menorca.":
-    "Ho barche pieghevoli da quando avevo dodici anni. L'estate scorsa ho sceso 2.580 km di Danubio su un pieghevole degli anni Cinquanta, da Ulma al mar Nero, con il mio cane Fluffo come equipaggio. Mi sono formato come architetto, lavoro come modello e ho passato anni a fare fotografia di prodotto. Quest'anno attraverso la Spagna a piedi e in kayak, e faccio il giro di Maiorca e Minorca a pagaia.",
+"I've had folding boats since I was twelve. Last summer I paddled a 1950s folding kayak 2,580 km down the Danube, from Ulm to the Black Sea, with my dog Fluffo as crew. I trained as an architect and I've spent years in product photography. This year I'm crossing Spain on foot and by kayak, and paddling around Mallorca and Menorca.":
+    "Ho barche pieghevoli da quando avevo dodici anni. L'estate scorsa ho sceso 2.580 km di Danubio su un pieghevole degli anni Cinquanta, da Ulma al mar Nero, con il mio cane Fluffo come equipaggio. Mi sono formato come architetto e ho passato anni a fare fotografia di prodotto. Quest'anno attraverso la Spagna a piedi e in kayak, e faccio il giro di Maiorca e Minorca a pagaia.",
 "Five languages, and a lifetime racing and paddling the coasts of southern Spain, Corsica and the Mediterranean.":
     "Cinque lingue, e una vita intera di regate e di pagaia lungo le coste della Spagna del sud, della Corsica e del Mediterraneo.",
 "down the Danube": "di Danubio",
@@ -163,8 +163,8 @@ T = {
 
 # ---------- marchi ----------
 "For brands &amp; partners": "Per marchi e partner",
-"One person who is photographer, model and location at once.":
-    "Una persona sola che è fotografo, modello e location insieme.",
+"One person who is photographer, subject and location at once.":
+    "Una persona sola che è fotografo, soggetto e location insieme.",
 "Film": "Video",
 "A documentary of twenty to forty minutes, plus daily short films you are free to run on your own channels.":
     "Un documentario dai venti ai quaranta minuti, più video brevi quotidiani che potete usare liberamente sui vostri canali.",
@@ -179,8 +179,6 @@ T = {
     "Le buche le scavo io, sugli altipiani più vuoti della Spagna, e a voi arrivano le coordinate.",
 "Write to me": "Scrivimi",
 "Download media kit (PDF)": "Scarica il media kit (PDF)",
-"Casting or an agency?": "Casting o agenzia?",
-"Model digitals on request.": "Digitals da modello su richiesta.",
 
 # ---------- stampe ----------
 "Prints &amp; editions": "Stampe ed edizioni",
@@ -267,12 +265,14 @@ T = {
 # ---------- correcciones de agosto ----------
 ". By sea kayak, on foot, by bike and by thumb, always with my dog Fluffo.":
     ". In kayak da mare, a piedi, in bici e in autostop, sempre con il mio cane Fluffo.",
-"Tassilo de la Torre, adventure photographer, model and architect based in Madrid. Photographs from long journeys by sea kayak, on foot, by bike and hitchhiking, always with my dog Fluffo.":
-    "Tassilo de la Torre, fotografo d'avventura, modello e architetto con base a Madrid. Fotografie da viaggi lunghi in kayak da mare, a piedi, in bici e in autostop, sempre con il mio cane Fluffo.",
+"Tassilo de la Torre, adventure photographer and architect based in Madrid. Photographs from long journeys by sea kayak, on foot, by bike and hitchhiking, always with my dog Fluffo.":
+    "Tassilo de la Torre, fotografo d'avventura e architetto con base a Madrid. Fotografie da viaggi lunghi in kayak da mare, a piedi, in bici e in autostop, sempre con il mio cane Fluffo.",
 "These come from journeys by sea kayak, on foot, by bike and hitchhiking. I sleep outside most nights, in caves, in ruins, on gravel bars and on summits, so I am usually there early and late, when the light is good. A trip runs for weeks or months.":
     "Vengono da viaggi in kayak da mare, a piedi, in bici e in autostop. Quasi tutte le notti dormo fuori, in grotte, tra le rovine, sui greti di ghiaia e in cima alle montagne, così di solito sono lì presto e tardi, quando la luce è buona. Un viaggio dura settimane o mesi.",
 "Across Spain on foot and by sea kayak: the Almería desert, the plains of Castilla, the wet green north coast. Sleeping outside most nights, with Fluffo.":
     "Attraversare la Spagna a piedi e in kayak da mare: il deserto di Almería, le pianure della Castiglia, la costa nord verde e bagnata. Quasi tutte le notti fuori, con Fluffo.",
     'Journeys': 'Viaggi',
     'Where I have already been: rivers, coasts and roads, in photographs →': 'Dove sono già stato: fiumi, coste e strade, in fotografie →',
+"Brands": "Marchi",
+"See the work →": "Vedi il lavoro →",
 }

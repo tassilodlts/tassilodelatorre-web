@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 T = {
 # ---------- metas ----------
-"Tassilo de la Torre, Adventure Photographer · Model · Architect · Madrid":
-    "Tassilo de la Torre, fotógrafo de aventura · modelo · arquitecto · Madrid",
-"Tassilo de la Torre - Adventure photographer, model and architect":
-    "Tassilo de la Torre, fotógrafo de aventura, modelo y arquitecto",
+"Tassilo de la Torre, Adventure Photographer · Architect · Madrid":
+    "Tassilo de la Torre, fotógrafo de aventura · arquitecto · Madrid",
+"Tassilo de la Torre - Adventure photographer and architect":
+    "Tassilo de la Torre, fotógrafo de aventura y arquitecto",
 
 # ---------- cabecera / hero ----------
 "Skip to content": "Ir al contenido",
@@ -16,8 +16,8 @@ T = {
 "Prints": "Copias",
 "Partners": "Marcas",
 "Contact": "Contacto",
-"Adventure photographer · Model · Architect · Madrid":
-    "Fotógrafo de aventura · modelo · arquitecto · Madrid",
+"Adventure photographer · Architect · Madrid":
+    "Fotógrafo de aventura · arquitecto · Madrid",
 "Partner with the 2026 expeditions": "Patrocina las expediciones de 2026",
 "Follow the expedition on Instagram · @tassilodlts":
     "Sigue la expedición en Instagram · @tassilodlts",
@@ -105,8 +105,8 @@ T = {
 "About": "Sobre mí",
 "Behind the camera.": "Detrás de la cámara.",
 "The other kind of shoot.": "El otro tipo de sesión.",
-"I've had folding boats since I was twelve. Last summer I paddled a 1950s folding kayak 2,580 km down the Danube, from Ulm to the Black Sea, with my dog Fluffo as crew. I trained as an architect, I work as a model, and I've spent years in product photography. This year I'm crossing Spain on foot and by kayak, and paddling around Mallorca and Menorca.":
-    "Tengo barcos plegables desde los doce años. El verano pasado bajé 2.580 km del Danubio en un plegable de los años cincuenta, de Ulm al mar Negro, con mi perro Fluffo de tripulación. Estudié arquitectura, trabajo como modelo y llevo años haciendo fotografía de producto. Este año cruzo España a pie y en kayak, y doy la vuelta a Mallorca y Menorca remando.",
+"I've had folding boats since I was twelve. Last summer I paddled a 1950s folding kayak 2,580 km down the Danube, from Ulm to the Black Sea, with my dog Fluffo as crew. I trained as an architect and I've spent years in product photography. This year I'm crossing Spain on foot and by kayak, and paddling around Mallorca and Menorca.":
+    "Tengo barcos plegables desde los doce años. El verano pasado bajé 2.580 km del Danubio en un plegable de los años cincuenta, de Ulm al mar Negro, con mi perro Fluffo de tripulación. Estudié arquitectura y llevo años haciendo fotografía de producto. Este año cruzo España a pie y en kayak, y doy la vuelta a Mallorca y Menorca remando.",
 "Five languages, and a lifetime racing and paddling the coasts of southern Spain, Corsica and the Mediterranean.":
     "Cinco idiomas y toda una vida regateando y remando por las costas del sur de España, Córcega y el Mediterráneo.",
 "down the Danube": "de Danubio",
@@ -163,8 +163,8 @@ T = {
 
 # ---------- marcas ----------
 "For brands &amp; partners": "Para marcas y patrocinadores",
-"One person who is photographer, model and location at once.":
-    "Una sola persona que es fotógrafo, modelo y localización a la vez.",
+"One person who is photographer, subject and location at once.":
+    "Una sola persona que es fotógrafo, sujeto y localización a la vez.",
 "Film": "Vídeo",
 "A documentary of twenty to forty minutes, plus daily short films you are free to run on your own channels.":
     "Un documental de veinte a cuarenta minutos, más vídeos cortos diarios que podéis usar libremente en vuestros propios canales.",
@@ -179,8 +179,6 @@ T = {
     "Los hoyos los cavo yo, en la sierra más vacía de España, y os doy las coordenadas.",
 "Write to me": "Escríbeme",
 "Download media kit (PDF)": "Descargar el media kit (PDF)",
-"Casting or an agency?": "¿Casting o agencia?",
-"Model digitals on request.": "Digitals de modelo a petición.",
 
 # ---------- copias ----------
 "Prints &amp; editions": "Copias y ediciones",
@@ -267,12 +265,14 @@ T = {
 # ---------- correcciones de agosto ----------
 ". By sea kayak, on foot, by bike and by thumb, always with my dog Fluffo.":
     ". En kayak de mar, a pie, en bici y a dedo, siempre con mi perro Fluffo.",
-"Tassilo de la Torre, adventure photographer, model and architect based in Madrid. Photographs from long journeys by sea kayak, on foot, by bike and hitchhiking, always with my dog Fluffo.":
-    "Tassilo de la Torre, fotógrafo de aventura, modelo y arquitecto afincado en Madrid. Fotografías de viajes largos en kayak de mar, a pie, en bici y a dedo, siempre con mi perro Fluffo.",
+"Tassilo de la Torre, adventure photographer and architect based in Madrid. Photographs from long journeys by sea kayak, on foot, by bike and hitchhiking, always with my dog Fluffo.":
+    "Tassilo de la Torre, fotógrafo de aventura y arquitecto afincado en Madrid. Fotografías de viajes largos en kayak de mar, a pie, en bici y a dedo, siempre con mi perro Fluffo.",
 "These come from journeys by sea kayak, on foot, by bike and hitchhiking. I sleep outside most nights, in caves, in ruins, on gravel bars and on summits, so I am usually there early and late, when the light is good. A trip runs for weeks or months.":
     "Salen de viajes en kayak de mar, a pie, en bici y a dedo. Casi todas las noches duermo fuera, en cuevas, en ruinas, en barras de grava y en cumbres, así que suelo estar allí temprano y tarde, que es cuando hay buena luz. Un viaje dura semanas o meses.",
 "Across Spain on foot and by sea kayak: the Almería desert, the plains of Castilla, the wet green north coast. Sleeping outside most nights, with Fluffo.":
     "Cruzar España a pie y en kayak de mar: el desierto de Almería, las llanuras de Castilla, el norte verde y mojado. Durmiendo fuera casi todas las noches, con Fluffo.",
     'Journeys': 'Viajes',
     'Where I have already been: rivers, coasts and roads, in photographs →': 'Dónde he estado ya: ríos, costas y caminos, en fotografías →',
+"Brands": "Marcas",
+"See the work →": "Ver el trabajo →",
 }
