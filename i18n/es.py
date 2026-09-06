@@ -321,4 +321,5 @@ T = {
 "A bed among the columns · Lycian tomb, Turkey": "Una cama entre las columnas · tumba licia, Turquía",
 "Golden hour with Fluffo · Turkey": "Hora dorada con Fluffo · Turquía",
 "The temple still stands · Turkey": "El templo sigue en pie · Turquía",
+    "Nuka": "Nuka",
 }

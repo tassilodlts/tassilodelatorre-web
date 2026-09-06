@@ -1,0 +1,45 @@
+/* Journeys: same tokens as the rest of the site (writing/style.css), wider frame for photographs. */
+.wrap{max-width:1180px}
+article header{max-width:720px}
+.meta{margin-bottom:clamp(24px,4vw,40px)}
+
+/* archive index: cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:clamp(22px,3vw,40px) clamp(18px,2.4vw,30px);margin:0 0 20px}
+.card{text-decoration:none;display:block}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);border-radius:2px;background:#dcd4c0}
+.card h2{font-family:var(--serif);font-weight:400;font-size:1.35rem;line-height:1.2;margin:.8rem 0 .2rem;letter-spacing:-.01em}
+.card p{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.card:hover h2{color:var(--rust-deep)}
+
+/* one journey: the photographs, natural proportions, column masonry */
+.ph-grid{columns:3 300px;column-gap:14px}
+.ph{display:block;break-inside:avoid;margin:0 0 14px;position:relative;text-decoration:none}
+.ph img{width:100%;height:auto;border:1px solid var(--line);border-radius:2px;background:#dcd4c0;transition:opacity .2s}
+.ph:hover img{opacity:.92}
+.ph.hidden{display:none}
+.fn{position:absolute;left:8px;top:8px;padding:2px 7px;border-radius:2px;background:rgba(75,74,61,.72);
+    color:#f4efdf;font-family:var(--sans);font-size:11px;letter-spacing:.06em;font-variant-numeric:tabular-nums;opacity:0;transition:opacity .2s}
+body.names .fn{opacity:1}
+
+.more{display:block;width:100%;margin:10px 0 0;padding:15px;background:none;border:1px solid var(--line);color:var(--ink);
+      font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;border-radius:2px}
+.more:hover{border-color:var(--rust);color:var(--rust-deep)}
+.back{display:inline-block;margin:34px 0 0;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+.back:hover{color:var(--rust-deep)}
+.namebtn{position:fixed;right:18px;bottom:18px;z-index:9;padding:9px 13px;background:var(--bg);border:1px solid var(--line);
+    color:var(--muted);font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;cursor:pointer}
+.namebtn:hover{color:var(--ink);border-color:var(--rust)}
+
+/* lightbox */
+.lb{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100vw;height:100vh;margin:0}
+.lb::backdrop{background:rgba(35,34,28,.94)}
+.lb figure{margin:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:clamp(12px,3vw,40px);box-sizing:border-box}
+.lb img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border:0;border-radius:2px;background:transparent}
+.lb button{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border:0;background:rgba(232,225,207,.12);
+           color:#e8e1cf;font-size:26px;cursor:pointer;border-radius:50%;line-height:1}
+.lb button:hover{background:rgba(232,225,207,.26)}
+.lb .prev{left:14px}.lb .next{right:14px}
+.lb .close{top:14px;right:14px;transform:none;width:44px;height:44px;font-size:22px}
+.lb .cnt{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);font-family:var(--sans);font-size:12px;letter-spacing:.14em;color:rgba(232,225,207,.7)}
+@media(max-width:640px){.lb button{width:44px;height:44px;font-size:22px}.lb .prev{left:6px}.lb .next{right:6px}}
+@media(max-width:640px){.ph-grid{columns:2;column-gap:10px}.ph{margin-bottom:10px}.fn{left:5px;top:5px}}
