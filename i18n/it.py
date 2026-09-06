@@ -68,10 +68,10 @@ T = {
 "Two journeys. One camera.": "Due viaggi. Una macchina fotografica.",
 "Spain, under human power": "La Spagna, con la sola forza del corpo",
 "On the trail now · Two months": "In cammino adesso · due mesi",
-"A lap of the Balearics, filmed": "Un giro delle Baleari, filmato",
-"September · ~250 nautical miles": "Settembre · circa 250 miglia nautiche",
-"Around Mallorca and Menorca by sea kayak in stages, with Fluffo as crew, and I'll bring home a short documentary, daily films and a real body of photography.":
-    "Il giro di Maiorca e Minorca in kayak da mare, a tappe, con Fluffo come equipaggio, e a casa porto un documentario breve, video quotidiani e un vero corpo di fotografie.",
+"A lap of Mallorca, filmed": "Un giro di Maiorca, filmato",
+"September · In stages": "Settembre · A tappe",
+"Around Mallorca by sea kayak in stages, with Fluffo as crew, and I'll bring home a short documentary, daily films and a real body of photography.":
+    "Il giro di Maiorca in kayak da mare, a tappe, con Fluffo come equipaggio, e a casa porto un documentario breve, video quotidiani e un vero corpo di fotografie.",
 "Want your gear on this journey? Partner with the 2026 expeditions →":
     "Vuoi che il vostro materiale venga in questo viaggio? Diventa partner delle spedizioni 2026 →",
 
@@ -97,8 +97,8 @@ T = {
 "About": "Chi sono",
 "Behind the camera.": "Dietro la macchina.",
 "The other kind of shoot.": "L'altro tipo di servizio.",
-"I've had folding boats since I was twelve. Last summer I paddled a 1950s folding kayak 2,580 km down the Danube, from Ulm to the Black Sea, with my dog Fluffo as crew. I trained as an architect and I've spent years in product photography. This year I'm crossing Spain on foot and by kayak, and paddling around Mallorca and Menorca.":
-    "Ho barche pieghevoli da quando avevo dodici anni. L'estate scorsa ho sceso 2.580 km di Danubio su un pieghevole degli anni Cinquanta, da Ulma al mar Nero, con il mio cane Fluffo come equipaggio. Mi sono formato come architetto e ho passato anni a fare fotografia di prodotto. Quest'anno attraverso la Spagna a piedi e in kayak, e faccio il giro di Maiorca e Minorca a pagaia.",
+"I've had folding boats since I was twelve. Last summer I paddled a 1950s folding kayak 2,580 km down the Danube, from Ulm to the Black Sea, with my dog Fluffo as crew. I trained as an architect and I've spent years in product photography. This year I'm crossing Spain on foot and by kayak, and paddling around Mallorca.":
+    "Ho barche pieghevoli da quando avevo dodici anni. L'estate scorsa ho sceso 2.580 km di Danubio su un pieghevole degli anni Cinquanta, da Ulma al mar Nero, con il mio cane Fluffo come equipaggio. Mi sono formato come architetto e ho passato anni a fare fotografia di prodotto. Quest'anno attraverso la Spagna a piedi e in kayak, e faccio il giro di Maiorca a pagaia.",
 "down the Danube": "di Danubio",
 "Age 12": "A 12 anni",
 "first folding boat": "prima barca pieghevole",
@@ -209,22 +209,22 @@ T = {
 "Interactive satellite globe of Tassilo's journeys": "Globo satellitare interattivo dei viaggi di Tassilo",
 
 # ---------- contador (JavaScript) ----------
-"Setting off in {n} days · Mallorca and Menorca by sea kayak":
-    "Si parte tra {n} giorni · Maiorca e Minorca in kayak da mare",
-"Setting off tomorrow · Mallorca and Menorca by sea kayak":
-    "Si parte domani · Maiorca e Minorca in kayak da mare",
-"Setting off today · Mallorca and Menorca by sea kayak":
-    "Si parte oggi · Maiorca e Minorca in kayak da mare",
-"On the water · Mallorca and Menorca by sea kayak":
-    "In acqua · Maiorca e Minorca in kayak da mare",
+"Setting off in {n} days · Mallorca by sea kayak":
+    "Si parte tra {n} giorni · Maiorca in kayak da mare",
+"Setting off tomorrow · Mallorca by sea kayak":
+    "Si parte domani · Maiorca in kayak da mare",
+"Setting off today · Mallorca by sea kayak":
+    "Si parte oggi · Maiorca in kayak da mare",
+"On the water · Mallorca by sea kayak":
+    "In acqua · Maiorca in kayak da mare",
 
 # ---------- titular y textos nuevos ----------
 "Small boats, long journeys,":
     "Barche piccole, viaggi lunghi",
 "and a lot of world to look at.":
     "e tanto mondo da guardare.",
-"Small boats, long journeys, and a lot of world to look at. Spain and the Balearics, 2026.":
-    "Barche piccole, viaggi lunghi e tanto mondo da guardare. Spagna e Baleari, 2026.",
+"Small boats, long journeys, and a lot of world to look at. Spain and Mallorca, 2026.":
+    "Barche piccole, viaggi lunghi e tanto mondo da guardare. Spagna e Maiorca, 2026.",
 "Where these come from.":
     "Da dove vengono queste foto.",
 "I studied architecture (B.A., TU München), so I tend to look at ruins, structures and landscapes the way I used to draw buildings. Most of these were taken from the water or from the air.":
@@ -316,7 +316,7 @@ T = {
 "Conservation, structural engineering, photogrammetry, archives, heritage law, film. There is room in the group.": "Conservazione, ingegneria strutturale, fotogrammetria, archivi, diritto dei beni culturali, cinema. C'è posto nel gruppo.",
 "Nuka Sakdari, on its shelf of rock above the valley. Artvin, Turkey.": "Nuka Sakdari, sul suo terrazzo di roccia sopra la valle. Artvin, Turchia.",
 "Underway · Sept. 2026": "In corso · sett. 2026",
-"On the water · Mallorca and Menorca by sea kayak": "In acqua · Maiorca e Minorca in kayak da mare",
+"On the water · Mallorca by sea kayak": "In acqua · Maiorca in kayak da mare",
 "A long night in an abandoned Armenian house. Turkey.": "Una notte lunga in una casa armena abbandonata. Turchia.",
 "A bed among the columns · Lycian tomb, Turkey": "Un letto tra le colonne · tomba licia, Turchia",
 "Golden hour with Fluffo · Turkey": "Ora dorata con Fluffo · Turchia",

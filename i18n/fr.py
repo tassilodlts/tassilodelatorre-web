@@ -68,10 +68,10 @@ T = {
 "Two journeys. One camera.": "Deux voyages. Un seul appareil.",
 "Spain, under human power": "L'Espagne, à la seule force du corps",
 "On the trail now · Two months": "En route · deux mois",
-"A lap of the Balearics, filmed": "Un tour des Baléares, filmé",
-"September · ~250 nautical miles": "Septembre · environ 250 milles nautiques",
-"Around Mallorca and Menorca by sea kayak in stages, with Fluffo as crew, and I'll bring home a short documentary, daily films and a real body of photography.":
-    "Faire le tour de Majorque et de Minorque en kayak de mer, par étapes, avec Fluffo comme équipage, et en rapporter un court documentaire, des vidéos quotidiennes et un vrai corpus photographique.",
+"A lap of Mallorca, filmed": "Un tour de Majorque, filmé",
+"September · In stages": "Septembre · Par étapes",
+"Around Mallorca by sea kayak in stages, with Fluffo as crew, and I'll bring home a short documentary, daily films and a real body of photography.":
+    "Faire le tour de Majorque en kayak de mer, par étapes, avec Fluffo comme équipage, et en rapporter un court documentaire, des vidéos quotidiennes et un vrai corpus photographique.",
 "Want your gear on this journey? Partner with the 2026 expeditions →":
     "Envie que votre matériel soit du voyage ? Devenez partenaire des expéditions 2026 →",
 
@@ -97,8 +97,8 @@ T = {
 "About": "À propos",
 "Behind the camera.": "Derrière l'appareil.",
 "The other kind of shoot.": "L'autre genre de séance.",
-"I've had folding boats since I was twelve. Last summer I paddled a 1950s folding kayak 2,580 km down the Danube, from Ulm to the Black Sea, with my dog Fluffo as crew. I trained as an architect and I've spent years in product photography. This year I'm crossing Spain on foot and by kayak, and paddling around Mallorca and Menorca.":
-    "J'ai des bateaux pliants depuis mes douze ans. L'été dernier, j'ai descendu 2 580 km du Danube dans un kayak pliant des années cinquante, d'Ulm à la mer Noire, avec mon chien Fluffo comme équipage. J'ai une formation d'architecte et j'ai passé des années en photographie de produit. Cette année, je traverse l'Espagne à pied et en kayak, et je fais le tour de Majorque et de Minorque à la pagaie.",
+"I've had folding boats since I was twelve. Last summer I paddled a 1950s folding kayak 2,580 km down the Danube, from Ulm to the Black Sea, with my dog Fluffo as crew. I trained as an architect and I've spent years in product photography. This year I'm crossing Spain on foot and by kayak, and paddling around Mallorca.":
+    "J'ai des bateaux pliants depuis mes douze ans. L'été dernier, j'ai descendu 2 580 km du Danube dans un kayak pliant des années cinquante, d'Ulm à la mer Noire, avec mon chien Fluffo comme équipage. J'ai une formation d'architecte et j'ai passé des années en photographie de produit. Cette année, je traverse l'Espagne à pied et en kayak, et je fais le tour de Majorque à la pagaie.",
 "down the Danube": "de Danube",
 "Age 12": "À 12 ans",
 "first folding boat": "premier bateau pliant",
@@ -209,22 +209,22 @@ T = {
 "Interactive satellite globe of Tassilo's journeys": "Globe satellite interactif des voyages de Tassilo",
 
 # ---------- contador (JavaScript) ----------
-"Setting off in {n} days · Mallorca and Menorca by sea kayak":
-    "Départ dans {n} jours · Majorque et Minorque en kayak de mer",
-"Setting off tomorrow · Mallorca and Menorca by sea kayak":
-    "Départ demain · Majorque et Minorque en kayak de mer",
-"Setting off today · Mallorca and Menorca by sea kayak":
-    "Départ aujourd'hui · Majorque et Minorque en kayak de mer",
-"On the water · Mallorca and Menorca by sea kayak":
-    "Sur l'eau · Majorque et Minorque en kayak de mer",
+"Setting off in {n} days · Mallorca by sea kayak":
+    "Départ dans {n} jours · Majorque en kayak de mer",
+"Setting off tomorrow · Mallorca by sea kayak":
+    "Départ demain · Majorque en kayak de mer",
+"Setting off today · Mallorca by sea kayak":
+    "Départ aujourd'hui · Majorque en kayak de mer",
+"On the water · Mallorca by sea kayak":
+    "Sur l'eau · Majorque en kayak de mer",
 
 # ---------- titular y textos nuevos ----------
 "Small boats, long journeys,":
     "Des petits bateaux, de longs voyages",
 "and a lot of world to look at.":
     "et beaucoup de monde à regarder.",
-"Small boats, long journeys, and a lot of world to look at. Spain and the Balearics, 2026.":
-    "Des petits bateaux, de longs voyages, et beaucoup de monde à regarder. Espagne et Baléares, 2026.",
+"Small boats, long journeys, and a lot of world to look at. Spain and Mallorca, 2026.":
+    "Des petits bateaux, de longs voyages, et beaucoup de monde à regarder. Espagne et Majorque, 2026.",
 "Where these come from.":
     "D'où viennent ces images.",
 "I studied architecture (B.A., TU München), so I tend to look at ruins, structures and landscapes the way I used to draw buildings. Most of these were taken from the water or from the air.":
@@ -316,7 +316,7 @@ T = {
 "Conservation, structural engineering, photogrammetry, archives, heritage law, film. There is room in the group.": "Conservation, ingénierie des structures, photogrammétrie, archives, droit du patrimoine, cinéma. Il y a de la place dans le groupe.",
 "Nuka Sakdari, on its shelf of rock above the valley. Artvin, Turkey.": "Nuka Sakdari, sur sa vire rocheuse au-dessus de la vallée. Artvin, Turquie.",
 "Underway · Sept. 2026": "En cours · sept. 2026",
-"On the water · Mallorca and Menorca by sea kayak": "Sur l'eau · Majorque et Minorque en kayak de mer",
+"On the water · Mallorca by sea kayak": "Sur l'eau · Majorque en kayak de mer",
 "A long night in an abandoned Armenian house. Turkey.": "Une longue nuit dans une maison arménienne abandonnée. Turquie.",
 "A bed among the columns · Lycian tomb, Turkey": "Un lit entre les colonnes · tombeau lycien, Turquie",
 "Golden hour with Fluffo · Turkey": "Heure dorée avec Fluffo · Turquie",
